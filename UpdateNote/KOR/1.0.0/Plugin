@@ -1,0 +1,44 @@
+DrewRPGLevelSystem 1.0.0 Official Release Update Note
+
+Hello, this is drewdrew1_ (or drew0414).
+Following extensive development and deep testing, we are excited to announce the official release of DrewRPGLevelSystem Version 1.0.0, a powerful plugin designed to implement rich RPG content on your Minecraft server.
+This plugin is engineered as a robust system that allows server administrators to fully control all experience gain, leveling calculations, and reward distribution logic through external JSON configuration files. By focusing on operational flexibility and expandability, it offers granular customization features that distinguish it from existing RPG plugins.
+
+--------------------
+
+Detailed Introduction to DrewRPGLevelSystem 1.0.0 Key Features
+DrewRPGLevelSystem 1.0.0 is structured around four core pillars to maximize player immersion and optimize server management efficiency.
+1. Dynamic Experience Gain and Event System
+The plugin features a sophisticated system that detects various activities performed by players on the server and awards skill experience accordingly.
+ * Support for Diverse Events: Basic in-game events such as BlockBreakEvent (block destruction), EntityDeathEvent (mob killing), and PlayerFishEvent (fishing success) are utilized as triggers for experience gain.
+ * Skill-Specific Event Mapping: By defining an Events array within each skill's JSON configuration, administrators can precisely specify which activities grant experience for a particular skill. Furthermore, it checks if the player's current skill level meets the minimum level requirement set in the event, allowing for structured content progression.
+ * Environmental Conditional Bonus EXP: Through the BonusExpCalculator, the plugin awards bonuses based on environmental factors in addition to base experience. Additional experience can be configured based on the world's time of day (Day/Night) or weather condition (Rain), encouraging players to engage in activities during specific server conditions, thus creating a dynamic gameplay environment.
+2. Precise Leveling Calculation and Data Management
+The leveling calculation is flexible to match the unique characteristics of each skill, while player data is managed with high stability.
+ * Flexible Level-Up EXP Formula: The experience required for a level up is calculated based on the LevelDrainage value found in each skill's JSON file. The formula is: Required\;EXP = (LevelDrainage \times Current\;Level + 1). Adjusting this value allows for free customization of the difficulty and progression curve for each skill.
+ * Multi-Level Up Handling: If the gained experience exceeds the required EXP for the next level, a while loop accurately processes the simultaneous gain of multiple levels by repeatedly subtracting the required EXP for the current level until the remaining experience is less than the next required amount.
+ * Performance Optimization via Memory Caching: The PlayerJsonManager loads player data into memory upon joining and saves it upon leaving. This approach minimizes frequent disk I/O (Input/Output) operations, thereby reducing server load and enhancing data processing speed.
+3. Advanced Reward Distribution Logic
+The level-up reward system goes beyond simple item handouts, supporting complex probability and randomization features.
+ * Level-Specific Reward Mapping: The skillRewardJsons are used to retrieve reward lists precisely mapped to each skill level.
+ * Probability-Based Reward Distribution: By setting enableChance and chance values in the reward entry, administrators can control the probability of a reward being granted.
+ * Random Item Group Selection: The useRandom feature and randomValue setting allow for the selection of one group of rewards out of multiple defined groups at random, increasing reward diversity and unpredictability.
+ * Comprehensive Reward Types: Item rewards support detailed specifications including Material, amount, and Enchantment information. The system also supports running server commands (runCommands) with the option to execute them either as the player or the console.
+4. Administrator Control and Stability Features
+The plugin provides powerful tools for operation and data management.
+ * In-Game Data Management Command (/DRPG): Administrators (OPs) can view, add, subtract, and set player skill levels and experience in real-time, reset skill data, or clear data from memory using the /DRPG command.
+ * Real-Time JSON File Reload: All skill and reward JSON configuration files can be reloaded instantly into memory with a single in-game command, eliminating the need for a server restart.
+ * Declarative Version Management System: The plugin employs the JsonVersionLoader and Main.java's startVersion() method to read the version defined in config.json and dynamically load the corresponding class set (event handlers, commands). This structure is designed to reduce the likelihood of configuration file compatibility issues in future updates and supports stable migration.
+
+--------------------
+
+Core Strengths and Differentiation from Other RPG Plugins
+DrewRPGLevelSystem 1.0.0 is focused on providing server operators with the maximum possible flexibility, moving past the rigidity often found in existing RPG plugins.
+1. Unprecedented Configuration Flexibility (Configuration Flexibility)
+The most significant distinction of DrewRPGLevelSystem 1.0.0 is its adoption of a pure JSON-based data structure. All skill definitions, experience criteria, leveling curves, and even reward lists are controlled only through external JSON configuration files, without any need for plugin code modification. This allows server operators to establish unique growth systems and complex skill combinations simply by editing text files, eliminating the hassle of recompiling the plugin or restarting the server.
+2. Stable and Independent Data Structure (Data Integrity)
+The plugin stores all player skill data as independent JSON files, named after the player's UUID (Universally Unique Identifier). This approach differs from the single database table or unified file method used by many other plugins. This structure fundamentally prevents the catastrophic risk of losing all player data due to a single file corruption or database error. Furthermore, it greatly simplifies the process of backing up or modifying the data of specific players, enhancing overall data management stability.
+3. Dynamic Content Expandability (Dynamic Content Expansion)
+DrewRPGLevelSystem 1.0.0 elevates player activity beyond simple repetitive rewards. It integrates environmental factors (weather, time) into the EXP bonus calculation via the BonusExpCalculator and applies level restrictions to event triggers in HandlerEvents, introducing strategic elements to content play. For instance, by making bonus EXP available only during night or rain, the system encourages players to consider the server environment, leading to a more engaging and immersive RPG experience.
+4. Declarative Version Control Support (Declarative Version Management)
+The plugin reads the version defined in the config.json file through the JsonVersionLoader and uses the startVersion() method in Main.java to dynamically load the appropriate class implementations (event handlers, commands) for that version. This declarative version control system helps manage compatibility issues with older configuration files during future updates and ensures a stable response when configuration file migration is required, adding significant stability to server operation.
