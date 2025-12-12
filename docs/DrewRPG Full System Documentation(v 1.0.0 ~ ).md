@@ -3107,3 +3107,301 @@ DrewRPG 이벤트 엔진은 완전히 모듈형이다:
 
 ---
 
+# **Chapter 11 — SERVER OPTIMIZATION GUIDE**
+
+# **챕터 11 — 서버 최적화 가이드**
+
+---
+
+# **11.1 Overview / 개요**
+
+**EN:**
+This chapter provides a full optimization guide for Minecraft servers running the DrewRPG plugin. The focus is on performance stability, low TPS drop, safe async processing, and efficient data handling.
+
+**KR:**
+이 챕터는 DrewRPG 플러그인을 사용하는 마인크래프트 서버의 **완전한 최적화 가이드**이다. TPS 드랍 방지, 안정성, 안전한 비동기 처리, 효율적인 데이터 구조를 중심으로 설명한다.
+
+---
+
+# **11.2 Server Requirements / 서버 요구 사양**
+
+**EN:**
+Minimum recommended environment for stable operation.
+
+**KR:**
+안정적인 운영을 위한 최소 권장 환경.
+
+| Category (EN) | Category (KR) | Recommended                                     |
+| ------------- | ------------- | ----------------------------------------------- |
+| CPU           | CPU           | High single-core IPC (Intel 12th+, Ryzen 5000+) |
+| RAM           | 메모리           | ≥ 8GB server allocation                         |
+| Disk          | 디스크           | SSD/NVMe only                                   |
+| OS            | 운영체제          | Linux recommended                               |
+| Java          | 자바            | Java 21 LTS                                     |
+
+---
+
+# **11.3 Paper/Purpur Settings / Paper·Purpur 설정**
+
+## **11.3.1 paper.yml**
+
+**EN: Key optimization options**
+**KR: 핵심 최적화 옵션**
+
+| EN                                     | KR           |
+| -------------------------------------- | ------------ |
+| `use-faster-eigencraft-redstone: true` | 고성능 레드스톤 최적화 |
+| `max-entity-collisions: 2`             | 엔티티 충돌 횟수 제한 |
+| `delay-chunk-unloads-by: 10s`          | 청크 언로드 딜레이   |
+
+---
+
+## **11.3.2 spigot.yml**
+
+| EN                               | KR            |
+| -------------------------------- | ------------- |
+| `mob-spawn-range: 4`             | 몹 스폰 범위 축소    |
+| `entity-activation-range` tuned  | 엔티티 활성 범위 조정  |
+| `tick-inactive-villagers: false` | 비활성 주민 틱 비활성화 |
+
+---
+
+## **11.3.3 purpur.yml**
+
+| EN                                  | KR           |
+| ----------------------------------- | ------------ |
+| `dropped-items.merge-radius: 4.0`   | 아이템 병합 범위 증가 |
+| `entities.armor-stands.tick: false` | 갑티 틱 비활성화    |
+| `entities.bee.tick: false`          | 벌 비활성화 가능    |
+
+---
+
+# **11.4 Plugin Optimization / 플러그인 최적화**
+
+## **11.4.1 Async Processing / 비동기 처리**
+
+**EN:**
+DrewRPG uses async for:
+
+* Data saving
+* Reward table loading
+* PlayerData caching
+* Validator execution
+
+**KR:**
+DrewRPG는 다음을 비동기로 처리한다:
+
+* 데이터 저장
+* 보상 테이블 로딩
+* PlayerData 캐싱
+* Validator 실행
+
+---
+
+## **11.4.2 Cache Layers / 캐시 계층**
+
+**EN:**
+DrewRPG uses 3 levels of cache:
+
+1. **Static caches** (skillData, rewardData)
+2. **Player session cache**
+3. **Soft reference fallback**
+
+**KR:**
+DrewRPG는 3가지 캐시 구조 사용:
+
+1. **정적 캐시** (skillData, rewardData)
+2. **플레이어 세션 캐시**
+3. **Soft Reference 백업 캐시**
+
+---
+
+# **11.5 Database Handling / 데이터베이스 처리**
+
+## **EN:**
+
+Choose **one** of the following:
+
+* JSON (default, slow but simple)
+* SQLite (balanced)
+* MySQL/MariaDB (best for large servers)
+
+## **KR:**
+
+다음 중 **하나만 선택**:
+
+* JSON (기본값, 단순하지만 가장 느림)
+* SQLite (균형 잡힘)
+* MySQL/MariaDB (대규모 서버 최적)
+
+---
+
+# **11.6 Memory Optimization / 메모리 최적화**
+
+## **EN:**
+
+Key rules:
+
+* Avoid storing Player objects
+* Clear caches on logout
+* Reuse JsonObject instances
+* Avoid heavy reward parsing on the main thread
+
+## **KR:**
+
+핵심 규칙:
+
+* Player 객체 저장 금지
+* 로그아웃 시 캐시 즉시 제거
+* JsonObject 재사용
+* 메인 스레드에서 보상 파싱 금지
+
+---
+
+# **11.7 Tick Optimization / 서버 틱 최적화**
+
+| EN                                 | KR                   |
+| ---------------------------------- | -------------------- |
+| Run heavy logic async              | 무거운 로직은 비동기로         |
+| Use scheduled repeaters, not loops | 반복문 대신 스케줄러 사용       |
+| Avoid scanning chunks frequently   | 청크 스캔 금지             |
+| Reduce NBT heavy operations        | NBT 연산 최소화           |
+| Use early-return style             | early-return 스타일로 처리 |
+
+---
+
+# **11.8 Anti-Lag Integration / 타 플러그인 연동**
+
+## **EN-Compatible plugins:**
+
+* Spark (profiling)
+* Insight
+* GSit (lightweight)
+* FastAsyncWorldEdit
+
+## **KR-호환 플러그인:**
+
+* Spark (성능 분석용 최고)
+* Insight
+* GSit (가벼움)
+* FAWE (빠른 월드에딧)
+
+---
+
+# **11.9 Scaling Strategy / 서버 확장 전략**
+
+## **EN:**
+
+For servers with 200+ players:
+
+* Use MySQL cluster
+* Use proxy (Velocity)
+* Add regional shards
+* Enable async skill handling
+
+## **KR:**
+
+200명 이상 서버:
+
+* MySQL 클러스터
+* 프록시(Velocity) 사용
+* 지역별 샤드 구성
+* 스킬 처리 비동기화 확장
+
+---
+
+# **11.10 Best Practices / 최적화 모범 사례**
+
+**EN:**
+
+* Always profile before optimizing
+* Never trust TPS alone (check MSPT)
+* Avoid complex item NBT checks
+* Disable logging in production
+
+**KR:**
+
+* 최적화 전에 항상 프로파일링
+* TPS만 보지 말고 **MSPT** 확인
+* 복잡한 아이템 NBT 체크 금지
+* 운영 서버에서는 디버그 로그 비활성화
+
+---
+
+# **11.11 Optimization Checklist / 최적화 체크리스트**
+
+**EN Version:**
+
+* [ ] Paper/Purpur settings applied
+* [ ] Async DB enabled
+* [ ] SkillData cached
+* [ ] RewardData cached
+* [ ] No sync I/O
+* [ ] Debug disabled (production)
+* [ ] PlayerData unloaded safely
+* [ ] No main-thread loops
+* [ ] Profiling done weekly
+
+**KR 버전:**
+
+* [ ] Paper·Purpur 설정 적용됨
+* [ ] 비동기 DB 활성화
+* [ ] SkillData 캐시됨
+* [ ] RewardData 캐시됨
+* [ ] 동기 I/O 없음
+* [ ] 운영 환경 디버그 비활성
+* [ ] PlayerData 안전 언로드
+* [ ] 메인 스레드 반복문 없음
+* [ ] 주 1회 성능 분석 완료
+
+---
+
+# **11.12 Example: Highly Optimized Server Setup**
+
+# **11.12 예시: 고성능 최적화 서버 구성**
+
+**EN:**
+A recommended setup for DrewRPG on 1.21.4:
+
+**KR:**
+DrewRPG를 1.21.4 환경에서 운영할 때 추천 구성:
+
+* Purpur 1.21.4 latest
+* Java 21
+* MySQL 8.0
+* RAM 10GB allocated
+* Spark + Insight installed
+* Regional shard using Velocity
+
+---
+
+# **11.13 Troubleshooting / 문제 해결**
+
+| Problem (EN)                 | 해결 방안 (KR)              |
+| ---------------------------- | ----------------------- |
+| TPS drops hard during mining | 광질 보상 계산을 비동기화          |
+| Long startup time            | 스킬/보상 JSON 압축 또는 DB 전환  |
+| PlayerData randomly missing  | 저장 과정을 sync → async로 분리 |
+| High MSPT                    | Chunk 관련 연산 최소화         |
+
+---
+
+# **11.14 Future Optimization Extensions / 향후 최적화 확장**
+
+**EN:**
+Future versions will include:
+
+* Zero-copy PlayerData engine
+* Optional Redis cache
+* Multi-threaded reward evaluation
+* JIT-compiled skill scripts
+
+**KR:**
+향후 버전 예정 기능:
+
+* Zero-Copy PlayerData 엔진
+* Redis 캐시 선택적 지원
+* 멀티스레드 보상 계산
+* 스킬 스크립트 JIT 컴파일
+
+---
