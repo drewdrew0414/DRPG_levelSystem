@@ -133,20 +133,6 @@ SECTION 10 — Debug Engine Internals / 디버그 엔진 내부 구조
 SECTION 11 — Server Optimization Guide / 서버 최적화 가이드
 
   11.1 Requirements
-  
-  11.2 Performance Theory
-  
-  11.3 Paper/Purpur Settings
-  
-  11.4 Async Processing
-  
-  11.5 Cache Layers
-  
-  11.6 Database Strategy
-  
-  11.7 MSPT Diagnostics
-  
-  11.8 Best Practices
 
 ---
 
