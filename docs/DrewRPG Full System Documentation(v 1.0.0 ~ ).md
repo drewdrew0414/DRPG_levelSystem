@@ -2,8 +2,6 @@
 
 # **DrewRPG Ultimate Integrated Manual**
 
-# **(Full English → Korean Alternating Version, No Omission)**
-
 # ================================================================
 
 ---
