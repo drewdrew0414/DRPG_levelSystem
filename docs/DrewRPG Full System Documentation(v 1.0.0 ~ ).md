@@ -1,17 +1,341 @@
-# ================================================================
+| # | Section Title (EN) | Section Title (KR) |
+|---|---|---|
+| 1. | Introduction | 소개 |
+| 2. | Directory Structure & File System | 디렉토리 구조 및 파일 시스템 |
+| 3. | CONFIG.JSON Complete Specification | CONFIG.JSON 전체 명세 |
+| 4. | PLAYERDATA Format Complete Specification | PLAYERDATA 형식 전체 명세 |
+| 5. | Internal Architecture | 내부 아키텍처 |
+| 6. | Skill JSON Full Schema | 스킬 JSON 전체 스키마 |
+| 7. | Reward JSON Full Schema | 보상 JSON 전체 스키마 |
+| 8. | Debug System – Full Technical Breakdown | 디버그 시스템 – 전체 기술 분석 |
+| 9. | loadAllJsonData – Complete Internal Dissection | loadAllJsonData – 내부 전체 해부 |
+| 10. | Event Handling Engine – Ultra Detailed Explanation | 이벤트 처리 엔진 – 초정밀 상세 설명 |
+| 11. | SERVER OPTIMIZATION GUIDE | 서버 최적화 가이드 |
 
-# SECTION 1 — INTRODUCTION
-
-# ================================================================
-
----
-
-## [EN]
-
-DrewRPG is a fully modular, JSON-driven leveling and reward framework designed for Minecraft (Paper/Spigot) servers.
-Its primary purpose is to allow server operators, developers, and content creators to define and modify all RPG-related behavior — such as skills, EXP rules, level progression, and reward structures — without touching Java code or recompiling the plugin.
-
-The entire system is decentralized into text-based modules.
+1. Introduction (소개)
+[EN]
+DrewRPG is a fully modular, JSON-driven leveling and reward framework designed for Minecraft (Paper/Spigot) servers. Its primary purpose is to allow server operators, developers, and content creators to define and modify all RPG-related behavior—such as skills, EXP rules, level progression, and reward structures—without touching Java code or recompiling the plugin.
+The entire system is decentralized into text-based modules. The plugin loads all configuration files at startup and merges them into a unified runtime model. This design provides high flexibility, high maintainability, and allows the system to scale easily when adding additional skills or content packs.
+The system is composed of these core components: Global configuration (config.json), Skill definition files (skills/*.json), Reward definition files (rewards/*.json), a Debug framework (global and per-module logging controls), and a Data registry (runtime caches for skills, rewards, and UUID-bound player data). Every component operates independently, but all of them integrate at runtime to form the final RPG engine.
+DrewRPG ensures safe loading by validating JSON structures, types, and required fields before enabling systems. If one module fails (for example, a malformed skills file), the plugin disables only the broken module while allowing other modules to continue running.
+[KR]
+DrewRPG는 Minecraft(Paper/Spigot) 서버용으로 제작된 완전 모듈화된 JSON 기반 RPG 레벨 시스템이다. 서버 운영자, 개발자, 콘텐츠 제작자가 Java 코드를 수정하지 않고도 스킬, 경험치 규칙, 레벨 상승 방식, 보상 구조 등 RPG 관련 모든 동작을 자유롭게 변경할 수 있도록 설계되었다.
+시스템의 모든 구성 요소는 텍스트(JSON) 기반 파일로 이루어져 있으며, 플러그인은 서버 시작 시 모든 설정 파일을 불러온 후 이를 통합하여 하나의 실행 모델로 만든다. 이는 높은 확장성, 유지보수 용이성, 빠른 설정 변경을 가능하게 한다.
+핵심 구성 요소는 전역 설정 파일(config.json), 스킬 정의 파일(skills/*.json), 보상 정의 파일(rewards/*.json), 디버그 프레임워크 (전체 및 모듈별 로그 제어), 그리고 데이터 레지스트리 (스킬, 보상, 플레이어 UUID 데이터의 런타임 캐시)로 구성된다. 각 구성 요소는 개별적으로 동작하지만, 런타임에 하나의 RPG 엔진으로 통합된다.
+DrewRPG는 JSON 구조, 필드 타입, 필수 요소 등을 로드 전에 검사하여 안전성을 보장한다. 어떤 모듈(예: skills 파일 중 하나)이 손상되어도 해당 모듈만 비활성화되며, 나머지 모듈은 정상 동작한다.
+2. Directory Structure & File System (디렉토리 구조 및 파일 시스템)
+[EN]
+DrewRPG stores all configuration, runtime data, and user-defined content in a structured directory hierarchy inside the plugin folder. Understanding this structure is essential for troubleshooting, customization, backup, and content creation.
+The file system components are:
+ * config.json: The global configuration controlling plugin behavior, debug settings, and version metadata. This is always loaded first.
+ * skills/: This directory contains one JSON file per skill, where the file name must match the internal skill key. It defines the skill name, display name, maximum level, experience drainage rules, event triggers, EXP amounts, and randomization system.
+ * rewards/: This directory contains one JSON file per skill, defining rewards granted on specific levels. It includes the level number, item list, EXP bonuses, enchantments, and random reward modes.
+ * playerdata/: This directory stores UUID.json player progress files, which are automatically created by the plugin. Each file includes skill name, player level, player EXP, integrity markers, and auto-fix fields. Manual editing is strongly discouraged.
+[KR]
+DrewRPG는 모든 구성 파일, 플레이어 데이터, 사용자 정의 스킬 및 보상 파일을 플러그인 폴더 안에서 체계적으로 관리한다. 이 디렉토리 구조를 정확히 이해해두면 문제 해결, 백업, 설정 변경, 커스텀 콘텐츠 제작이 훨씬 쉬워진다.
+파일 시스템 구성 요소는 다음과 같다:
+ * config.json: 플러그인의 전체 동작, 디버그 설정, 버전 정보를 제어하는 전역 설정 파일이다. 플러그인이 활성화될 때 항상 가장 먼저 로드된다.
+ * skills/: 이 폴더에는 스킬당 1개의 JSON 파일이 들어간다. 파일 이름은 스킬의 내부 키와 동일해야 하며, 스킬 이름, 표시용 이름, 최대 레벨, 경험치 소모 규칙, 이벤트 트리거, 경험치량, 랜덤 보상 시스템을 포함한다.
+ * rewards/: 이 폴더 역시 스킬당 하나의 JSON 파일이 존재하며, 해당 스킬의 특정 레벨에서 지급되는 보상을 정의한다. 보상 파일에는 레벨 번호, 아이템 목록, 추가 경험치, 인챈트 정보, 랜덤 보상 모드 등이 포함된다.
+ * playerdata/: 이 폴더에는 플레이어 UUID.json 파일이 저장되며, 플레이어의 스킬 진행도가 포함된다. 이 파일은 자동 생성, 검증, 복구되므로, 직접 수정하면 데이터 오류가 발생할 수 있다.
+3. CONFIG.JSON Complete Specification (CONFIG.JSON 전체 명세)
+[EN]
+The config.json file controls global plugin behavior.
+Main Fields
+ * version: A human-readable version marker used for debugging and patch tracking.
+ * usePlugin: If set to false, the plugin disables all RPG systems but remains enabled in the /plugins folder.
+Debug Sub-options
+The Debug object controls logging behavior. The useDebug field acts as a master toggle; if false, no debug logs are printed.
+ * logLoadedSkills: Logs every loaded skill file and its parsed data.
+ * logLoadedRewards: Logs each reward file and all level entries.
+ * logPlayerJoin: Prints whenever a player joins and their data is loaded or created.
+ * logExpChanges: Prints EXP additions, removals, and calculations.
+ * logRewardGranting: Prints detailed information about rewards given at level-up events.
+ * logValidator: Indicates missing fields, auto-generated fields, and corrupted entries during validation.
+Data Sub-options
+The Data object manages persistence and integrity.
+ * autoSaveIntervalTicks: Sets the automatic playerdata save interval, where 1200 ticks equals 60 seconds.
+ * validateOnJoin: Runs the validator when a player joins.
+ * validateOnLoad: Runs the validator when the plugin loads playerdata on startup.
+[KR]
+config.json은 플러그인의 전체 동작을 제어하는 핵심 파일이다.
+주요 항목
+ * version: 사람이 읽기 위한 버전 정보로, 디버깅에 유용하다.
+ * usePlugin: false로 설정하면 플러그인은 비활성화되지만, 파일은 유지된다.
+Debug 하위 옵션
+Debug 객체는 로그 옵션을 제어한다. useDebug는 마스터 스위치이며, false면 아래 모든 디버그 옵션이 꺼진다.
+ * logLoadedSkills: 로드된 모든 스킬 파일 정보를 출력한다.
+ * logLoadedRewards: 로드된 모든 보상 파일 정보를 출력한다.
+ * logPlayerJoin: 플레이어 접속 시 데이터 로드/생성 로그를 출력한다.
+ * logExpChanges: 경험치 추가/감소/레벨업 계산 기록을 출력한다.
+ * logRewardGranting: 레벨업 시 지급되는 보상 기록을 출력한다.
+ * logValidator: 누락된 필드 자동 생성이나 잘못된 구조 발견 시 메시지를 출력한다.
+Data 하위 옵션
+Data 객체는 영속성과 무결성을 관리한다.
+ * autoSaveIntervalTicks: 자동 저장 주기를 설정하며, 1200틱은 60초이다.
+ * validateOnJoin: 플레이어 접속 시 데이터 무결성 검사를 수행한다.
+ * validateOnLoad: 플러그인 로드 시 전체 데이터를 검사한다.
+4. PLAYERDATA Format Complete Specification (PLAYERDATA 형식 전체 명세)
+[EN]
+The playerdata/ directory contains every player’s RPG progression, saved as <UUID>.json. These files are automatically created, validated, updated, and repaired by the DrewRPG Level System.
+Field-by-field Explanation
+ * player → name: The player’s last-known username, updated automatically whenever the player joins.
+ * player → uuid: The unique identifier, always stored in lowercase UUID string format.
+ * player → lastSeen: A millisecond UNIX timestamp representing the last moment the player was online.
+ * skills (root object): Contains keys matching each loaded skill name.
+ * skills → <SkillName>: Each skill entry includes:
+   * level: The current level of the player in this skill.
+   * exp: The current experience points accumulated toward the next level.
+   * lastUpdated: Timestamp of the last modification, used internally to detect stale or corrupted data.
+   * integrity: A plugin-managed object containing the validated status and missingFieldsRepaired count.
+PLAYERDATA Auto-Fix Rules
+The validator will automatically repair several issues, including:
+ * Missing level (set to 1).
+ * Missing exp (set to 0).
+ * Corrupted negative exp or level (set to 0 or 1, respectively).
+ * Missing integrity object (recreated).
+ * Ghost skills (skills that no longer exist) (removed).
+[KR]
+playerdata/ 폴더에는 각 플레이어의 RPG 진행도가 <UUID>.json 형식으로 저장된다. 이 파일들은 DrewRPG 시스템이 자동 생성, 검증, 갱신, 복구한다.
+필드별 상세 설명
+ * player → name: 플레이어의 마지막 닉네임이 저장되며, 로그인 때 자동 갱신된다.
+ * player → uuid: 플레이어의 고유 식별자(UUID)로, 항상 소문자 문자열 형태로 기록된다.
+ * player → lastSeen: 플레이어의 마지막 접속 시점을 밀리초 단위 UNIX 타임스탬프로 저장한다.
+ * skills 객체: 각 스킬 이름을 key로 사용한다.
+ * skills → <스킬 이름>: 각 스킬에는 다음 정보가 포함된다:
+   * level: 현재 스킬 레벨.
+   * exp: 해당 레벨의 다음 단계까지 필요한 경험치 중 축적된 양.
+   * lastUpdated: 마지막으로 이 스킬 데이터가 수정된 시점의 타임스탬프.
+   * integrity: 무결성 관리 객체로, validated 여부와 missingFieldsRepaired 수를 포함한다.
+PLAYERDATA 자동 복구 규칙
+Validator는 다음과 같은 문제를 자동으로 복구한다:
+ * level이 없으면 1로 설정.
+ * exp가 없거나 음수면 0으로 설정.
+ * 음수 level은 1로 설정.
+ * 삭제된 스킬의 유령 데이터는 즉시 삭제된다.
+5. Internal Architecture (내부 아키텍처)
+[EN]
+DrewRPG is a JSON-driven modular leveling system where every subsystem operates independently but is orchestrated through a central loading mechanism.
+JSON Loading Pipeline
+All JSON loaders follow an identical three-step pipeline:
+ * Discovery Phase: Scans directories (e.g., /skills or /rewards) and identifies all JSON files.
+ * Parsing Phase: Reads each file, converts it into a JsonObject, and performs structural validation.
+ * Registration Phase: Stores the validated data in a global static HashMap for fast runtime access.
+Data Storage Registry
+All loaded data is stored in specialized static registries:
+ * SkillDataRegistry: Stores skill definitions (events, drainage, max level).
+ * RewardDataRegistry: Stores reward templates for each skill and level.
+ * ConfigRegistry: Stores config.json main settings and debug flags.
+ * PlayerDataRegistry: Stores real-time player progress.
+Event Dispatch Architecture
+Minecraft events (like BlockBreakEvent or EntityDeathEvent) are intercepted by event handlers. The handlers pass the event name to a lookup table to determine if any skill defines this event, if experience should be granted, if conditions should be applied, and if rewards should be triggered.
+[KR]
+DrewRPG는 JSON 기반으로 동작하는 모듈형 레벨 시스템으로, 모든 서브 시스템은 독립적으로 작동하지만 중앙 로더가 전체를 통합해 제어한다.
+JSON 로딩 파이프라인
+모든 JSON 로더는 동일한 3단계 방식을 따른다.
+ * 파일 탐색 단계: /skills, /rewards 같은 디렉토리에서 모든 JSON 파일을 읽는다.
+ * 파싱 단계: JsonObject로 변환하고 구조 검증까지 수행한다.
+ * 등록 단계: 검증된 데이터를 전역 static HashMap에 저장한다.
+데이터 저장 레지스트리
+모든 로딩된 데이터는 다음 전용 레지스트리에 보관된다.
+ * SkillDataRegistry: 스킬 정의를 저장한다.
+ * RewardDataRegistry: 각 스킬/레벨 보상 템플릿을 저장한다.
+ * ConfigRegistry: config.json 설정값을 저장한다.
+ * PlayerDataRegistry: 실시간 플레이어 데이터를 저장한다.
+이벤트 디스패치 구조
+마인크래프트 이벤트가 발생하면 이벤트 핸들러가 이를 가로채고, 해당 이벤트가 어떤 스킬과 연관되는지 즉시 조회한다. 이 조회 후 경험치 지급 여부, 조건 충족 여부, 보상 지급 여부를 결정한다.
+6. Skill JSON Full Schema (스킬 JSON 전체 스키마)
+[EN]
+Skill JSON files define how each skill behaves, including the name, display name, maximum level, experience drainage rules, event triggers, conditions, and EXP rewards per event.
+Core Fields
+ * Name: The internal, unique, case-sensitive identifier.
+ * DisplayName: The name visible to players, which can contain color codes.
+ * LevelDrainage: The amount of EXP that reduces after level-up.
+ * maxLevel: The absolute limit of skill progression.
+Events Section
+The Events array defines how experience is earned. Each event object must define:
+ * Name: The name of the event condition (e.g., block or mob type).
+ * EventType: Defines which Minecraft event triggers this (e.g., BLOCK_BREAK, KILL_ENTITY).
+ * exp: The required experience amount, or the maximum if randomization is used.
+ * useRandom: A boolean defining if random EXP should be used.
+ * RandomRange: A [min, max] array required if useRandom is true.
+ * Conditions: An optional object that limits where EXP can be gained.
+Conditions
+Conditions restrict whether EXP should be rewarded, all of which are AND-based (all must be true). Supported keys include:
+ * world: Restricts the event to only listed worlds.
+ * biome: Restricts the event to only listed biomes.
+ * requiredPermission: Requires the player to have a specific permission.
+ * requiredTool: Restricts the event to only when the player is holding a specific tool.
+[KR]
+Skill JSON 파일은 각 스킬의 동작 방식을 완전히 정의한다.
+핵심 항목
+ * Name: 시스템 내부에서 사용하는 고유 이름이며 대소문자를 구분한다.
+ * DisplayName: 플레이어에게 보여질 이름으로, 색 코드를 포함할 수 있다.
+ * LevelDrainage: 레벨업 시 소모되는 EXP 양이다.
+ * maxLevel: 해당 스킬의 최대 달성 레벨이다.
+Events 항목
+Events 배열에서는 경험치를 얻는 조건을 정의한다. 각 이벤트 객체는 다음을 정의해야 한다:
+ * Name: 이벤트 조건의 이름 (예: 블록, 몹 종류).
+ * EventType: 어떤 마인크래프트 이벤트인지 정의한다 (예: BLOCK_BREAK, KILL_ENTITY).
+ * exp: 고정 경험치 양, 또는 랜덤 사용 시 최대값이 된다.
+ * useRandom: 랜덤 경험치 사용 여부를 정의하는 불리언 값이다.
+ * RandomRange: useRandom이 true일 경우 필수인 [min, max] 배열이다.
+ * Conditions: EXP 부여 조건을 제한하는 선택적 객체이다.
+Conditions 조건 시스템
+조건은 EXP 지급 여부를 제한하며, 모든 조건은 AND 조건이다. 지원되는 키는 다음과 같다:
+ * world: 특정 월드에서만 적용되도록 제한한다.
+ * biome: 특정 바이옴에서만 적용되도록 제한한다.
+ * requiredPermission: 특정 권한이 필요하다.
+ * requiredTool: 특정 도구 사용 시에만 적용되도록 제한한다.
+7. Reward JSON Full Schema (보상 JSON 전체 스키마)
+[EN]
+Reward JSON files define what players receive when leveling up specific skills. All reward logic is fully data-driven.
+File Structure Overview
+The file uses Name and displayName fields, and then uses the level number (as a string, e.g., "1", "5") as keys for the reward arrays. Each level key maps to an array of reward blocks.
+Reward Object Specification
+Each reward block inside the level array contains items, permissions, commands, and messaging.
+ * useRandom: A boolean that determines if the reward block uses a random selection.
+ * Permissions: A string or null that defines a required permission for receiving the reward.
+ * RandomCount: An integer required if useRandom is true, specifying the number of items to select randomly.
+ * items: An array of item objects to be awarded.
+ * commands: An array of commands to be executed by the console.
+ * message: An optional string message to send to the player upon receiving the reward.
+Item Specification
+Item objects within the items array require:
+ * itemName: The item name, which must match the Bukkit Material name.
+ * amount: The quantity to be awarded.
+ * nbt: An optional NBT Json string.
+ * enchant: An optional array of enchant objects (type and level).
+ * exp: An optional internal EXP bonus field.
+[KR]
+Reward JSON 파일은 특정 스킬 레벨업 시 플레이어가 받을 보상을 정의한다.
+파일 구조 개요
+파일은 Name과 displayName 필드를 사용하며, 그 외의 key는 레벨 번호(문자열, 예: "1")로 취급되어 보상 배열에 매핑된다. 각 레벨 키는 보상 묶음의 배열로 연결된다.
+보상 객체 규격
+레벨 배열 내의 각 보상 묶음은 다음 항목을 포함한다.
+ * useRandom: 랜덤 보상 사용 여부를 나타내는 불리언 값이다.
+ * Permissions: 해당 보상을 받기 위해 필요한 권한 문자열이다.
+ * RandomCount: 랜덤 모드일 때 필요한 아이템 개수를 지정하는 정수이다.
+ * items: 지급할 아이템 목록의 배열이다.
+ * commands: 실행할 명령어 목록의 배열이다.
+ * message: 플레이어에게 보낼 메시지 문자열이다.
+Item 세부 규격
+items 배열 내의 아이템 객체는 다음을 필요로 한다:
+ * itemName: Bukkit Material과 동일한 이름이어야 한다.
+ * amount: 지급 수량이며 1 이상의 정수이다.
+ * nbt: 선택적인 NBT Json 문자열이다.
+ * enchant: 선택적인 인챈트 객체(타입과 레벨) 배열이다.
+ * exp: 플러그인 자체 EXP 보정 필드이다.
+8. Debug System – Full Technical Breakdown (디버그 시스템 – 전체 기술 분석)
+[EN]
+The Debug subsystem is a detailed analysis tool, not just a simple logging feature, controlled entirely through the config.json's Debug object. It allows tracking of all core processing steps.
+Debug Flags
+The available debug toggles include:
+ * useDebug: The absolute master toggle; when false, no debug logs are produced.
+ * logLoadedSkills: Prints loading logs for skill files, including event count and parsed keys.
+ * logLoadedRewards: Prints loading logs for reward files, including level and reward block counts.
+ * logPlayerLevelUp: Prints level-up events, showing the before/after values.
+ * logGivenRewards: Prints reward execution logs, detailing items given.
+ * logPlayerDataLoad: Prints logs related to player data loading.
+ * logExpGain: Shows the precise origin and amount of EXP awarded, such as Source: STONE_BREAK → +3 EXP.
+ * logEventTrigger: Shows the event name and raw Bukkit data, such as Triggered Event: BLOCK_BREAK → Material: COAL_ORE.
+[KR]
+DrewRPG의 Debug 시스템은 단순히 “로그 출력 여부”를 조절하는 기능이 아니라, 플러그인의 모든 핵심 처리 단계를 추적 가능하도록 설계된 세부 분석 도구이다.
+지원 플래그
+지원되는 디버그 토글은 다음과 같다:
+ * useDebug: 디버그 전체 마스터 스위치이며, false일 경우 어떤 로그도 출력되지 않는다.
+ * logLoadedSkills: 로드된 스킬 파일 로그를 출력하며, 이벤트 수와 파싱된 JSON 키를 포함한다.
+ * logLoadedRewards: 로드된 보상 파일 로그를 출력하며, 레벨 및 보상 블록 수를 포함한다.
+ * logPlayerLevelUp: 레벨업 로그를 출력하며, 레벨 변경 전/후 값을 보여준다.
+ * logGivenRewards: 보상 지급 로그를 출력하며, 지급된 아이템을 상세히 보여준다.
+ * logPlayerDataLoad: 플레이어 데이터 로드 로그를 출력한다.
+ * logExpGain: 정확한 경험치 획득 출처와 양을 보여준다 (예: Source: STONE_BREAK → +3 EXP).
+ * logEventTrigger: 이벤트 이름과 원본 Bukkit 데이터를 출력한다 (예: Triggered Event: BLOCK_BREAK → Material: COAL_ORE).
+9. loadAllJsonData – Complete Internal Dissection (loadAllJsonData – 내부 전체 해부)
+[EN]
+The loadAllJsonData() function is the bootstrap stage of DrewRPG, responsible for directory scanning, file reading, JSON parsing, internal registry construction, skill-reward linking, debug logging, and error capturing. If this function fails, no skills or rewards will load.
+Full Step List
+ * Ensure Directory Exists: The plugin checks for the /skills/ and /rewards/ paths and automatically generates them if missing.
+ * List All JSON Files: Only files with the .json extension are accepted.
+ * Read File Contents: Reads the file contents as UTF-8 text.
+ * JsonParser.parseString(): The raw JSON string is converted into Gson structures (JsonObject, JsonArray, JsonElement).
+ * Validation Phase: Structural validation is performed; for example, files without the required "Name" field are skipped.
+ * Registry Insert: Validated data is stored in the global registries (e.g., skillData.put(name, json)).
+ * Cross Linking: Skill and reward names are matched. If a skill exists but the corresponding reward file is missing, a warning is logged.
+[KR]
+loadAllJsonData()는 DrewRPG의 부트스트랩 단계이며, 디렉토리 스캔, 파일 읽기, JSON 파싱, 내부 레지스트리 구축, 스킬-보상 연결, 디버그 로깅, 오류 포착을 담당한다. 이 함수가 실패하면 스킬이나 보상도 로드되지 않는다.
+전체 단계 목록
+ * 디렉토리 확인: /skills/와 /rewards/ 경로를 확인하고 없으면 자동 생성한다.
+ * JSON 파일 목록 수집: .json 확장자 파일만 수집한다.
+ * 파일 내용 읽기: UTF-8 텍스트로 파일 내용을 읽는다.
+ * JsonParser.parseString(): 원본 JSON 문자열을 Gson 구조로 변환한다.
+ * 검증 단계: "Name" 필드가 없는 등 구조 오류 발생 시 해당 파일은 스킵된다.
+ * Registry에 저장: 검증된 데이터가 전역 레지스트리에 저장된다.
+ * 스킬 ↔ 보상 연결: 스킬 이름과 보상 이름이 일치하는지 확인하며, 보상 파일이 누락된 경우 경고를 출력한다.
+10. Event Handling Engine – Ultra Detailed Explanation (이벤트 처리 엔진 – 초정밀 상세 설명)
+[EN]
+The Event Handling Engine is the core mechanism that detects player actions (events) and carries out the entire process of Exp granting, leveling up, and reward delivery.
+Event Flow
+ * Event Capture: The Bukkit event is intercepted by the event handlers.
+ * Skill Event Match: The engine iterates through all loaded skill definitions to find a matching EventType and Name (e.g., BLOCK_BREAK of STONE).
+ * Condition Check: All Conditions (world, tool, permission) defined in the skill event must be met.
+ * EXP Calculation & Grant: Calculated EXP (fixed or random) is added to the player's data.
+ * Level Up Check: If the player's EXP meets or exceeds the required EXP, the level is incremented, and the Reward System is called.
+Safety & Protection
+The event engine is designed with safety checks and try/catch isolation. This ensures that a single malformed JSON or invalid event type cannot crash the entire event system or cause NullPointerExceptions.
+[KR]
+DrewRPG의 이벤트 처리 엔진은 플레이어가 게임 내에서 행동할 때 발생하는 모든 이벤트를 감지하고, Exp 지급, 레벨업, 보상 지급까지 이어지는 전체 프로세스를 담당한다.
+이벤트 흐름
+ * 이벤트 포착: Bukkit 이벤트가 이벤트 핸들러에 의해 가로채진다.
+ * 스킬 이벤트 매칭: 엔진은 로드된 모든 스킬 정의를 순회하며 일치하는 EventType 및 Name을 찾는다.
+ * 조건 검사: 스킬 이벤트에 정의된 모든 Conditions (월드, 도구, 권한)이 충족되어야 한다.
+ * EXP 계산 및 지급: 계산된 EXP (고정 또는 랜덤)가 플레이어 데이터에 추가된다.
+ * 레벨업 검사: 현재 EXP가 필요 EXP를 만족하면 레벨업이 반복적으로 발생하고 보상 지급 시스템이 호출된다.
+안전성 및 보호
+이벤트 엔진은 안전성 검사와 try/catch 격리를 통해 설계되었다. 이 덕분에 JSON 오류나 비정상 이벤트 실행이 전체 시스템을 중단시키거나 NullPointerException을 유발하지 않는다.
+11. SERVER OPTIMIZATION GUIDE (서버 최적화 가이드)
+[EN]
+This guide focuses on performance stability, low TPS drop, safe async processing, and efficient data handling for servers running DrewRPG.
+Platform Requirements
+For optimal performance, recommended platforms and settings include:
+ * Platform: Purpur latest version is recommended.
+ * Java: Java 21 LTS is highly recommended.
+ * Database: MySQL/MariaDB is recommended for scaling (200+ players).
+Paper/Purpur Settings
+Key optimization options in configuration files include:
+ * In paper.yml, enabling use-faster-eigencraft-redstone: true and limiting max-entity-collisions: 2.
+ * In spigot.yml, tuning mob-spawn-range and entity-activation-range.
+ * In purpur.yml, increasing dropped-items.merge-radius and potentially disabling non-essential entity ticks.
+Plugin Optimization Practices
+ * Async Processing: DrewRPG uses asynchronous processing for data saving, reward table loading, PlayerData caching, and Validator execution to prevent main-thread load.
+ * Cache Layers: The plugin uses three levels of cache: Static caches (Skill/Reward Data), PlayerData caches (runtime player progress), and Database caching (for MySQL).
+ * Best Practices: Avoid scanning chunks frequently, reduce NBT heavy operations, and use early-return style coding.
+Troubleshooting
+Common issues and their solutions:
+ * Problem (EN): TPS drops hard during mining. Solution (KR): 광질 보상 계산을 비동기화해야 한다.
+ * Problem (EN): Long startup time. Solution (KR): 스킬/보상 JSON 파일 수를 줄이거나 검증 옵션을 조정해야 한다.
+ * Problem (EN): Player data corruption. Solution (KR): validateOnJoin 및 validateOnLoad를 항상 true로 설정해야 한다.
+[KR]
+이 가이드는 DrewRPG 플러그인을 사용하는 마인크래프트 서버의 성능 안정성, 낮은 TPS 하락, 안전한 비동기 처리, 효율적인 데이터 처리에 중점을 둔다.
+플랫폼 요구 사항
+최적의 성능을 위한 권장 플랫폼 및 설정은 다음과 같다:
+ * 플랫폼: Purpur 최신 버전이 권장된다.
+ * 자바: Java 21 LTS가 강력하게 권장된다.
+ * 데이터베이스: 200명 이상의 플레이어 확장을 위해서는 MySQL/MariaDB가 권장된다.
+Paper/Purpur 설정
+구성 파일의 핵심 최적화 옵션은 다음과 같다:
+ * paper.yml에서 use-faster-eigencraft-redstone: true 활성화 및 max-entity-collisions: 2로 엔티티 충돌 횟수 제한.
+ * spigot.yml에서 몹 스폰 범위(mob-spawn-range)와 엔티티 활성 범위(entity-activation-range) 조정.
+ * purpur.yml에서 아이템 병합 범위(dropped-items.merge-radius) 증가.
+플러그인 최적화 모범 사례
+ * 비동기 처리: DrewRPG는 데이터 저장, 보상 테이블 로딩, PlayerData 캐싱, Validator 실행 등을 비동기로 처리하여 메인 스레드 부하를 완화한다.
+ * 캐시 계층: 스태틱 캐시(스킬/보상 데이터), PlayerData 캐시(런타임 플레이어 진행), 데이터베이스 캐싱(MySQL 사용 시)의 3단계 캐시를 사용한다.
+ * 모범 사례: 청크 스캔을 자주 하는 것을 피하고, NBT 연산을 최소화하며, early-return 스타일로 처리해야 한다.
+문제 해결
+일반적인 문제와 해결 방안은 다음과 같다:
+ * 문제 (KR): 광질 중에 TPS가 심하게 하락한다. 해결 방안 (KR): 광질 보상 계산을 비동기화해야 한다.
+ * 문제 (KR): 서버 시작 시간이 길다. 해결 방안 (KR): 스킬/보상 JSON 파일 수를 줄이거나 검증 옵션을 조정해야 한다.
+ * 문제 (KR): 플레이어 데이터가 손상된다. 해결 방안 (KR): validateOnJoin 및 validateOnLoad를 항상 true로 설정해야 한다.
 The plugin loads all configuration files at startup and merges them into a unified runtime model.
 This gives high flexibility, high maintainability, and allows the system to scale easily when adding additional skills or content packs.
 
