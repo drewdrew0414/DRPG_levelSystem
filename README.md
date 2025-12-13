@@ -1,5 +1,5 @@
 # This Plugin Isn't Launched! This is Alpha Test Version!
-
+### Use Modrinth! https://modrinth.com/project/drewrpgproject#download
 # DrewRPG Level System
 
 **Minecraft Server's Ultimate RPG Leveling System**
