@@ -4,6 +4,7 @@
 **Minecraft 서버의 궁극적인 RPG 레벨링 시스템**
 
 This plugin is a professional RPG skill leveling system designed to provide the highest level of stability, scalability, and ease of debugging for Minecraft servers. All core logic is completely customizable via JSON files, significantly reducing the complexity of server operation.
+
 본 플러그인은 Minecraft 서버에 최고 수준의 안정성, 확장성, 디버깅 편의성을 제공하도록 설계된 전문적인 RPG 스킬 레벨링 시스템입니다. 모든 핵심 로직은 JSON 파일을 통해 완벽하게 커스터마이징 가능하며, 서버 운영의 복잡성을 획기적으로 낮춥니다.
 
 ---
@@ -11,15 +12,21 @@ This plugin is a professional RPG skill leveling system designed to provide the 
 ## 1. DrewRPG's Competitive Advantages / DrewRPG만의 차별화된 핵심 기능
 
 The DrewRPG Level System focuses on fundamentally solving common problems in existing RPG plugins, such as data errors, balancing difficulty, and maintenance complexity.
+
 DrewRPG Level System은 기존 RPG 플러그인들이 흔히 겪는 데이터 오류, 밸런싱 난이도, 유지보수 복잡성 등의 문제점을 근본적으로 해결하는 데 중점을 두었습니다.
 
 ### 1.1. Data Integrity Guarantee: Complete Resolution of Data Inconsistency (Desync) Issues / 데이터 무결성 보장: 데이터 불일치 (Desync) 문제의 완벽한 해결
 
 * **Centralized Cache System (PlayerJsonManager):** All player data is stored in a centralized memory cache. It is loaded upon player login (`loadPlayerJson`) and saved immediately upon logout (`savePlayerJson`), minimizing data loss.
+  
     * 중앙 집중식 캐시 시스템 (PlayerJsonManager): 모든 플레이어 데이터는 중앙 집중식 메모리 캐시에 보관되며, 플레이어 접속 시 로드(loadPlayerJson)되고, 접속 종료 시 즉시 저장(savePlayerJson)되어 데이터 유실을 최소화합니다.
+      
 * **Forced Command-Cache Synchronization (Critical Stability):** To prevent data inconsistency (Desync) after using administrator commands (e.g., `/DRPG setLevel`, `/DRPG addExp`), all data modification logic is forced to go through the central cache and immediately saved to disk after modification. This completely eliminates the possibility of data rollback that can occur upon server reboot.
+  
     * 커맨드-캐시 동기화 강제 (Critical Stability): 관리자 명령어(예: `/DRPG setLevel`, `/DRPG addExp`) 사용 후 데이터 불일치(Desync)가 발생하지 않도록, 모든 데이터 수정 로직은 중앙 캐시를 통해서만 이루어지며, 수정 직후 디스크에 즉시 저장하는 로직을 강제하였습니다. 이는 서버 재부팅 시 발생할 수 있는 데이터 롤백 가능성을 완벽하게 차단합니다.
+      
 * **Asynchronous I/O and Performance Optimization:** Data loading and saving can be processed **asynchronously (Async)** via the `PlayerData` settings in `config.json`, preventing server lag during heavy I/O operations.
+  
     * 비동기 I/O 및 성능 최적화: `config.json`의 PlayerData 설정을 통해 데이터 로드와 저장을 **비동기(Async)**로 처리할 수 있어, I/O 작업량이 많을 때 서버 랙이 발생하는 것을 방지합니다.
 
 ---
@@ -27,60 +34,57 @@ DrewRPG Level System은 기존 RPG 플러그인들이 흔히 겪는 데이터 �
 ## 2. Dynamic Features and Extensibility / 동적 기능 및 확장성
 
 DrewRPG is designed to be highly flexible and easy to extend through its modular architecture.
+
 DrewRPG는 모듈식 아키텍처를 통해 높은 유연성과 확장 용이성을 갖도록 설계되었습니다.
 
 ### 2.1. Skill Logic Customization (EventProcessor) / 스킬 로직 커스터마이징 (EventProcessor)
 
 * **JSON-Defined Events:** Skill EXP gain triggers are defined in `skills/*.json`. For example, EXP can be granted for `BlockBreakEvent`, `EntityDeathEvent`, or `PlayerInteractEvent` and customized with various conditions (e.g., specific block IDs, specific entity types).
+  
     * JSON 정의 이벤트: 스킬 경험치 획득 트리거는 `skills/*.json`에 정의됩니다. 예를 들어, `BlockBreakEvent`, `EntityDeathEvent`, `PlayerInteractEvent` 등에 경험치를 부여할 수 있으며, 다양한 조건(예: 특정 블록 ID, 특정 엔티티 종류)으로 커스터마이징됩니다.
+      
 * **Accurate Event-to-EXP Mapping:** The system ensures that experience gained from in-game events is calculated precisely, level-ups are processed accurately, and defined rewards are dispensed for every level reached.
+  
     * 정확한 이벤트-EXP 매핑: 인게임 이벤트에서 얻는 경험치가 정확하게 계산되고, 레벨업이 정확하게 처리되며, 도달한 레벨마다 정의된 보상이 지급되도록 보장합니다.
 
 ### 2.2. Reward System Flexibility (RewardProcessor) / 보상 시스템 유연성 (RewardProcessor)
 
 * **Separated Reward Trigger Levels:** Rewards granted upon level-up are managed entirely separately by level (JSON key) and are configured as JSON arrays.
+  
     * 분리된 보상 발동 레벨: 레벨업 시 지급되는 보상은 레벨별(JSON 키)로 완전히 분리되어 관리되며 JSON 배열로 구성됩니다.
+      
 * **Item Customization (NBT Data):** In addition to `itemName` and `amount`, the `nbt` (NBT data) field can be defined, securing the scalability to add custom data, names, and Lore to items.
+  
     * 아이템 커스터마이징 (NBT 데이터): `itemName`과 `amount` 외에 `nbt` (NBT 데이터) 필드를 정의할 수 있어, 아이템에 커스텀 데이터, 이름, Lore 등을 추가할 수 있는 확장성을 확보합니다.
+      
 * **Reward Notification System (RewardNotify):** The `config.json` allows administrators to select and customize the display format (Chat, Actionbar, or Title message) for level-up reward notifications.
+  
     * 보상 알림 시스템 (RewardNotify): `config.json`을 통해 관리자는 레벨업 보상 알림의 표시 형식(채팅, 액션바, 또는 타이틀 메시지)을 선택하고 커스터마이징할 수 있습니다.
 
 ### 2.3. Server Integration and Operation Support (Integration & Operation) / 서버 통합 및 운영 지원 (Integration & Operation)
 
 * **PlaceholderAPI Support:** The PlaceholderAPI section in `config.json` provides seamless integration with the PlaceholderAPI plugin.
+  
     * PlaceholderAPI 지원: `config.json`의 PlaceholderAPI 섹션은 PlaceholderAPI 플러그인과 완벽한 통합을 제공합니다.
+      
 * **Automatic File Management (FileManager):** Upon first launch, all Skill and Reward JSON files defined in `config.json` are automatically copied from the JAR file to the server folder, providing a ready-to-use environment.
+  
     * 자동 파일 관리 (FileManager): 첫 실행 시 `config.json`에 정의된 모든 스킬 및 보상 JSON 파일이 JAR 파일에서 서버 폴더로 자동 복사되어 바로 사용할 수 있는 환경을 제공합니다.
+      
 * **Version Management (JsonVersionLoader):** The version key in `config.json` is used to execute plugin loading logic based on the version number, ensuring flexibility for future major updates.
+  
     * 버전 관리 (JsonVersionLoader): `config.json`의 버전 키는 버전 번호에 따라 플러그인 로딩 로직을 실행하는 데 사용되어, 향후 주요 업데이트에 대한 유연성을 보장합니다.
 
 ### 2.4. Administrator Commands (Administrator Commands) / 관리자 명령어 (Administrator Commands)
 
 All commands are accessed via `/DRPG levelSystem` or the alias `/drpg`, and administrator permission is required. Detailed usage is provided in `commands.md`.
+
 모든 명령어는 `/DRPG levelSystem` 또는 별칭인 `/drpg`를 통해 접근할 수 있으며, 관리자 권한이 필요합니다. 상세한 사용법은 `commands.md`에 제공됩니다.
 
 ---
 
 Made by drewdrew1_
- * 고급 환경 조건부 경험치 (BonusExpCalculator):
-   * 플레이어의 **환경 조건 (날씨, 시간대, 차원/Dimension)**에 따라 추가 경험치(BonusEXP)를 지급하는 로직이 완벽하게 분리되어 구현되었습니다. 이는 특정 활동을 장려하거나, 위험 지역에서의 활동에 더 큰 보상을 주는 등 세밀한 밸런싱 툴로 활용됩니다.
- * 모듈식 복합 보상 처리 (RewardProcessor):
-   * 레벨업 보상은 확률 기반 지급(enableChance), 다중 랜덤 아이템 그룹 선택(useRandom), 그리고 콘솔 명령어 실행이 하나의 보상 객체 내에서 유기적으로 결합됩니다.
-   * 안전하지 않은 인챈트(Unsafe Enchantment) 지원: enchant 배열을 통해 바닐라 최대 레벨을 초과하는 인챈트 레벨까지 부여할 수 있어, RPG 서버 특유의 고성능 아이템을 손쉽게 정의할 수 있습니다.
 
-1.3. 유지보수를 위한 통합 진단 시스템 및 개발자 모드
- * 글로벌 디버그 모드:
-   * config.json의 Debug.useDebug 스위치 하나로 모든 핵심 로직(EXP 계산, 레벨업 체크, 보상 지급)의 상세 실행 정보를 콘솔에 출력합니다.
- * 세부 로깅 옵션 (Logging 섹션):
-   * 파일 로깅: 콘솔 외에 별도 로그 파일(rpg-log.txt)에 기록하도록 설정할 수 있어, 서버 콘솔이 아닌 외부에서 심층 분석이 가능합니다.
-   * 선택적 로깅: logSkillActions, logRewardGiving, logWarnings, logErrors 등 로깅 범위를 세분화하여 필요한 정보만 필터링하여 추적할 수 있습니다.
- * 플러그인 무결성 검사 (Plugin_Integrity):
-   * validateSkillFiles, validateRewardFiles 등의 옵션을 통해 JSON 파일 구조의 유효성을 자동으로 검사하고, autoFixCommonErrors를 통해 흔한 JSON 포맷 오류를 자동으로 수정하려는 시도를 하여 관리자 부담을 줄입니다.
-
-2. 상세 기능 분석 (Detailed Feature Breakdown)
-
-2.1. 스킬 정의 및 EXP 시스템
- * 커스텀 레벨업 공식: 각 스킬 JSON 파일의 LevelDrainage 상수를 기반으로 (현재 레벨 \times LevelDrainage + 1) 공식에 따라 다음 레벨 필요 경험치가 결정됩니다.
  * 다중 이벤트 핸들링 (HandlerEvents):
    * BlockBreakEvent (블록 캘 시), EntityDeathEvent (엔티티 죽일 시), PlayerFishEvent (낚시 할 시)
  * 연쇄 레벨업 로직 (checkLevelUp):
@@ -106,60 +110,4 @@ Made by drewdrew1_
 
 ---------------------------------
 
-This plugin is a professional RPG Skill Leveling System designed to provide the highest level of Stability, Scalability, and Debugging Convenience to Minecraft servers. All core logic is completely customizable via JSON files, dramatically reducing the complexity of server operation.
-
-1. DrewRPG's Unique Core Features (Competitive Advantages)
-The DrewRPG Level System focuses on fundamentally resolving common issues faced by existing RPG plugins, such as data errors, balancing difficulty, and maintenance complexity, enabling server administrators to implement almost any desired scenario without coding.
-
-1.1. Guaranteed Data Integrity: Perfect Resolution of Desynchronization (Desync) Issues
- * Centralized Cache System (PlayerJsonManager):
-   * All player data is stored in a centralized memory cache. Data is loaded upon player join (loadPlayerJson) and immediately saved (savePlayerJson) upon player quit, minimizing data loss.
- * Forced Command-Cache Synchronization (Critical Stability):
-   * To prevent data inconsistency (Desync) after using admin commands (e.g., /DRPG setLevel, /DRPG addExp), all data modification logic must pass through the central cache, and saving to disk is immediately enforced after the modification. This completely eliminates the potential for data rollback upon server reboot.
- * Asynchronous I/O and Performance Optimization:
-   * The PlayerData settings in config.json allow data loading and saving to be processed asynchronously (Async), preventing I/O operations from affecting the server's main tick and mitigating lag.
-
-1.2. Unrivaled Configuration Flexibility and Complex EXP/Reward Structure
- * Advanced Environmental Conditional Experience (BonusExpCalculator):
-   * The logic for providing additional experience (BonusEXP) based on a player's environmental conditions (Weather, Time of Day, Dimension) is completely separated and implemented. This serves as a critical balancing tool to encourage activity during specific conditions or reward higher risk activities.
- * Modular Complex Reward Processing (RewardProcessor):
-   * Level-up rewards seamlessly combine chance-based grants (enableChance), selection from multiple random item groups (useRandom), and console command execution within a single reward object.
-   * Unsafe Enchantment Support: The enchant array allows defining enchantment levels beyond the standard vanilla maximum, enabling the easy creation of powerful, unique items characteristic of RPG servers.
-
-1.3. Integrated Diagnostics System and Developer Mode for Maintenance
- * Global Debug Mode:
-   * A single switch (Debug.useDebug: true) in config.json enables the detailed output of all core logic execution paths (EXP calculation, level-up check, reward grant) to the console.
- * Detailed Logging Options (Logging Section):
-   * File Logging: Data can be recorded to a separate log file (rpg-log.txt) in addition to the console, allowing for in-depth analysis outside the live server environment.
-   * Selective Logging: Options like logSkillActions, logRewardGiving, logWarnings, and logErrors allow administrators to filter and track only the necessary information.
- * Plugin Integrity Check (Plugin_Integrity):
-   * Options like validateSkillFiles and validateRewardFiles automatically check the validity of the JSON file structure. Furthermore, autoFixCommonErrors attempts to automatically correct common JSON formatting errors, reducing the administrator's burden.
-
-2. Detailed Feature Breakdown
-
-2.1. Skill Definition and EXP Acquisition System
- * Custom Leveling Formula: Based on the LevelDrainage constant in each skill's JSON file, the next level's required experience is determined by the custom difficulty formula: (CurrentLevel \times LevelDrainage + 1).
- * Multiple Event Handling (HandlerEvents):
-   * BlockBreakEvent (Mining, WoodCutting, Farming), EntityDeathEvent (Hunting), PlayerFishEvent (Fishing)
- * Chained Level-up Logic (checkLevelUp):
-   * If the acquired EXP is sufficient to pass multiple levels at once, a while loop ensures all level-ups are processed accurately, and defined rewards are dispensed for every level reached.
-
-2.2. Reward System Flexibility (RewardProcessor)
- * Separated Reward Trigger Levels: Rewards granted upon level-up are managed entirely separately by level (JSON key) and are configured as JSON arrays.
- * Item Customization (NBT Data):
-   * In addition to itemName and amount, the nbt (NBT data) field can be defined, securing the scalability to add custom data, names, and Lore to items.
- * Reward Notification System (RewardNotify):
-   * The config.json allows administrators to select and customize the display format (Chat, Actionbar, or Title message) for level-up reward notifications.
-
-2.3. Server Integration and Operation Support (Integration & Operation)
- * PlaceholderAPI Support:
-   * The PlaceholderAPI section in config.json provides seamless integration with the PlaceholderAPI plugin.
- * Automatic File Management (FileManager):
-   * Upon first launch, all Skill and Reward JSON files defined in config.json are automatically copied from the JAR file to the server folder, providing a ready-to-use environment.
- * Version Management (JsonVersionLoader):
-   * The version key in config.json is used to execute plugin loading logic based on the version number, ensuring flexibility for future major updates.
-
-2.4. Administrator Commands (Administrator Commands)
-All commands are accessed via /DRPG levelSystem or the alias /drpg, and administrator permission is required.
-
-Made by drewdrew1_
+Made By drewdrew1_
