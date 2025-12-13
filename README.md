@@ -1,3 +1,5 @@
+# This Plugin Isn't Realized! This is Alpha Test Version!
+
 # DrewRPG Level System
 
 **Minecraft Server's Ultimate RPG Leveling System**
