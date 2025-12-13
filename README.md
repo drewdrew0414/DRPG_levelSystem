@@ -1,4 +1,4 @@
-# This Plugin Isn't Realized! This is Alpha Test Version!
+# This Plugin Isn't Launched! This is Alpha Test Version!
 
 # DrewRPG Level System
 
