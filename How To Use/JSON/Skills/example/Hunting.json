@@ -1,0 +1,116 @@
+{
+  "Name": "Hunting",
+  "DisplayName": "Hunting",
+  "LevelDrainage": 50,
+  "maxLevel": 50,
+  "Events": [
+    {
+      "Name": ["CREEPER"],
+      "EXP": {"min": 15, "max": 25},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["SKELETON", "STRAY"],
+      "EXP": {"min": 10, "max": 20},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["ZOMBIE", "HUSK", "DROWNED", "ZOMBIFIED_PIGLIN", "ZOMBIE_VILLAGER"],
+      "EXP": {"min": 8, "max": 16},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["SPIDER", "CAVE_SPIDER"],
+      "EXP": {"min": 10, "max": 18},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["ENDERMAN"],
+      "EXP": {"min": 20, "max": 35},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["WITCH", "PILLAGER", "VINDICATOR", "EVOKER", "ILLUSIONER", "RAVAGER"],
+      "EXP": {"min": 25, "max": 45},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["BLAZE", "MAGMA_CUBE", "GHAST", "WITHER_SKELETON", "STRIDER", "HOGLIN", "PIGLIN", "PIGLIN_BRUTE"],
+      "EXP": {"min": 20, "max": 40},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["SHULKER", "ENDERMITE", "SILVERFISH"],
+      "EXP": {"min": 15, "max": 25},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["PHANTOM"],
+      "EXP": {"min": 18, "max": 30},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["BAT", "CHICKEN", "COW", "MUSHROOM_COW", "PIG", "SHEEP", "WOLF", "FOX", "RABBIT", "TURTLE", "SQUID", "GLOW_SQUID", "SALMON", "COD", "TROPICAL_FISH", "PUFFERFISH", "DOLPHIN", "CAT", "PARROT", "LLAMA", "TRADER_LLAMA", "HORSE", "DONKEY", "MULE", "GOAT", "AXOLOTL", "FROG", "ALLAY", "WANDERING_TRADER"],
+      "EXP": {"min": 3, "max": 8},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["WITHER", "ENDER_DRAGON"],
+      "EXP": {"min": 100, "max": 200},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["TADPOLE", "FROG", "ALLAY", "GOAT"],
+      "EXP": {"min": 2, "max": 5},
+      "PlayerExp": 0,
+      "Event": "EntityDeathEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    }
+  ]
+}
