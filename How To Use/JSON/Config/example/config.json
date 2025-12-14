@@ -1,0 +1,78 @@
+{
+  "configVersion": "1.0.0",
+  "usePlugin": true,
+
+  "Debug": {
+    "enable": true,
+    "forceEnable": false,
+    "retryOnError": true,
+    "retryCount": 3
+  },
+
+  "Logging": {
+    "logToConsole": true,
+    "logToFile": true,
+    "logFileName": "log.txt",
+    "includeDebug": true,
+    "includeStackTrace": true,
+    "includeJsonError": true,
+    "includePerformance": false
+  },
+
+  "Performance": {
+    "useAsync": true,
+    "asyncThreads": 2,
+    "centralAsyncExecutor": true,
+    "useCache": true,
+    "cacheExpireSeconds": 120,
+    "preventDesync": true
+  },
+
+  "PlayerData": {
+    "storageType": "JSON",
+    "autoSave": true,
+    "saveIntervalSeconds": 300,
+    "autoBackup": true,
+    "backupIntervalMinutes": 30,
+    "backupMaxFiles": 10
+  },
+
+  "Permissions": {
+    "opOnly": true,
+    "useLuckPerms": true,
+    "ignoreNoPermissionMessage": false
+  },
+
+  "Skill": {
+    "validateSkillFiles": true,
+    "stopOnCriticalError": false,
+    "autoFixSimpleError": true
+  },
+
+  "Reward": {
+    "validateRewardFiles": true,
+    "preventDuplicateReward": true,
+    "cooldownSeconds": 10,
+    "Notify": {
+      "chat": true,
+      "actionBar": true,
+      "title": false,
+      "subtitle": false
+    }
+  },
+
+  "Protection": {
+    "preventOverflow": true,
+    "preventAsyncRace": true,
+    "safeModeOnException": true
+  },
+
+  "VersionControl": {
+    "checkPluginVersion": true,
+    "executeOnlySupportedFeatures": true
+  },
+
+  "PlaceholderAPI": {
+    "enable": true
+  }
+}
