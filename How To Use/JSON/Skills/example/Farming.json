@@ -1,0 +1,125 @@
+{
+  "Name": "Farming",
+  "DisplayName": "Farming",
+  "LevelDrainage": 50,
+  "maxLevel": 50,
+  "Events": [
+    {
+      "Name": "WHEAT",
+      "EXP": {"min": 6, "max": 9},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["POTATO", "CARROT"],
+      "EXP": {"min": 10, "max": 13},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "BEETROOT",
+      "EXP": {"min": 13, "max": 16},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["PUMPKIN", "MELON"],
+      "EXP": {"min": 17, "max": 21},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "SUGAR_CANE",
+      "EXP": {"min": 5, "max": 12},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "COCOA_BEANS",
+      "EXP": {"min": 20, "max": 25},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "NETHER_WART",
+      "EXP": {"min": 23, "max": 27},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["RED_MUSHROOM_BLOCK", "BROWN_MUSHROOM_BLOCK"],
+      "EXP": {"min": 19, "max": 23},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "CACTUS",
+      "EXP": {"min": 15, "max": 21},
+      "PlayerExp": 0,
+      "Event": "BlockBreakEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "WHEAT_SEEDS",
+      "EXP": {"min": 2, "max": 4},
+      "PlayerExp": 0,
+      "Event": "BlockPlaceEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["POTATO", "CARROT"],
+      "EXP": {"min": 4, "max": 7},
+      "PlayerExp": 0,
+      "Event": "BlockPlaceEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": "BEETROOT",
+      "EXP": {"min": 6, "max": 8},
+      "PlayerExp": 0,
+      "Event": "BlockPlaceEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    },
+    {
+      "Name": ["PUMPKIN_SEEDS", "MELON_SEEDS"],
+      "EXP": {"min": 8, "max": 11},
+      "PlayerExp": 0,
+      "Event": "BlockPlaceEvent",
+      "Chance": 100,
+      "LevelRequired": 0,
+      "Tools": []
+    }
+  ]
+}
