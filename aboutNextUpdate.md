@@ -16,3 +16,5 @@
    -> **Simple Exception Handling Enhancement:** Stability will be reinforced by ensuring the **server does not crash but only provides a warning to administrators** in unforeseen circumstances (e.g., malformed JSON files).
    
    -> **단순 예외 처리 보강:** 잘못된 JSON 포맷 등 예기치 않은 상황에서 **서버가 다운되지 않고 관리자에게 경고만 제공**하도록 안정성을 강화합니다.
+   
+   -> **단순 예외 처리 보강:** 잘못된 JSON 포맷 등 예기치 않은 상황에서 **서버가 다운되지 않고 관리자에게 경고만 제공**하도록 안정성을 강화합니다.
