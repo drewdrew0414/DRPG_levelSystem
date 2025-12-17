@@ -1,0 +1,281 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Mining",
+  "displayName": "Mining",
+  "5": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "COAL",
+          "amount": 15,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        },
+        {
+          "itemName": "IRON_PICKAXE",
+          "amount": 1,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "useRandom": true,
+      "randomValue": 4,
+      "randomItems": [
+        {
+          "0": [
+            {
+              "itemName": "IRON_ORE",
+              "amount": 16,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ],
+          "1": [
+            {
+              "itemName": "COPPER_ORE",
+              "amount": 32,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ],
+          "2": [
+            {
+              "itemName": "COAL",
+              "amount": 48,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ],
+          "3": [
+            {
+              "itemName": "IRON_INGOT",
+              "amount": 6,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ]
+        }
+      ],
+      "Permissions": null,
+      "items": []
+    }
+  ],
+  "15": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "TORCH",
+          "amount": 32,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        },
+        {
+          "itemName": "IRON_PICKAXE",
+          "amount": 1,
+          "nbt": null,
+          "enchant": [
+            ["UNBREAKING", 2],
+            ["EFFICIENCY", 1]
+          ],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "20": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "IRON_INGOT",
+          "amount": 20,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        },
+        {
+          "itemName": "OBSIDIAN",
+          "amount": 14,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "useRandom": true,
+      "randomValue": 3,
+      "randomItems": [
+        {
+          "0": [
+            {
+              "itemName": "GOLD_ORE",
+              "amount": 16,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ],
+          "1": [
+            {
+              "itemName": "GOLD_INGOT",
+              "amount": 16,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ],
+          "2": [
+            {
+              "itemName": "IRON_INGOT",
+              "amount": 25,
+              "nbt": null,
+              "enchant": [],
+              "exp": 0
+            }
+          ]
+        }
+      ],
+      "Permissions": null,
+      "items": []
+    }
+  ],
+  "30": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "EXPERIENCE_BOTTLE",
+          "amount": 25,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        },
+        {
+          "itemName": "DIAMOND",
+          "amount": 8,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "35": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "DIAMOND",
+          "amount": 16,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        },
+        {
+          "itemName": "DIAMOND_PICKAXE",
+          "amount": 1,
+          "nbt": null,
+          "enchant": [],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "DIAMOND_PICKAXE",
+          "amount": 1,
+          "nbt": null,
+          "enchant": [
+            ["UNBREAKING", 1],
+            ["EFFICIENCY", 3]
+          ],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "45": [
+    {
+      "useRandom": true,
+      "randomValue": 3,
+      "randomItems": [
+        {
+          "0": [
+            {
+              "itemName": "ENCHANTED_BOOK",
+              "amount": 1,
+              "nbt": null,
+              "enchant": [["UNBREAKING", 3]],
+              "exp": 0
+            }
+          ],
+          "1": [
+            {
+              "itemName": "ENCHANTED_BOOK",
+              "amount": 1,
+              "nbt": null,
+              "enchant": [["EFFICIENCY", 4]],
+              "exp": 0
+            }
+          ],
+          "2": [
+            {
+              "itemName": "ENCHANTED_BOOK",
+              "amount": 1,
+              "nbt": null,
+              "enchant": [["FORTUNE", 2]],
+              "exp": 0
+            }
+          ]
+        }
+      ],
+      "Permissions": null,
+      "items": []
+    }
+  ],
+  "50": [
+    {
+      "useRandom": false,
+      "Permissions": null,
+      "items": [
+        {
+          "itemName": "DIAMOND_PICKAXE",
+          "amount": 1,
+          "nbt": null,
+          "enchant": [
+            ["UNBREAKING", 3],
+            ["EFFICIENCY", 4],
+            ["FORTUNE", 2]
+          ],
+          "exp": 0
+        }
+      ]
+    }
+  ]
+}
