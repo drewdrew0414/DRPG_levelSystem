@@ -1,27 +1,51 @@
-## This Plugin Isn't launched!
-
-# 세상에서 가장 유연하고 안전한 마인크래프트 RPG 플러그인 "DRPG_LevelSystem".
+# This Plugin Isn't Launched!
 
 ---
 
-**이 플러그인은 Minecraft 서버에 최고 수준의 안정성, 확장성, 디버깅 편의성을 제공하는 PRG 스킬 레벨링 시스템이다.**
+## 세상에서 가장 유연하고 안전한 마인크래프트 RPG 플러그인 "DRPG_LevelSystem"
 
-* 모든 핵심 로직은 .json파일로 완벽히 커스텀마이징 가능하며, 서버 운영의 복잡성을 획기적으로 낮춘다.
+## The World's Most Flexible and Secure Minecraft RPG Plugin: "DRPG_LevelSystem"
 
 ---
 
-## 1. 핵심 기능
+**이 플러그인은 Minecraft 서버에 최고 수준의 안정성, 확장성, 디버깅 편의성을 제공하는 RPG 스킬 레벨링 시스템이다.**
+
+**This plugin is an RPG Skill Leveling System that provides the highest level of stability, scalability, and debugging convenience for Minecraft servers.**
+
+*  모든 핵심 로직은 `.json` 파일로 완벽히 커스텀마이징 가능하며, 서버 운영의 복잡성을 획기적으로 낮춘다.
+* All core logic is fully customizable via `.json` files, significantly reducing the complexity of server operation.
+
+---
+
+## 1. 핵심 기능 (Core Features)
 
 **이 플러그인은 기존 RPG 레벨 시스템 플러그인들이 흔히 겪는 데이터 오류, 밸런싱 난이도, 유지보수 복잡성 등의 문제점을 근본적으로 해결하는데 중점을 두었다.**
 
-### 1.1. 데이터 부결성 보장: 데이터 불일치 ( Desync ) 문제 해결
+**This plugin fundamentally focuses on solving common problems faced by existing RPG level system plugins, such as data corruption, balancing difficulty, and maintenance complexity.**
 
-* 중앙 집중식 캐시 시스템을 이용해 모든 데이터는 메모리 캐시에 보관되며, 불러오기 및 저장 기능으로 데이터 유실을 최소화한다.
+###1.1. 데이터 무결성 보장: 데이터 불일치 (`Desync`) 문제 해결
+### 1.1. Data Integrity Assurance: Solving Data Inconsistency (`Desync`) Issues
 
-* 커맨드 - 캐시 동기화 강제: config.json의 설정을 통하여 명령어 사용 후 데이터 불일치 ( Desync )이 발생하지 않도록 모든 데이터는 중앙 캐시를 통해서만 이루어지며, 수정 직후 즉시 저장하는 로직으로, 서버 재부팅 시 발생 가능한 데이터 롤백 가능성은 완벽히 차단하였다.
+*  중앙 집중식 캐시 시스템을 이용해 모든 데이터는 메모리 캐시에 보관되며, 불러오기 및 저장 기능으로 데이터 유실을 최소화한다.
+*  Utilizing a centralized cache system, all data is stored in the memory cache, minimizing data loss through dedicated load and save functionalities.
 
-* 비동기 I/O 및 성능 최적화:
-config.json의 PlayerData 설정을 통해 데이터 로드와 저장을 **비동기 (Async )**로 처리할 수 있어, I/O 작업량이 많을 때 서버 랙이 발생하는 것을 방지한다.
+*  커맨드 - 캐시 동기화 강제: `config.json`의 설정을 통하여 명령어 사용 후 데이터 불일치 (`Desync`)가 발생하지 않도록 모든 데이터는 중앙 캐시를 통해서만 이루어지며, 수정 직후 즉시 저장하는 로직으로, 서버 재부팅 시 발생 가능한 데이터 롤백 가능성은 완벽히 차단하였다.
+*  Command-Cache Synchronization Enforcement: By setting configurations in `config.json`, all data operations are strictly routed through the central cache to prevent data inconsistency (`Desync`) after command usage. The logic ensures immediate saving right after modification, completely blocking the possibility of data rollback during server reboot.
+
+*  비동기 I/O 및 성능 최적화:
+`config.json`의 `PlayerData` 설정을 통해 데이터 로드와 저장을 **비동기 (Async )**로 처리할 수 있어, I/O 작업량이 많을 때 서버 랙이 발생하는 것을 방지한다.
+*  Asynchronous I/O and Performance Optimization:
+The `PlayerData` settings in `config.json` allow data loading and saving to be processed **Asynchronously**, preventing server lag when the I/O workload is high.
+1.1. 데이터 무결성 보장: 데이터 불일치 (Desync) 문제 해결
+1.1. Data Integrity Assurance: Solving Data Inconsistency (Desync) Issues
+ * 중앙 집중식 캐시 시스템을 이용해 모든 데이터는 메모리 캐시에 보관되며, 불러오기 및 저장 기능으로 데이터 유실을 최소화한다.
+ * Utilizing a centralized cache system, all data is stored in the memory cache, minimizing data loss through dedicated load and save functionalities.
+ * 커맨드 - 캐시 동기화 강제: config.json의 설정을 통하여 명령어 사용 후 데이터 불일치 (Desync)가 발생하지 않도록 모든 데이터는 중앙 캐시를 통해서만 이루어지며, 수정 직후 즉시 저장하는 로직으로, 서버 재부팅 시 발생 가능한 데이터 롤백 가능성은 완벽히 차단하였다.
+ * Command-Cache Synchronization Enforcement: By setting configurations in config.json, all data operations are strictly routed through the central cache to prevent data inconsistency (Desync) after command usage. The logic ensures immediate saving right after modification, completely blocking the possibility of data rollback during server reboot.
+ * 비동기 I/O 및 성능 최적화:
+   config.json의 PlayerData 설정을 통해 데이터 로드와 저장을 **비동기 (Async )**로 처리할 수 있어, I/O 작업량이 많을 때 서버 랙이 발생하는 것을 방지한다.
+ * Asynchronous I/O and Performance Optimization:
+   The PlayerData settings in config.json allow data loading and saving to be processed Asynchronously, preventing server lag when the I/O workload is high.
 
 ---
 
