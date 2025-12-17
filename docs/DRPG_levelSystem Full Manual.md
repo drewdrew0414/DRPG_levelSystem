@@ -25,6 +25,12 @@
 
 * [3. 파일 구조](#3-파일-구조)
 
+* [4. config.json 사용법](#4-`config.json`-사용법)
+
+* [5. skills/\*.json 및 rewards/\*.json 사용법](#5-skills/\*.json,-rewards/\*.json-사용법)
+
+* [6. 명령어 가이드](#6-명령어-가이드)
+
 ---
 
 ## 1. DRPG에 대하여
@@ -73,19 +79,19 @@
 
     1. /config.json:
        * 모든 설정은 이 파일에서 진행된다.
-       자세한 설명을 보려면 [여기](../How To Use/JSON/Config/Config Manual (KOR).md)를 클릭 하십시오.
+       자세한 설명을 보려면 [여기](../How%20To%20Use/JSON/Config/Config%20Manual%20(KOR).md)를 클릭 하십시오.
 
     2. /skills/*.json
        * 모든 스킬은 이 위치에 있어야한다.
-       자세한 설명을 보려면 [여기](../How To Use/JSON/Skilla/Skills Manual (KOR).md)를 클릭 하십시오.
+       자세한 설명을 보려면 [여기](../How%20To%20Use/JSON/Skills/Skills%20Manual%20(KOR).md)를 클릭 하십시오.
     3. /rewards/*.json
        * 모든 보상은 이 위치에 있어야한다.
-       자세한 설명을 보려면 [여기](../How To Use/JSON/Rewards/Rewards Manual (KOR).md)를 클릭 하십시오.
+       자세한 설명을 보려면 [여기](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20(KOR).md)를 클릭 하십시오.
 
 ---
 
 ## 4. `config.json` 사용법
-* 자세한 사용법은 [여기](../How To Use/JSON/Config/Config Manual (KOR).md)에 있습니다.
+* 자세한 사용법은 [여기](../How%20To%20Use/JSON/Config/Config%20Manual%20(KOR).md)에 있습니다.
 
 * ### 1. 기본 설정 (Base Configuration)
 
@@ -168,52 +174,19 @@
 
 ---
 
+## 5. skills/\*.json, rewards/\*.json 사용법
 
+* 이 json들은 아래를 참조하십시오.
+* [skills/\*.json 참고하러가기](../How%20To%20Use/JSON/Skills/Skills%20Manual%20(KOR).md)
+  * [예시 참고하기](../How%20To%20Use/JSON/Skills/example/)
+ 
+ * [rewards/\*.json 참고하러가기](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20(KOR).md)
+  * [예시 참고하기](../How%20To%20Use/JSON/Rewards/example/)
 
-SECTION 4 — PlayerData Format FULL SPEC / 플레이어데이터 전체 스펙
+---
 
-4.1 Mandatory Fields
+## 6. 명령어 가이드
 
-4.2 Optional Fields
+** [명령어 확인하기](../How%20To%20Use/Commands/Command%20Manual%20(KOR).md)
 
-4.3 Validation Rules
-
-4.4 Example Data Structures
-
-4.5 Common Mistakes
-
-SECTION 5 — Skills Format DEEP SPEC / 스킬 포맷 전체 스펙
-
-5.1 Skill Root Fields
-
-5.2 Events Block Specification
-
-5.3 Random EXP Rules
-
-5.4 Permission-Based Skill Logic
-
-5.5 Advanced Design Examples
-
-SECTION 6 — Rewards Format DEEP SPEC / 보상 포맷 전체 스펙
-
-6.1 Reward Root Fields
-
-6.2 Item Formats
-
-6.3 NBT Handling Rules
-
-6.4 Command Rewards
-
-6.5 Probability-Based Reward Sets
-
-SECTION 7 — Commands FULL GUIDE (EN/KR Parallel)
-
-7.1 System Commands
-
-7.2 Admin Commands
-
-7.3 Editor Commands
-
-7.4 Debug Commands
-
-7.5 Output Examples
+---
