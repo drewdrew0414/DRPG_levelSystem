@@ -1,0 +1,242 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Farming",
+  "DisplayName": "Farming",
+  "LevelDrainage": 50,
+  "MaxLevel": 50,
+
+  "Events": {
+    "BlockBreak": [
+      {
+        "TypeItemName": ["WHEAT"],
+        "EXP": { "min": 6, "max": 9 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 2, "addMax": 7 },
+            "clear": { "addMin": 1, "addMax": 3 }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["PLAINS", "FOREST"]
+        }
+      },
+
+      {
+        "TypeItemName": ["POTATO", "CARROT"],
+        "EXP": { "min": 10, "max": 13 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 2, "addMax": 7 },
+            "clear": { "addMin": 1, "addMax": 3 }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["PLAINS", "FOREST"]
+        }
+      },
+
+      {
+        "TypeItemName": ["BEETROOT"],
+        "EXP": { "min": 13, "max": 14 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 2, "addMax": 7 },
+            "clear": { "addMin": 1, "addMax": 3 }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["PLAINS", "FOREST"]
+        }
+      },
+
+      {
+        "TypeItemName": ["PUMPKIN", "MELON"],
+        "EXP": { "min": 17, "max": 21 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 2, "addMax": 7 },
+            "clear": { "addMin": 1, "addMax": 3 }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["PLAINS", "FOREST"]
+        }
+      },
+
+      {
+        "TypeItemName": ["SUGAR_CANE"],
+        "EXP": { "min": 3, "max": 7 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {},
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["PLAINS", "FOREST"]
+        }
+      },
+
+      {
+        "TypeItemName": ["COCOA_BEANS"],
+        "EXP": { "min": 18, "max": 25 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 2, "addMax": 7 },
+            "clear": { "addMin": 1, "addMax": 3 }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["JUNGLE"]
+        }
+      },
+
+      {
+        "TypeItemName": ["NETHER_WART"],
+        "EXP": { "min": 20, "max": 28 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "Weather": {},
+          "multiplier": 1.3,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY"]
+        }
+      }
+    ],
+
+    "BlockPlace": [
+      {
+        "TypeItemName": [
+          "WHEAT_SEEDS",
+          "POTATO",
+          "CARROT",
+          "BEETROOT_SEEDS",
+          "PUMPKIN_SEEDS",
+          "MELON_SEEDS"
+        ],
+        "EXP": { "min": 1, "max": 3 },
+        "PlayerGetExp": 0,
+        "Chance": 25,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+        "Cooldown": 2,
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventMassPlace": {
+            "MaxPerSecond": 5
+          },
+          "RequirePlayerPlaced": true,
+          "PlayerPermissionOverride": "farming.bypass",
+          "RequireBiome": ["PLAINS", "FOREST"]
+        }
+      }
+    ]
+  }
+}
