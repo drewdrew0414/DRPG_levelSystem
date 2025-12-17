@@ -20,6 +20,8 @@
   * [1-1. DRPG levelSystem이란?](#1-1-drpg-levelsystem이란)
   * [1-2. 시스템 설계 철학](#1-2-시스템-설계-철학)
   * [1-3. 데이터 기반 아키텍처](#1-3-데이터-기반-아키텍처)
+    
+* [2. 설치 가이드](#2-설치-가이드)
 
 ---
 
@@ -46,5 +48,19 @@
 
 ---
 
-## 2. 설치 가이드
-여기에 설치 방법 작성
+## 2. 설치 및 사용 가이드
+
+* **설치법**
+  1. [PaperMC](https://papermc.io/downloads) 서버를 설치하고 실행합니다.
+  2. DRPG LevelSystem 플러그인 `.jar` 파일을 다운로드합니다.
+     * 서버 버전과 플러그인이 지원하는 버전 맞출 것
+  3. 서버 디렉토리 내 `plugins` 폴더에 `.jar` 파일을 복사합니다.
+  4. 서버를 재시작합니다.
+  5. 서버 콘솔에 "DRPG LevelSystem enabled" 메시지가 출력되면 정상적으로 설치 완료입니다.
+     * 오류가 날 시 (drew0414drew@gmail.com)에 문의할 것.
+
+* **사용법**
+ 1. 서버 시작 시 `plugins/DRPG/levelSystem/ 폴더가 생성됩니다.
+ 2. `plugins/DRPG/levelSystem/skills/에 파일을 넣습니다. > [예시](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20(KOR).md)
+ 3. `plugins/DRPG/levelSystem/rewards/에 파일을 넣습니다.
+
