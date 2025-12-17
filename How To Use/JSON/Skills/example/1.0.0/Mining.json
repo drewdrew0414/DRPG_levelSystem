@@ -1,0 +1,282 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Mining",
+  "DisplayName": "Mining",
+  "LevelDrainage": 50,
+  "MaxLevel": 50,
+
+  "Events": {
+    "BlockBreak": [
+      {
+        "TypeItemName": ["STONE", "DEEPSLATE"],
+        "EXP": { "min": 6, "max": 9 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["COAL_ORE", "DEEPSLATE_COAL_ORE"],
+        "EXP": { "min": 8, "max": 12 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["IRON_ORE", "DEEPSLATE_IRON_ORE"],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 1,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["COPPER_ORE", "DEEPSLATE_COPPER_ORE"],
+        "EXP": { "min": 9, "max": 14 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 1,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["GOLD_ORE", "DEEPSLATE_GOLD_ORE"],
+        "EXP": { "min": 12, "max": 18 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 2,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["REDSTONE_ORE", "DEEPSLATE_REDSTONE_ORE"],
+        "EXP": { "min": 13, "max": 20 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 3,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["LAPIS_ORE", "DEEPSLATE_LAPIS_ORE"],
+        "EXP": { "min": 14, "max": 22 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 3,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["EMERALD_ORE", "DEEPSLATE_EMERALD_ORE"],
+        "EXP": { "min": 18, "max": 26 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 4,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.1,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["DIAMOND_ORE", "DEEPSLATE_DIAMOND_ORE"],
+        "EXP": { "min": 20, "max": 30 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 5,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.2,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 10
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["NETHER_QUARTZ_ORE"],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.1,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY"],
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["NETHER_GOLD_ORE"],
+        "EXP": { "min": 12, "max": 18 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 2,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.1,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireBiome": ["NETHER_WASTES"],
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      },
+
+      {
+        "TypeItemName": ["ANCIENT_DEBRIS"],
+        "EXP": { "min": 30, "max": 45 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 10,
+        "RequiredTools": [],
+
+        "ExtraEXP": {
+          "multiplier": 1.5,
+          "bonusEXP": 0
+        },
+
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY", "BASALT_DELTAS"],
+          "PreventXPGrinding": {
+            "Radius": 8,
+            "CooldownSeconds": 30
+          },
+          "PlayerPermissionOverride": "mining.bypass"
+        }
+      }
+    ]
+  }
+}
