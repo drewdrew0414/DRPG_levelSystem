@@ -187,6 +187,6 @@
 
 ## 6. 명령어 가이드
 
-** [명령어 확인하기](../How%20To%20Use/Commands/Command%20Manual%20(KOR).md)
+** [명령어 확인하기](../How%20To%20Use/Commands/command%20Manual%20(KOR).md)
 
 ---
