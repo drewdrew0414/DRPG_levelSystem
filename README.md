@@ -23,7 +23,7 @@
 
 **This plugin fundamentally focuses on solving common problems faced by existing RPG level system plugins, such as data corruption, balancing difficulty, and maintenance complexity.**
 
-###1.1. 데이터 무결성 보장: 데이터 불일치 (`Desync`) 문제 해결
+### 1.1. 데이터 무결성 보장: 데이터 불일치 (`Desync`) 문제 해결
 ### 1.1. Data Integrity Assurance: Solving Data Inconsistency (`Desync`) Issues
 
 *  중앙 집중식 캐시 시스템을 이용해 모든 데이터는 메모리 캐시에 보관되며, 불러오기 및 저장 기능으로 데이터 유실을 최소화한다.
