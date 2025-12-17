@@ -23,6 +23,8 @@
     
 * [2. 설치 가이드](#2-설치-가이드)
 
+* [3. 
+
 ---
 
 ## 1. DRPG에 대하여
@@ -62,5 +64,7 @@
 * **사용법**
  1. 서버 시작 시 `plugins/DRPG/levelSystem/ 폴더가 생성됩니다.
  2. `plugins/DRPG/levelSystem/skills/에 파일을 넣습니다. > [예시](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20(KOR).md)
- 3. `plugins/DRPG/levelSystem/rewards/에 파일을 넣습니다.
+ 3. `plugins/DRPG/levelSystem/rewards/에 파일을 넣습니다. > [예시](../How%20To%20Use/JSON/Skills/Skills%20Manual%20(KOR).md)
 
+## 3. 파일 구조
+ 1. 
