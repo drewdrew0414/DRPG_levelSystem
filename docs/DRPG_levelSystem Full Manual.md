@@ -240,7 +240,7 @@ Refer to the manuals below:
 
 * [4. config.json 사용법](#4-configjson-사용법)
 
-* [5. skills/\*.json 및 rewards/\*.json 사용법](#5.-skills/*json--rewards/*json-사용법)
+* [5. skills/\*.json 및 rewards/\*.json 사용법](#5-skillsjson--rewardsjson-사용법)
 
 * [6. 명령어 가이드](#6-명령어-가이드)
 
