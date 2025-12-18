@@ -13,7 +13,78 @@
 [2. Events 구조](#4-events-구조)
 * [2-1. BlockBreak 이벤트](#2-1-BlockBreak-이벤트)
   * [2-1-1. 구조](2-1-1-구조)
-  * [2-1-2. 
-* [8. 동작 흐름 요약](#8-동작-흐름-요약)
-* [9. 주의사항](#9-주의사항)
-* [10. 예시 JSON (Farming)](#10-예시-json-farming)
+  * [2-1-2. 고급기능](2-1-2-고급기능)
+  * 
+* [3. 동작 흐름 요약](#3-동작-흐름-요약)
+* [4. 주의사항](#4-주의사항)
+* [5. 예시 JSON (Farming)](#5-예시-JSON)
+
+---
+
+## 1. 최상위 구조
+```
+{
+  "RewardJsonVersion": "<version>",
+  "Name": "SkillName",
+  "DisplayName": "Display Name",
+  "LevelDrainage": <inteager>,
+  "MaxLevel": <integer>,
+  "Events": {
+
+  }
+}
+```
+
+필드                  | 타입     | 설명                 |
+| ------------------- | ------ | ------------------ |
+| `RewardJsonVersion` | String | JSON 포맷 버전         |
+| `Name`              | String | 스킬 내부 ID           |
+| `DisplayName`       | String | 화면에 표시될 이름         |
+| `LevelDrainage`     | int    | 레벨업에 필요한 경험치 증가 계수 (공식 : (level + 1) * LevelDrainage) |
+| `MaxLevel`          | int    | 스킬 최대 레벨           |
+| `Events`            | Object | 이벤트 기반 경험치 규칙      |
+
+---
+
+## 2. Events 구조
+   2-1. BlockBreak 이벤트
+   **플레이어가 블록을 부쉈을 때 실행됨**
+
+   2-1-1. 구조
+   
+   ```
+// "Events { } 내부
+"BlockBreak": [
+      {
+        "TypeItemName": ["ItemName"],
+        "EXP": { "min": <int>, "max": <int> },
+        "PlayerGetExp": <int>,
+        "Chance": <int>,
+        "RequiredLevel": <int>,
+        "RequiredTools": [<String>],
+
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": <int>, "addMax": <int> },
+            "clear": { "addMin": <int>, "addMax": <int> }
+          },
+          "multiplier": <double>,
+          "bonusEXP": <int>
+        },
+        // if you set "UseAdvancedSettings" false, you don't need to write "AdvancedSettings"
+        "UseAdvancedSettings": <boolean>,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": <boolean>,
+          "PreventXPGrinding": {
+            "Radius": <int>,
+            "CooldownSeconds": <int>
+          },
+          "PlayerPermissionOverride": "Use LuckPerm at Here",
+          "RequireBiome": [<biome>]
+        }
+      }
+
+// ...
+```
+
+  ### 구조 설명ㅇㅇ
