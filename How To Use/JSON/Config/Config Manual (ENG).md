@@ -1,7 +1,7 @@
 ===============
 Made By drewdrew0414 (or drewdrew1_)
 ===============
-Looking for this? -> [../../../How%20To%20Use/JSON/Config/example]
+Looking for this? -> [example config.json](../../../How%20To%20Use/JSON/Config/example)
 1. configVersion & usePlugin (ENG)
 {
   "configVersion": "1.0.0",
