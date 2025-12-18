@@ -9,7 +9,220 @@
 ---
 
 ## ENGLISH VERSION MANUAL
-여기에 영어 설명을 작성하면 됩니다.
+
+## (Made By drewdrew0414(or drewdrew1_))
+
+# SELECT LANGUAGE
+
+* [English](#english-version-manual)
+* [한국어](#한국어-버전-설명서)
+
+---
+
+## ENGLISH VERSION MANUAL
+
+## 0. Table of Contents
+
+* [1. About DRPG](#1-about-drpg)
+
+  * [1-1. What is DRPG LevelSystem?](#1-1-what-is-drpg-levelsystem)
+  * [1-2. System Design Philosophy](#1-2-system-design-philosophy)
+  * [1-3. Data-Driven Architecture](#1-3-data-driven-architecture)
+
+* [2. Installation Guide](#2-installation-guide)
+
+* [3. File Structure](#3-file-structure)
+
+* [4. How to Use `config.json`](#4-how-to-use-configjson)
+
+* [5. How to Use `skills/*.json` & `rewards/*.json`](#5-how-to-use-skillsjson--rewardsjson)
+
+* [6. Command Guide](#6-command-guide)
+
+---
+
+## 1. About DRPG
+
+### 1-1. What is DRPG LevelSystem?
+
+* DRPG LevelSystem is a **fully modular, JSON-based RPG level system** developed for Minecraft (Paper/Spigot) servers.
+* It is designed so that **server operators, developers, and content creators can freely customize skills, experience rules, level-up mechanics, and reward structures without modifying Java code**.
+* All system components are defined using text-based JSON files, which are loaded and merged into a unified runtime model when the server starts.
+* This approach enables **high extensibility, easy maintenance, and rapid configuration changes**.
+* Adding new skills or importing content packs from other servers is simple and efficient.
+
+### 1-2. System Design Philosophy
+
+The core design philosophy of DRPG LevelSystem is as follows:
+
+* **Externalized Game Rules** – Game logic resides in JSON files, not Java code.
+* **Modularity** – Skills and rewards are managed independently.
+* **Fault Isolation** – A single corrupted file does not stop the entire system.
+* **Data Integrity** – Player data is stored using UUIDs, safe from nickname changes.
+* **Debug Visibility** – When debug mode is enabled, all loading events, parsing details, and registered content are logged.
+* **Complete Customization** – Server owners can create unlimited skills, reward tiers, and finely tuned experience rules.
+
+### 1-3. Data-Driven Architecture
+
+* DRPG LevelSystem is built on a **Data-Driven Architecture**.
+* Heavy or repetitive tasks are processed **asynchronously in the background**, ensuring stable operation without impacting server performance.
+
+---
+
+## 2. Installation Guide
+
+### Installation
+
+1. Install and run a [PaperMC](https://papermc.io/downloads) server.
+2. Download the DRPG LevelSystem plugin `.jar` file.
+
+   * Make sure the plugin version matches your server version.
+3. Copy the `.jar` file into the server’s `plugins` folder.
+4. Restart the server.
+5. If the console outputs **"DRPG LevelSystem enabled"**, the installation was successful.
+
+   * If errors occur, contact: **[drew0414drew@gmail.com](mailto:drew0414drew@gmail.com)**
+
+### Usage
+
+1. On server startup, the folder `plugins/DRPG/levelSystem/` will be created.
+2. Place skill files into `plugins/DRPG/levelSystem/skills/`
+   → [Example](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20%28ENG%29.md)
+3. Place reward files into `plugins/DRPG/levelSystem/rewards/`
+   → [Example](../How%20To%20Use/JSON/Skills/Skills%20Manual%20%28ENG%29.md)
+
+---
+
+## 3. File Structure
+
+Base directory:
+
+```
+<ServerName>/plugins/DRPG/levelSystem/
+```
+
+1. **/config.json**
+
+   * All global settings are configured here.
+   * Detailed documentation:
+     → [Config Manual](../How%20To%20Use/JSON/Config/Config%20Manual%20%28ENG%29.md)
+
+2. **/skills/*.json**
+
+   * All skill definition files must be placed here.
+   * Documentation:
+     → [Skills Manual](../How%20To%20Use/JSON/Skills/Skills%20Manual%20%28ENG%29.md)
+
+3. **/rewards/*.json**
+
+   * All reward definition files must be placed here.
+   * Documentation:
+     → [Rewards Manual](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20%28ENG%29.md)
+
+---
+
+## 4. How to Use `config.json`
+
+* Full documentation is available here:
+  → [Config Manual](../How%20To%20Use/JSON/Config/Config%20Manual%20%28ENG%29.md)
+
+### 1. Base Configuration
+
+| Option          | Type    | Description                                                                     |
+| --------------- | ------- | ------------------------------------------------------------------------------- |
+| `configVersion` | String  | Configuration file version. Used for automatic updates when the format changes. |
+| `usePlugin`     | boolean | Enables or disables the plugin. If set to false, the plugin will not run.       |
+
+### 2. Debug
+
+| Option         | Type    | Description                                                  |
+| -------------- | ------- | ------------------------------------------------------------ |
+| `enable`       | boolean | Enables debug logging. Recommended to disable in production. |
+| `forceEnable`  | boolean | Forces debug mode regardless of error state.                 |
+| `retryOnError` | boolean | Retries failed tasks automatically.                          |
+| `retryCount`   | integer | Maximum retry attempts on failure.                           |
+
+### 3. Logging
+
+| Option               | Type    | Description                                         |
+| -------------------- | ------- | --------------------------------------------------- |
+| `logToConsole`       | boolean | Outputs logs to the server console.                 |
+| `logToFile`          | boolean | Saves logs to a file.                               |
+| `logFileName`        | String  | Name of the log file.                               |
+| `includeDebug`       | boolean | Includes debug logs in the log file.                |
+| `includeStackTrace`  | boolean | Includes stack traces on errors.                    |
+| `includeJsonError`   | boolean | Includes JSON parsing errors.                       |
+| `includePerformance` | boolean | Logs performance metrics (enable only when needed). |
+
+### 4. Performance
+
+| Option               | Type    | Description                                    |
+| -------------------- | ------- | ---------------------------------------------- |
+| `useAsync`           | boolean | Runs heavy tasks asynchronously (recommended). |
+| `asyncThreads`       | integer | Number of async worker threads.                |
+| `useCache`           | boolean | Enables data caching for faster access.        |
+| `cacheExpireSeconds` | integer | Cache expiration time in seconds.              |
+
+### 5. Player Data
+
+| Option                  | Type                         | Description                                             |
+| ----------------------- | ---------------------------- | ------------------------------------------------------- |
+| `storageType`           | String (JSON, MYSQL, SQLITE) | Data storage type. **Note:** v1.0.0 supports JSON only. |
+| `autoSave`              | boolean                      | Automatically saves player data.                        |
+| `saveIntervalSeconds`   | integer                      | Auto-save interval in seconds.                          |
+| `autoBackup`            | boolean                      | Enables automatic backups (recommended).                |
+| `backupIntervalMinutes` | integer                      | Backup interval in minutes.                             |
+| `backupMaxFiles`        | integer                      | Maximum number of backup files to keep.                 |
+
+### 6. Permissions
+
+| Option                      | Type    | Description                              |
+| --------------------------- | ------- | ---------------------------------------- |
+| `opOnly`                    | boolean | Restricts commands/features to OPs only. |
+| `useLuckPerms`              | boolean | Enables LuckPerms integration.           |
+| `ignoreNoPermissionMessage` | boolean | Suppresses “no permission” messages.     |
+
+### 7. Skills & Rewards
+
+| Option                            | Type    | Description                                         |
+| --------------------------------- | ------- | --------------------------------------------------- |
+| Skill > `validateSkillFiles`      | boolean | Validates skill JSON format on load.                |
+| Skill > `autoFixSimpleError`      | boolean | Attempts to auto-fix simple errors.                 |
+| Reward > `preventDuplicateReward` | boolean | Prevents duplicate rewards.                         |
+| Reward > `cooldownSeconds`        | integer | Minimum cooldown between rewards.                   |
+| Reward > `Notify`                 | String  | Notification type: chat, actionBar, title, subtitle |
+
+### 8. Protection & Version Control
+
+| Option                                | Type    | Description                               |
+| ------------------------------------- | ------- | ----------------------------------------- |
+| Protection > `safeModeOnException`    | boolean | Enables safe mode on critical exceptions. |
+| VersionControl > `checkPluginVersion` | boolean | Checks for plugin updates.                |
+
+### 9. PlaceholderAPI Integration
+
+| Option                    | Type    | Description                     |
+| ------------------------- | ------- | ------------------------------- |
+| PlaceholderAPI > `enable` | boolean | Enables PlaceholderAPI support. |
+
+---
+
+## 5. How to Use `skills/*.json` & `rewards/*.json`
+
+Refer to the manuals below:
+
+* [Skills JSON Manual](../How%20To%20Use/JSON/Skills/Skills%20Manual%20%28ENG%29.md)
+
+  * [Examples](../How%20To%20Use/JSON/Skills/example/)
+* [Rewards JSON Manual](../How%20To%20Use/JSON/Rewards/Rewards%20Manual%20%28ENG%29.md)
+
+  * [Examples](../How%20To%20Use/JSON/Rewards/example/)
+
+---
+
+## 6. Command Guide
+
+* [View Command Manual](../How%20To%20Use/Commands/command%20Manual%20%28ENG%29.md)
 
 ---
 
