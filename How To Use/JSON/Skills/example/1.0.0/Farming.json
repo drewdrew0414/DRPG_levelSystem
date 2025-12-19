@@ -1,10 +1,9 @@
 {
-  "RewardJsonVersion": "1.0.0",
+  "SkillsJsonVersion": "1.0.0",
   "Name": "Farming",
   "DisplayName": "Farming",
   "LevelDrainage": 50,
   "MaxLevel": 50,
-
   "Events": {
     "BlockBreak": [
       {
@@ -14,28 +13,38 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
           "Weather": {
             "rain": { "addMin": 2, "addMax": 7 },
-            "clear": { "addMin": 1, "addMax": 3 }
+            "clear": { "addMin": 1, "addMax": 3 },
+            "thunder": { "addMin": 0, "addMax": 0 }
           },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["POTATO", "CARROT"],
         "EXP": { "min": 10, "max": 13 },
@@ -43,28 +52,38 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
           "Weather": {
             "rain": { "addMin": 2, "addMax": 7 },
-            "clear": { "addMin": 1, "addMax": 3 }
+            "clear": { "addMin": 1, "addMax": 3 },
+            "thunder": { "addMin": 0, "addMax": 0 }
           },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["BEETROOT"],
         "EXP": { "min": 13, "max": 14 },
@@ -72,28 +91,38 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
           "Weather": {
             "rain": { "addMin": 2, "addMax": 7 },
-            "clear": { "addMin": 1, "addMax": 3 }
+            "clear": { "addMin": 1, "addMax": 3 },
+            "thunder": { "addMin": 0, "addMax": 0 }
           },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["PUMPKIN", "MELON"],
         "EXP": { "min": 17, "max": 21 },
@@ -101,28 +130,38 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
           "Weather": {
             "rain": { "addMin": 2, "addMax": 7 },
-            "clear": { "addMin": 1, "addMax": 3 }
+            "clear": { "addMin": 1, "addMax": 3 },
+            "thunder": { "addMin": 0, "addMax": 0 }
           },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["SUGAR_CANE"],
         "EXP": { "min": 3, "max": 7 },
@@ -130,25 +169,36 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
-          "Weather": {},
+          "Weather": {
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["COCOA_BEANS"],
         "EXP": { "min": 18, "max": 25 },
@@ -156,28 +206,38 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
           "Weather": {
             "rain": { "addMin": 2, "addMax": 7 },
-            "clear": { "addMin": 1, "addMax": 3 }
+            "clear": { "addMin": 1, "addMax": 3 },
+            "thunder": { "addMin": 0, "addMax": 0 }
           },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["JUNGLE"]
         }
       },
-
       {
         "TypeItemName": ["NETHER_WART"],
         "EXP": { "min": 20, "max": 28 },
@@ -185,26 +245,37 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
-          "Weather": {},
+          "Weather": {
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
           "multiplier": 1.3,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
           "RequirePlayerPlaced": true,
           "PreventXPGrinding": {
             "Radius": 5,
-            "CooldownSeconds": 10
+            "CooldownSeconds": 10,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
           },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY"]
         }
       }
     ],
-
     "BlockPlace": [
       {
         "TypeItemName": [
@@ -220,21 +291,37 @@
         "Chance": 25,
         "RequiredLevel": 0,
         "RequiredTools": [],
-        "Cooldown": 2,
-
         "ExtraEXP": {
+          "Weather": {
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": {
+            "Radius": 0,
+            "CooldownSeconds": 0,
+            "MaxBlocksInChunk": 0,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": 0
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": false,
+            "CancelExpIfCancelled": false
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 0
+          },
           "PreventMassPlace": {
             "MaxPerSecond": 5
           },
-          "RequirePlayerPlaced": true,
           "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "RequireBiome": ["All"]
         }
       }
     ]
