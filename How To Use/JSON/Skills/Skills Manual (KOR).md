@@ -56,6 +56,7 @@
 **사용가능한 이벤트들** :
 * [BlockBreak](#2-1-BlockBreak-이벤트)
 * [BlockPlace](#2-2-BlockPlace-이벤트)
+* [EnchantItem](#2-3-EnxhantItem-이벤트)
   
   ---
   ## 2-1. BlockBreak 이벤트
@@ -310,3 +311,57 @@
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | CheckEnchantingTableLevel | boolean | [악용방지] 주변 책장 개수와 요청된 인챈트 레벨의 일치 여부를 서버에서 재검증 (핵 패킷 방지) |
+
+---
+
+## 2-4. CraftItem 이벤트
+**플레이어가 조합창(작업대 등)에서 아이템을 제작했을 때 실행됨**
+
+### 2-4-1. 구조
+```
+// "Events" { } 내부
+"CraftItem": [
+  {
+    "TypeItemName": ["String"],
+    "EXP": { "min": int, "max": int },
+    "PlayerGetExp": int,
+    "Chance": int,
+
+    "ExtraEXP": {
+      "Weather": {
+        "rain": { "addMin": int, "addMax": int },
+        "clear": { "addMin": int, "addMax": int }
+      },
+      "multiplier": double,
+      "bonusEXP": int
+    },
+
+    "UseAdvancedSettings": boolean,
+    "AdvancedSettings": {
+      "PreventShiftClickCrafting": boolean,
+      "ValidateNBTIngredients": boolean,
+      "MaxCraftPerMinute": int,
+      "CheckInventorySpace": boolean
+    }
+  }
+]
+```
+### 구조 설명
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| TypeItemName | List<String> | 제작 결과물 아이템 코드 리스트 |
+| EXP | Object | 제작 성공 시 지급될 기본 경험치 범위 |
+| PlayerGetExp | int | 플레이어 레벨 경험치 추가 지급량 |
+| Chance | int | 경험치 획득 성공 확률 (0~100) |
+| ExtraEXP | Object | 날씨에 따른 추가 경험치 및 배수 설정 |
+
+### 2-4-2. 고급 기능 (AdvancedSettings)
+**제작 시스템 악용 및 버그 방지 설정**
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| PreventShiftClickCrafting | boolean | [악용방지] 시프트 클릭을 이용한 대량 제작 시 경험치가 비정상적으로 쌓이는 것을 방지 |
+| ValidateNBTIngredients | boolean | [버그방지] 일반 아이템을 RPG 전용 재료로 속여 제작하는 것을 막기 위해 재료의 NBT 데이터까지 정밀 검증 |
+| MaxCraftPerMinute | int | [악용방지] 1분당 최대 제작 횟수를 제한하여 매크로(Macro)를 이용한 초고속 레벨업 차단 |
+| CheckInventorySpace | boolean | [버그방지] 인벤토리가 가득 찬 상태에서 제작 시 발생할 수 있는 아이템 복사 및 증발 버그 차단 |
+
+---
