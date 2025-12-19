@@ -15,7 +15,10 @@
 * [2-1. BlockBreak 이벤트](#2-1-BlockBreak-이벤트)
   * [2-1-1. 구조](#2-1-1-구조)
   * [2-1-2. 고급기능](#2-1-2-고급기능)
-  * 
+* [2-2. BlockPlace 이벤트](#2-2-BlockPlace-이벤트)
+  * [2-2-1. 구조](#2-2-1-구조)
+  * [2-2-2. 고급기능](#2-2-2-고급기능)
+* [2-3. ]
 * [3. 동작 흐름 요약](#3-동작-흐름-요약)
 * [4. 주의사항](#4-주의사항)
 * [5. 예시 JSON (Farming)](#5-예시-JSON)
@@ -49,8 +52,10 @@
 
 ## 2. Events 구조
 **사용가능한 이벤트들** :
-* blockBreak
-* blockPlace
+* [BlockBreak](#2-1-BlockBreak-이벤트)
+* [BlockPlace](#2-2-BlockPlace-이벤트)
+  
+  ---
   
    ## 2-1. BlockBreak 이벤트
    **플레이어가 블록을 부쉈을 때 실행됨**
@@ -61,7 +66,7 @@
 // "Events { } 내부
 "BlockBreak": [
       {
-        "TypeItemName": ["ItemName"],
+        "TypeItemName": [<String>],
         "EXP": { "min": <int>, "max": <int> },
         "PlayerGetExp": <int>,
         "Chance": <int>,
@@ -117,3 +122,38 @@
   | PlayerPermissionOverride | String | |
   | RequireBiome | String | |
   
+---
+
+## 2-2. BlockPlace 이벤트
+**플레이어가 블록을설치 했을 때 실행함**
+
+### 2-2-1. 구조
+```
+"BlockPlace": [
+      {
+        "TypeItemName": [<String>],
+        "EXP": { "min": <int>  "max": <int> },
+        "PlayerGetExp": <int>,
+        "Chance": <int>,
+        "RequiredLevel": <int>,
+        "RequiredTools": [<String>],
+        "Cooldown": <int>,
+
+        "ExtraEXP": {
+          "multiplier": <double>,
+          "bonusEXP": <int>
+        },
+
+        "UseAdvancedSettings": <boolean>,
+        "AdvancedSettings": {
+          "PreventMassPlace": {
+            "MaxPerSecond": <int>
+          },
+          "PlayerPermissionOverride": "<String>",
+          "RequireBiome": [<String>]
+        }
+      }
+    ]
+```
+
+### 구조 설명ㅇㅇ
