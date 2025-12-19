@@ -21,6 +21,10 @@
 * [2-3. EnchantItem 이벤트](#2-3-EnchantItem-이벤트)
   * [2-3-1. 구조](#2-3-1-구조)
   * [2-3-2. 고급기능](#2-3-2-고급기능)
+* [2-4. CraftItem 이벤트](#2-4-CraftItem-이벤트)
+  * [2-4-1. 구조](#2-4-1-구조)
+  * [2-4-2. 고급기능](#2-4-2-고급기능)
+    
 * [3. 동작 흐름 요약](#3-동작-흐름-요약)
 * [4. 주의사항](#4-주의사항)
 * [5. 예시 JSON (Farming)](#5-예시-JSON)
@@ -56,7 +60,8 @@
 **사용가능한 이벤트들** :
 * [BlockBreak](#2-1-BlockBreak-이벤트)
 * [BlockPlace](#2-2-BlockPlace-이벤트)
-* [EnchantItem](#2-3-EnxhantItem-이벤트)
+* [EnchantItem](#2-3-EnchantItem-이벤트)
+* [CraftItem](#2-4-CraftItem-이벤트)
   
   ---
   ## 2-1. BlockBreak 이벤트
