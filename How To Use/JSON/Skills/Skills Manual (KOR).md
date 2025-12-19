@@ -96,7 +96,6 @@
         "CancelExpIfCancelled": boolean
       },
       "Requirements": {
-        "MinFoodLevel": int,
         "RequiredWorldTimeStart": int,
         "RequiredWorldTimeEnd": int,
         "ProbabilitySuccessXP": int
@@ -148,7 +147,6 @@
 [3] Requirements (환경 요구 조건)
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| MinFoodLevel | int | 플레이어의 배고픔 수치가 이 값 이상이어야 함 |
 | RequiredWorldTimeStart | int | 경험치 획득이 가능해지는 게임 내 시간 (0~24000 틱) |
 | RequiredWorldTimeEnd | int | 경험치 획득이 마감되는 게임 내 시간 (0~24000 틱) |
 | ProbabilitySuccessXP | int | 파괴 성공과 별개로 경험치 지급 로직이 작동할 확률 |
