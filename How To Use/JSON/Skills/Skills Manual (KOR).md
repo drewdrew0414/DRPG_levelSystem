@@ -18,7 +18,9 @@
 * [2-2. BlockPlace 이벤트](#2-2-BlockPlace-이벤트)
   * [2-2-1. 구조](#2-2-1-구조)
   * [2-2-2. 고급기능](#2-2-2-고급기능)
-* [2-3. ]
+* [2-3. EnchantItem 이벤트](#2-3-EnchantItem-이벤트)
+  * [2-3-1. 구조](#2-3-1-구조)
+  * [2-3-2. 고급기능](#2-3-2-고급기능)
 * [3. 동작 흐름 요약](#3-동작-흐름-요약)
 * [4. 주의사항](#4-주의사항)
 * [5. 예시 JSON (Farming)](#5-예시-JSON)
@@ -259,4 +261,52 @@
 
 ---
 
-## 2-3. 
+## 2-3. EnchantItem 이벤트
+**플레이어가 인챈트 테이블에서 아이템에 마법을 부여했을 때 실행됨**
+### 2-3-1. 구조
+```
+// "Events" { } 내부
+"EnchantItem": [
+  {
+    "TypeItemName": ["String"],
+    "CheckEnchant": [
+      { "EnchantType": "String", "Level": int }
+    ],
+    "EXP": { "min": int, "max": int },
+    "PlayerGetExp": int,
+    "Chance": int,
+
+    "ExtraEXP": {
+      "Weather": {
+        "rain": { "addMin": int, "addMax": int },
+        "clear": { "addMin": int, "addMax": int }
+      },
+      "multiplier": double,
+      "bonusEXP": int
+    },
+
+    "UseAdvancedSettings": boolean,
+    "AdvancedSettings": {
+      "CheckEnchantingTableLevel": boolean
+    }
+  }
+]
+```
+
+### 구조 설명
+
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| TypeItemName | List<String> | 대상 아이템 코드 리스트 |
+| CheckEnchant | List<Object> | 부여된 마법의 종류와 레벨 확인 (경험치 지급 조건) |
+| EXP | Object | 인챈트 성공 시 지급될 기본 경험치 범위 |
+| PlayerGetExp | int | 플레이어 레벨 경험치 추가 지급량 |
+| Chance | int | 경험치 획득 성공 확률 (0~100) |
+| ExtraEXP | Object | 날씨에 따른 추가 경험치 및 배수 설정 |
+
+### 2-3-2. 고급 기능 (AdvancedSettings)
+**악용 방지 및 검증 설정**
+
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| CheckEnchantingTableLevel | boolean | [악용방지] 주변 책장 개수와 요청된 인챈트 레벨의 일치 여부를 서버에서 재검증 (핵 패킷 방지) |
