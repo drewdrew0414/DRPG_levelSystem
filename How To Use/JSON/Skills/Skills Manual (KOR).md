@@ -52,7 +52,7 @@
 * blockBreak
 * blockPlace
   
-   ## * 2-1. BlockBreak 이벤트
+   ## 2-1. BlockBreak 이벤트
    **플레이어가 블록을 부쉈을 때 실행됨**
 
    ### 2-1-1. 구조
@@ -71,7 +71,8 @@
         "ExtraEXP": {
           "Weather": {
             "rain": { "addMin": <int>, "addMax": <int> },
-            "clear": { "addMin": <int>, "addMax": <int> }
+            "clear": { "addMin": <int>, "addMax": <int> },
+            "thunder": { "addMin: <int>, "addMax": <int> }
           },
           "multiplier": <double>,
           "bonusEXP": <int>
@@ -88,9 +89,9 @@
           "RequireBiome": [<biome>]
         }
       }
-
-// ...
-```
+   // ...
+      
+    ```
 
   ### 구조 설명
 
