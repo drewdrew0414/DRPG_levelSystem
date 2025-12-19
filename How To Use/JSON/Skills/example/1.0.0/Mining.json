@@ -1,10 +1,9 @@
 {
-  "RewardJsonVersion": "1.0.0",
+  "SkillsJsonVersion": "1.0.0",
   "Name": "Mining",
   "DisplayName": "Mining",
   "LevelDrainage": 50,
   "MaxLevel": 50,
-
   "Events": {
     "BlockBreak": [
       {
@@ -14,22 +13,21 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["COAL_ORE", "DEEPSLATE_COAL_ORE"],
         "EXP": { "min": 8, "max": 12 },
@@ -37,22 +35,21 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["IRON_ORE", "DEEPSLATE_IRON_ORE"],
         "EXP": { "min": 10, "max": 15 },
@@ -60,22 +57,21 @@
         "Chance": 100,
         "RequiredLevel": 1,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["COPPER_ORE", "DEEPSLATE_COPPER_ORE"],
         "EXP": { "min": 9, "max": 14 },
@@ -83,22 +79,21 @@
         "Chance": 100,
         "RequiredLevel": 1,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["GOLD_ORE", "DEEPSLATE_GOLD_ORE"],
         "EXP": { "min": 12, "max": 18 },
@@ -106,22 +101,21 @@
         "Chance": 100,
         "RequiredLevel": 2,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["REDSTONE_ORE", "DEEPSLATE_REDSTONE_ORE"],
         "EXP": { "min": 13, "max": 20 },
@@ -129,22 +123,21 @@
         "Chance": 100,
         "RequiredLevel": 3,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["LAPIS_ORE", "DEEPSLATE_LAPIS_ORE"],
         "EXP": { "min": 14, "max": 22 },
@@ -152,22 +145,21 @@
         "Chance": 100,
         "RequiredLevel": 3,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.0,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["EMERALD_ORE", "DEEPSLATE_EMERALD_ORE"],
         "EXP": { "min": 18, "max": 26 },
@@ -175,22 +167,21 @@
         "Chance": 100,
         "RequiredLevel": 4,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.1,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["DIAMOND_ORE", "DEEPSLATE_DIAMOND_ORE"],
         "EXP": { "min": 20, "max": 30 },
@@ -198,22 +189,21 @@
         "Chance": 100,
         "RequiredLevel": 5,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.2,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
-          "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10
-          },
-          "PlayerPermissionOverride": "mining.bypass"
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
+          "PlayerPermissionOverride": "mining.bypass",
+          "RequireBiome": ["All"]
         }
       },
-
       {
         "TypeItemName": ["NETHER_QUARTZ_ORE"],
         "EXP": { "min": 10, "max": 15 },
@@ -221,19 +211,21 @@
         "Chance": 100,
         "RequiredLevel": 0,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.1,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 0, "CooldownSeconds": 0, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
           "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY"],
           "PlayerPermissionOverride": "mining.bypass"
         }
       },
-
       {
         "TypeItemName": ["NETHER_GOLD_ORE"],
         "EXP": { "min": 12, "max": 18 },
@@ -241,19 +233,21 @@
         "Chance": 100,
         "RequiredLevel": 2,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.1,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 0, "CooldownSeconds": 0, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
           "RequireBiome": ["NETHER_WASTES"],
           "PlayerPermissionOverride": "mining.bypass"
         }
       },
-
       {
         "TypeItemName": ["ANCIENT_DEBRIS"],
         "EXP": { "min": 30, "max": 45 },
@@ -261,19 +255,18 @@
         "Chance": 100,
         "RequiredLevel": 10,
         "RequiredTools": [],
-
         "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 }, "thunder": { "addMin": 0, "addMax": 0 } },
           "multiplier": 1.5,
           "bonusEXP": 0
         },
-
         "UseAdvancedSettings": true,
         "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 8, "CooldownSeconds": 30, "MaxBlocksInChunk": 0, "MinLightLevel": 0, "MaxDailyXPPerBlock": 0 },
+          "ActionControl": { "AllowCreativeMode": false, "RequireNaturalBlock": false, "CancelExpIfCancelled": false },
+          "Requirements": { "RequiredWorldTimeStart": 0, "RequiredWorldTimeEnd": 0 },
           "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY", "BASALT_DELTAS"],
-          "PreventXPGrinding": {
-            "Radius": 8,
-            "CooldownSeconds": 30
-          },
           "PlayerPermissionOverride": "mining.bypass"
         }
       }
