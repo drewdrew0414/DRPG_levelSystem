@@ -94,17 +94,16 @@
 
   ### 구조 설명
 
-  | 필드                    | 설명              |
-| --------------------- | --------------- |
-| `TypeItemName`        | 대상 블록    |
-| `EXP`                 | 기본 지급 경험치 범위    |
-| `PlayerGetExp`        | 플레이어 경험치 지급량 |
-| `Chance`              | 경험치 획득 확률 (%)   |
-| `RequiredLevel`       | 요구 스킬 레벨        |
-| `RequiredTools`       | 사용해야 하는 도구      |
-| `ExtraEXP`            | 추가 경험치 규칙       |
-| `UseAdvancedSettings` | 고급 설정 사용 여부     |
-| `AdvancedSettings`    | 고급 조건 설정        |
+  | 필드                 | 타입   | 설명              |
+| ------------------- | ----- | --------------- |
+| `TypeItemName`  | String      | 대상 블록    |
+| `EXP`        | int         | 기본 지급 경험치 범위    |
+| `PlayerGetExp`   | int     | 플레이어 경험치 지급량 |
+| `Chance`          | int    | 경험치 획득 확률 (%)   |
+| `RequiredLevel`    | int   | 요구 스킬 레벨        |
+| `RequiredTools`   | String    | 사용해야 하는 도구      |
+| `ExtraEXP`       | int     | 추가 경험치 규칙       |
+| `UseAdvancedSettings` | boolean | 고급 설정 사용 여부     |
 
 ### 2-1-2. 고급기능
   **고급기능설명**
