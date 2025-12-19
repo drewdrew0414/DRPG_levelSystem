@@ -109,7 +109,8 @@
 * 2-1-2. 고급기능
   **고급기능설명**
 
-  | 필드 | 타입 | 설명 |
+  |       필드        |       타입      |        설명            |
+  | --- | --- | --- |
   | UseAdvancedSettings | boolean | 고급모드 사용 설정 |
   | RequirePlayerPlaced | boolean | 플레이어가 설치한 블록일 때 |
   | PreventXPGrinding.Radius | int | |
