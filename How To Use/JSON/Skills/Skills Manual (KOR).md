@@ -164,58 +164,98 @@
 ---
 
 ## 2-2. BlockPlace 이벤트
-**플레이어가 블록을설치 했을 때 실행함**
+**플레이어가 블록을 설치했을 때 실행됨**
 
 ### 2-2-1. 구조
 ```
+// "Events" { } 내부
 "BlockPlace": [
-      {
-        "TypeItemName": [<String>],
-        "EXP": { "min": <int>  "max": <int> },
-        "PlayerGetExp": <int>,
-        "Chance": <int>,
-        "RequiredLevel": <int>,
-        "RequiredTools": [<String>],
-        "Cooldown": <int>,
+  {
+    "TypeItemName": ["String"],
+    "EXP": { "min": int, "max": int },
+    "PlayerGetExp": int,
+    "Chance": int,
+    "RequiredLevel": int,
+    "RequiredTools": ["String"],
+    "Cooldown": int,
 
-        "ExtraEXP": {
-          "multiplier": <double>,
-          "bonusEXP": <int>
-        },
+    "ExtraEXP": {
+      "multiplier": double,
+      "bonusEXP": int
+    },
 
-        "UseAdvancedSettings": <boolean>,
-        "AdvancedSettings": {
-          "PreventMassPlace": {
-            "MaxPerSecond": <int>
-          },
-          "PlayerPermissionOverride": "<String>",
-          "RequireBiome": [<String>]
-        }
-      }
-    ]
+    "UseAdvancedSettings": boolean,
+    "AdvancedSettings": {
+      "VerifyGravityBlock": boolean,
+      "IgnoreLiquidPlacement": boolean,
+      "BlockDataValidation": boolean,
+      
+      "BroadcastToAdmins": {
+        "Enable": boolean,
+        "AdminPermission": "String",
+        "Message": "String"
+      },
+
+      "PreventMassPlace": {
+        "MaxPerSecond": int,
+        "MaxPerChunk": int
+      },
+
+      "Requirements": {
+        "RequiredLightLevel": int,
+        "SurfaceOnly": boolean,
+        "MinDistanceBetweenSameBlock": int,
+        "MinFoodLevel": int
+      },
+
+      "PlayerPermissionOverride": "String",
+      "RequireBiome": ["String"]
+    }
+  ]
+}
 ```
 
 ### 구조 설명
-| 필드                 | 타입   | 설명              |
-| ------------------- | ----- | --------------- |
-| `TypeItemName`  | String      | 대상 블록    |
-| `EXP`        | int         | 기본 지급 경험치 범위    |
-| `PlayerGetExp`   | int     | 플레이어 경험치 지급량 |
-| `Chance`          | int    | 경험치 획득 확률 (%)   |
-| `RequiredLevel`    | int   | 요구 스킬 레벨        |
-| `RequiredTools`   | String    | 사용해야 하는 도구      |
-| `ExtraEXP`       | int     | 추가 경험치 규칙       |
-| `UseAdvancedSettings` | boolean | 고급 설정 사용 여부     |
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| TypeItemName | List<String> | 대상 블록 아이템 코드 리스트 |
+| EXP | Object | 기본 지급 경험치의 최소/최대 범위 |
+| PlayerGetExp | int | 플레이어 레벨 경험치 외에 추가로 줄 경험치량 |
+| Chance | int | 설치 시 경험치 획득 성공 확률 (0~100) |
+| RequiredLevel | int | 해당 블록 설치로 경험치를 얻기 위한 최소 스킬 레벨 |
+| RequiredTools | List<String> | 특정 도구를 들고 설치해야 할 경우 (예: 건설 망치 등) |
+| Cooldown | int | 설치 경험치 획득 간의 대기 시간 (틱 단위) |
 
-### 2-2-2. 고급기능
-  **고급기능설명**
+### 2-2-2. 고급 기능 (AdvancedSettings)
+[1] 검증 및 보안 (Validation & Security)
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| VerifyGravityBlock | boolean | 모래, 자갈 등 중력 블록의 비정상 설치 어뷰징 방지 |
+| IgnoreLiquidPlacement | boolean | 물/용암 등 액체 안에서의 설치 경험치 무시 여부 |
+| BlockDataValidation | boolean | 블록의 방향이나 상태가 정상적인지 패킷 검증 |
+| BroadcastToAdmins | Object | 특정 블록 설치 시 관리자에게 알림 전송 설정 |
 
-  |       필드        |       타입      |        설명            |
-  | --- | --- | --- |
-  | UseAdvancedSettings | boolean | 고급모드 사용 설정 |
-  | PreventMassPlace.MaxPerSecond | int | |
-  | PlayerPermissionOverride | String | |
-  | RequireBiome | String | |
+
+[2] 대량 설치 제한 (Anti-Mass Place)
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| MaxPerSecond | int | 초당 최대 설치 허용 횟수 (매크로 방지) |
+| MaxPerChunk | int | 한 청크 내에 설치 가능한 해당 블록의 최대 개수 제한 |
+
+
+[3] 환경 요구 조건 (Requirements)
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| RequiredLightLevel | int | 설치 지점의 밝기가 이 값 이상이어야 경험치 지급 |
+| SurfaceOnly | boolean | 하늘이 트인 지상에서 설치했을 때만 인정 여부 |
+| MinDistanceBetweenSameBlock | int | 동일 종류 블록 간의 최소 거리 유지 (도배 방지) |
+| MinFoodLevel | int | 플레이어의 배고픔 수치가 일정 수준 이상이어야 함 |
+
+[4] 기타 설정
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| PlayerPermissionOverride | String | 특정 권한이 있는 유저만 이 로직을 적용하거나 우회함 |
+| RequireBiome | List<String> | 특정 바이옴 내에서 설치했을 때만 경험치 지급 |
 
 ---
 
