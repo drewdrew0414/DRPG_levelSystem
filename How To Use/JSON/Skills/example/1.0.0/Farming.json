@@ -41,6 +41,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["All"]
         }
@@ -80,6 +81,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["All"]
         }
@@ -119,6 +121,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["All"]
         }
@@ -158,6 +161,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["All"]
         }
@@ -197,6 +201,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["All"]
         }
@@ -236,6 +241,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["JUNGLE"]
         }
@@ -275,6 +281,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
+          "PreventMassPlace": { "MaxPerSecond": 0 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["NETHER_WASTES", "SOUL_SAND_VALLEY"]
         }
@@ -323,9 +330,7 @@
             "RequiredWorldTimeStart": 0,
             "RequiredWorldTimeEnd": 0
           },
-          "PreventMassPlace": {
-            "MaxPerSecond": 5
-          },
+          "PreventMassPlace": { "MaxPerSecond": 5 },
           "PlayerPermissionOverride": "farming.bypass",
           "RequireBiome": ["All"]
         }
