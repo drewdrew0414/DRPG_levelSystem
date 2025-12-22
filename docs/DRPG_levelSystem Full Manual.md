@@ -10,17 +10,6 @@
 
 ## ENGLISH VERSION MANUAL
 
-## (Made By drewdrew0414(or drewdrew1_))
-
-# SELECT LANGUAGE
-
-* [English](#english-version-manual)
-* [한국어](#한국어-버전-설명서)
-
----
-
-## ENGLISH VERSION MANUAL
-
 ## 0. Table of Contents
 
 * [1. About DRPG](#1-about-drpg)
