@@ -55,7 +55,7 @@
 
 * 정의: 플레이어가 블록을 파괴했을 때
 
-[바로가기](../../../How-To-Use/JSON/Skills/example/events/BlockBreak.md)
+[바로가기](/example/events/BlockBreak.md)
 
 ---
 
@@ -82,7 +82,7 @@
       "bonusEXP": int
     },
     "UseAdvancedSettings": boolean,
-    "AdvancedSettings": {
+ ettings": {
       "RequirePlayerPlaced": boolean,
       "PreventXPGrinding": {
         "Radius": int,
