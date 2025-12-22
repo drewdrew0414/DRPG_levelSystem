@@ -55,48 +55,7 @@
 
 * 정의: 플레이어가 블록을 파괴했을 때
 
-```json
-"BlockBreak": [
-  {
-    "TypeItemName": ["String"],
-    "EXP": { "min": int, "max": int },
-    "PlayerGetExp": int,
-    "Chance": int,
-    "RequiredLevel": int,
-    "RequiredTools": ["String"],
-    "ExtraEXP": {
-      "Weather": {
-        "rain": { "addMin": int, "addMax": int },
-        "clear": { "addMin": int, "addMax": int },
-        "thunder": { "addMin": int, "addMax": int }
-      },
-      "multiplier": double,
-      "bonusEXP": int
-    },
-    "UseAdvancedSettings": boolean,
-    "AdvancedSettings": {
-      "RequirePlayerPlaced": boolean,
-      "PreventXPGrinding": {
-        "Radius": int,
-        "CooldownSeconds": int,
-        "MaxBlocksInChunk": int,
-        "MinLightLevel": int,
-        "MaxDailyXPPerBlock": int
-      },
-      "ActionControl": {
-        "AllowCreativeMode": boolean,
-        "RequireNaturalBlock": boolean,
-        "CancelExpIfCancelled": boolean
-      },
-      "Requirements": {
-        "RequiredWorldTimeStart": int,
-        "RequiredWorldTimeEnd": int
-      }
-    }
-  }
-]
-```
-
+[바로가기](How To Use/JSON/Skills/example/events/BlockBreak.md)
 ---
 
 ### 2-2. BlockPlace 이벤트
