@@ -55,7 +55,7 @@
 
 * 정의: 플레이어가 블록을 파괴했을 때
 
-[바로가기](/example/events/BlockBreak.md)
+[바로가기](/How%20To%20Use/JSON/Skills/example/events/BlockBreak.md)
 
 ---
 
@@ -75,7 +75,7 @@
     "ExtraEXP": {
       "Weather": {
         "rain": { "addMin": int, "addMax": int },
-        "clear": { "addMin": int, "addMax": int },
+        "clear": { "addMdMax": int },
         "thunder": { "addMin": int, "addMax": int }
       },
       "multiplier": double,
