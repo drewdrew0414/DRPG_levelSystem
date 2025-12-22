@@ -55,7 +55,7 @@
 
 * 정의: 플레이어가 블록을 파괴했을 때
 
-[바로가기](../../../../How%20To%20Use/JSON/Skills/example/events/BlockBreak.md)
+[바로가기](../../../../How-To-Use/JSON/Skills/example/events/BlockBreak.md)
 
 ---
 
