@@ -5,15 +5,18 @@
 ===============
 
 ---
+# BlockBreak event example
+## Version
+### [1.0.0](#1-0-0)
 
-## BlockBreak event example
+---
 
 ### 1.0.0
 ``` json
 "Events": {
     "BlockBreak": [
       {
-        "TypeItemName": ["String"],
+        "TypeItemName": ["String"], // 
 
         "EXP": {
           "min": int,
