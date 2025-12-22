@@ -16,48 +16,49 @@
         "TypeItemName": ["String"],
 
         "EXP": {
-          "min": 6,
-          "max": 9
+          "min": int,
+          "max": int
         },
 
-        "Chance": 100,
-        "RequiredLevel": 0,
-        "RequiredTools": ["WOODEN_HOE", "STONE_HOE", "IRON_HOE"],
+        "Chance": int,
+        "RequiredLevel": int,
+        "RequiredTools": ["String"],
 
         "ExtraEXP": {
           "Weather": {
-            "rain": { "addMin": 2, "addMax": 5 },
-            "clear": { "addMin": 1, "addMax": 3 }
+            "rain": { "addMin": int, "addMax": int },
+            "clear": { "addMin": int, "addMax": int },
+            "thunder": { "addMin": int, "addMax": int }
           },
-          "multiplier": 1.2,
-          "bonusEXP": 0
+          "multiplier": double,
+          "bonusEXP": int
         },
 
-        "UseAdvancedSettings": true,
+        "UseAdvancedSettings": boolean,
         "AdvancedSettings": {
-          "RequirePlayerPlaced": true,
+          "RequirePlayerPlaced": boolean,
 
           "PreventXPGrinding": {
-            "Radius": 5,
-            "CooldownSeconds": 10,
-            "MaxBlocksInChunk": 20,
-            "MinLightLevel": 9,
-            "MaxDailyXPPerBlock": 100
+            "Radius": int,
+            "CooldownSeconds": int,
+            "MaxBlocksInChunk": int,
+            "MinLightLevel": int,
+            "MaxDailyXPPerBlock": int
           },
 
           "ActionControl": {
-            "AllowCreativeMode": false,
-            "RequireNaturalBlock": false,
-            "CancelExpIfCancelled": true
+            "AllowCreativeMode": boolean,
+            "RequireNaturalBlock": boolean,
+            "CancelExpIfCancelled": boolean
           },
 
           "Requirements": {
-            "RequiredWorldTimeStart": 0,
-            "RequiredWorldTimeEnd": 24000
+            "RequiredWorldTimeStart": int,
+            "RequiredWorldTimeEnd": int
           },
 
-          "PlayerPermissionOverride": "farming.bypass",
-          "RequireBiome": ["PLAINS", "FOREST"]
+          "PlayerPermissionOverride": "String",
+          "RequireBiome": ["String"]
         }
       }
     ]
