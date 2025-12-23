@@ -1,5 +1,5 @@
 {
-  "RewardJsonVersion": "1.0.0",
+  "SkillJsonVersion": "1.0.0",
   "Name": "Fishing",
   "DisplayName": "Fishing",
   "LevelDrainage": 50,
@@ -170,3 +170,4 @@
     ]
   }
 }
+
