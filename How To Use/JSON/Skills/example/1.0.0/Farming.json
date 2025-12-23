@@ -1,0 +1,282 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Farming",
+  "DisplayName": "Farming",
+  "LevelDrainage": 50,
+  "MaxLevel": 100,
+  "Events": {
+    "BlockBreak": [
+      {
+        "TypeItemName": [ "WHEAT" ],
+        "EXP": { "min": 5, "max": 7 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 5 }
+        }
+      },
+      {
+        "TypeItemName": [ "POTATOES" ],
+        "EXP": { "min": 6, "max": 9 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 5 }
+        }
+      },
+      {
+        "TypeItemName": [ "CARROTS" ],
+        "EXP": { "min": 7, "max": 10 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 5 }
+        }
+      },
+      {
+        "TypeItemName": [ "BEETROOTS" ],
+        "EXP": { "min": 9, "max": 13 },
+        "Chance": 100,
+        "RequiredLevel": 2,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 5 }
+        }
+      },
+      {
+        "TypeItemName": [ "MELON" ],
+        "EXP": { "min": 12, "max": 15 },
+        "Chance": 100,
+        "RequiredLevel": 5,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 3, "CooldownSeconds": 2 }
+        }
+      },
+      {
+        "TypeItemName": [ "PUMPKIN" ],
+        "EXP": { "min": 13, "max": 17 },
+        "Chance": 100,
+        "RequiredLevel": 7,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 3, "CooldownSeconds": 2 }
+        }
+      },
+      {
+        "TypeItemName": [ "COCOA" ],
+        "EXP": { "min": 15, "max": 20 },
+        "Chance": 100,
+        "RequiredLevel": 10,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": { "Radius": 4, "CooldownSeconds": 8 }
+        }
+      },
+      {
+        "TypeItemName": [ "NETHER_WART" ],
+        "EXP": { "min": 18, "max": 25 },
+        "Chance": 100,
+        "RequiredLevel": 12,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": true,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 10 }
+        }
+      },
+      {
+        "TypeItemName": [ "CHORUS_FLOWER" ],
+        "EXP": { "min": 25, "max": 35 },
+        "Chance": 100,
+        "RequiredLevel": 20,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 5, "CooldownSeconds": 5 }
+        }
+      },
+      {
+        "TypeItemName": [ "SWEET_BERRY_BUSH" ],
+        "EXP": { "min": 4, "max": 6 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 2, "CooldownSeconds": 2 }
+        }
+      },
+      {
+        "TypeItemName": [ "CAVE_VINES" ],
+        "EXP": { "min": 5, "max": 8 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 2, "CooldownSeconds": 2 }
+        }
+      },
+      {
+        "TypeItemName": [ "BROWN_MUSHROOM", "RED_MUSHROOM" ],
+        "EXP": { "min": 10, "max": 15 },
+        "Chance": 100,
+        "RequiredLevel": 5,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 3, "CooldownSeconds": 5 }
+        }
+      },
+      {
+        "TypeItemName": [ "CRIMSON_FUNGUS", "WARPED_FUNGUS" ],
+        "EXP": { "min": 12, "max": 18 },
+        "Chance": 100,
+        "RequiredLevel": 10,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": { "Radius": 3, "CooldownSeconds": 5 }
+        }
+      }
+    ],
+    "BlockPlace": [
+      {
+        "TypeItemName": [ "WHEAT_SEEDS" ],
+        "EXP": { "min": 1, "max": 2 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 5 } }
+      },
+      {
+        "TypeItemName": [ "POTATO" ],
+        "EXP": { "min": 2, "max": 3 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 5 } }
+      },
+      {
+        "TypeItemName": [ "CARROT" ],
+        "EXP": { "min": 2, "max": 3 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 5 } }
+      },
+      {
+        "TypeItemName": [ "BEETROOT_SEEDS" ],
+        "EXP": { "min": 3, "max": 4 },
+        "Chance": 100,
+        "RequiredLevel": 2,
+        "Cooldown": 2,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 4 } }
+      },
+      {
+        "TypeItemName": [ "PUMPKIN_SEEDS" ],
+        "EXP": { "min": 4, "max": 5 },
+        "Chance": 100,
+        "RequiredLevel": 5,
+        "Cooldown": 2,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 3 } }
+      },
+      {
+        "TypeItemName": [ "MELON_SEEDS" ],
+        "EXP": { "min": 4, "max": 5 },
+        "Chance": 100,
+        "RequiredLevel": 5,
+        "Cooldown": 2,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 3 } }
+      },
+      {
+        "TypeItemName": [ "NETHER_WART" ],
+        "EXP": { "min": 5, "max": 8 },
+        "Chance": 100,
+        "RequiredLevel": 12,
+        "Cooldown": 2,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 3 } }
+      },
+      {
+        "TypeItemName": [ "COCOA_BEANS" ],
+        "EXP": { "min": 6, "max": 9 },
+        "Chance": 100,
+        "RequiredLevel": 10,
+        "Cooldown": 3,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 3 } }
+      },
+      {
+        "TypeItemName": [ "SWEET_BERRIES" ],
+        "EXP": { "min": 2, "max": 4 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 5 } }
+      },
+      {
+        "TypeItemName": [ "GLOW_BERRIES" ],
+        "EXP": { "min": 3, "max": 5 },
+        "Chance": 100,
+        "RequiredLevel": 5,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 5 } }
+      },
+      {
+        "TypeItemName": [ "CHORUS_SAPLING" ],
+        "EXP": { "min": 10, "max": 15 },
+        "Chance": 100,
+        "RequiredLevel": 20,
+        "Cooldown": 5,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 2 } }
+      },
+      {
+        "TypeItemName": [ "CRIMSON_FUNGUS", "WARPED_FUNGUS" ],
+        "EXP": { "min": 5, "max": 7 },
+        "Chance": 100,
+        "RequiredLevel": 10,
+        "Cooldown": 2,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 3 } }
+      },
+      {
+        "TypeItemName": [ "MOSS_BLOCK" ],
+        "EXP": { "min": 1, "max": 2 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 10 } }
+      },
+      {
+        "TypeItemName": [ "SUGAR_CANE", "BAMBOO", "CACTUS" ],
+        "EXP": { "min": 1, "max": 2 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventMassPlace": { "MaxPerSecond": 10 } }
+      }
+    ]
+  }
+}
