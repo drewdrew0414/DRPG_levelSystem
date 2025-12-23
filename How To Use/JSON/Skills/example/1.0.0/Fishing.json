@@ -1,0 +1,172 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Fishing",
+  "DisplayName": "Fishing",
+  "LevelDrainage": 50,
+  "MaxLevel": 50,
+  "Events": {
+    "CatchingFish": [
+      {
+        "CatchType": ["FISH"],
+        "TypeItemName": ["COD"],
+        "EXP": { "min": 5, "max": 8 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredRod": [],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 1, "addMax": 2 }, "clear": { "addMin": 0, "addMax": 1 } },
+          "multiplier": 0.5,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 5.0, "MaxSamePositionCatches": 3 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["All"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      },
+      {
+        "CatchType": ["FISH"],
+        "TypeItemName": ["SALMON"],
+        "EXP": { "min": 6, "max": 10 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 1,
+        "RequiredRod": [],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 1, "addMax": 3 }, "clear": { "addMin": 0, "addMax": 2 } },
+          "multiplier": 0.6,
+          "bonusEXP": 1
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 6.0, "MaxSamePositionCatches": 3 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["All"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      },
+      {
+        "CatchType": ["FISH"],
+        "TypeItemName": ["TROPICAL_FISH"],
+        "EXP": { "min": 8, "max": 12 },
+        "PlayerGetExp": 0,
+        "Chance": 90,
+        "RequiredLevel": 2,
+        "RequiredRod": ["FISHING_ROD"],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 2, "addMax": 4 }, "clear": { "addMin": 1, "addMax": 2 } },
+          "multiplier": 0.7,
+          "bonusEXP": 2
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 8.0, "MaxSamePositionCatches": 2 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["WARM_OCEAN", "LUKEWARM_OCEAN"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      },
+      {
+        "CatchType": ["TREASURE"],
+        "TypeItemName": ["ENCHANTED_BOOK"],
+        "EXP": { "min": 12, "max": 20 },
+        "PlayerGetExp": 0,
+        "Chance": 70,
+        "RequiredLevel": 5,
+        "RequiredRod": ["ENCHANTED_FISHING_ROD"],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 3, "addMax": 6 }, "clear": { "addMin": 1, "addMax": 3 } },
+          "multiplier": 1.0,
+          "bonusEXP": 5
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 10.0, "MaxSamePositionCatches": 2 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["OCEAN", "DEEP_OCEAN"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      },
+      {
+        "CatchType": ["TREASURE"],
+        "TypeItemName": ["NAUTILUS_SHELL"],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 0,
+        "Chance": 60,
+        "RequiredLevel": 4,
+        "RequiredRod": ["FISHING_ROD", "ENCHANTED_FISHING_ROD"],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 2, "addMax": 5 }, "clear": { "addMin": 1, "addMax": 2 } },
+          "multiplier": 0.9,
+          "bonusEXP": 3
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 9.0, "MaxSamePositionCatches": 2 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["DEEP_OCEAN"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      },
+      {
+        "CatchType": ["JUNK"],
+        "TypeItemName": ["LEATHER_BOOTS"],
+        "EXP": { "min": 2, "max": 4 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredRod": [],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 1 }, "clear": { "addMin": 0, "addMax": 0 } },
+          "multiplier": 0.3,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 3.0, "MaxSamePositionCatches": 5 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["All"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      },
+      {
+        "CatchType": ["JUNK"],
+        "TypeItemName": ["BOWL"],
+        "EXP": { "min": 1, "max": 3 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredRod": [],
+        "ExtraEXP": {
+          "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 } },
+          "multiplier": 0.2,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventAFKFishing": { "Enable": true, "MinMovementDistance": 2.0, "MaxSamePositionCatches": 5 },
+          "RequireOpenWater": true,
+          "RequireBiome": ["All"],
+          "RequiredTime": { "Start": 0, "End": 24000 },
+          "CancelExpIfCancelled": true,
+          "PlayerPermissionOverride": "fishing.bypass"
+        }
+      }
+    ]
+  }
+}

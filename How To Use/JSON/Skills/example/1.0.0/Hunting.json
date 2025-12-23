@@ -1,0 +1,412 @@
+{
+  "SkillsJsonVersion": "1.0.0",
+  "Name": "Hunting",
+  "DisplayName": "Hunting",
+  "LevelDrainage": 50,
+  "MaxLevel": 50,
+  "Events": {
+    "KillEntity": [
+      {
+        "EntityType": [
+          "BAT"
+        ],
+        "EXP": {
+          "min": 1,
+          "max": 1
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.4,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true,
+          "PreventXPGrinding": {
+            "Radius": 4,
+            "CooldownSeconds": 20
+          }
+        }
+      },
+      {
+        "EntityType": [
+          "CHICKEN",
+          "RABBIT"
+        ],
+        "EXP": {
+          "min": 2,
+          "max": 3
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.45,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true,
+          "PreventXPGrinding": {
+            "Radius": 4,
+            "CooldownSeconds": 20
+          }
+        }
+      },
+      {
+        "EntityType": [
+          "PIG"
+        ],
+        "EXP": {
+          "min": 3,
+          "max": 4
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.5,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 25
+          }
+        }
+      },
+      {
+        "EntityType": [
+          "COW",
+          "MUSHROOM_COW"
+        ],
+        "EXP": {
+          "min": 4,
+          "max": 5
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.55,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true,
+          "PreventXPGrinding": {
+            "Radius": 5,
+            "CooldownSeconds": 25
+          }
+        }
+      },
+      {
+        "EntityType": [
+          "SHEEP",
+          "LLAMA"
+        ],
+        "EXP": {
+          "min": 5,
+          "max": 6
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.6,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true
+        }
+      },
+      {
+        "EntityType": [
+          "HORSE",
+          "DONKEY",
+          "MULE"
+        ],
+        "EXP": {
+          "min": 6,
+          "max": 7
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.65,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true
+        }
+      },
+      {
+        "EntityType": [
+          "WOLF"
+        ],
+        "EXP": {
+          "min": 7,
+          "max": 8
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.7,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowNamedEntity": true
+        }
+      },
+      {
+        "EntityType": [
+          "GOAT",
+          "BEE"
+        ],
+        "EXP": {
+          "min": 8,
+          "max": 9
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.75,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true
+        }
+      },
+      {
+        "EntityType": [
+          "IRON_GOLEM"
+        ],
+        "EXP": {
+          "min": 18,
+          "max": 22
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 1.2,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "DisallowVillageSpawn": true
+        }
+      },
+      {
+        "EntityType": [
+          "ZOMBIE",
+          "HUSK",
+          "DROWNED"
+        ],
+        "EXP": {
+          "min": 9,
+          "max": 11
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.9,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "RequireNaturalSpawn": true
+        }
+      },
+      {
+        "EntityType": [
+          "SKELETON",
+          "STRAY"
+        ],
+        "EXP": {
+          "min": 11,
+          "max": 13
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 0.95,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true
+        }
+      },
+      {
+        "EntityType": [
+          "SPIDER",
+          "CAVE_SPIDER"
+        ],
+        "EXP": {
+          "min": 13,
+          "max": 15
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true
+        }
+      },
+      {
+        "EntityType": [
+          "CREEPER"
+        ],
+        "EXP": {
+          "min": 16,
+          "max": 18
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 1.1,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true
+        }
+      },
+      {
+        "EntityType": [
+          "ENDERMAN"
+        ],
+        "EXP": {
+          "min": 20,
+          "max": 24
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 1.2,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true
+        }
+      },
+      {
+        "EntityType": [
+          "WARDEN"
+        ],
+        "EXP": {
+          "min": 120,
+          "max": 150
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 2.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "BossOnlyOncePerTime": {
+            "CooldownSeconds": 1800
+          }
+        }
+      },
+      {
+        "EntityType": [
+          "WITHER"
+        ],
+        "EXP": {
+          "min": 350,
+          "max": 420
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 2.5,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "BossOnlyOncePerTime": {
+            "CooldownSeconds": 1200
+          }
+        }
+      },
+      {
+        "EntityType": [
+          "ENDER_DRAGON"
+        ],
+        "EXP": {
+          "min": 500,
+          "max": 650
+        },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredWeapon": [],
+        "ExtraEXP": {
+          "multiplier": 3.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequireDirectKill": true,
+          "BossOnlyOncePerTime": {
+            "CooldownSeconds": 2400
+          }
+        }
+      }
+    ]
+  }
+}
