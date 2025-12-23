@@ -1,4 +1,6 @@
 {
+  "SkillJsonVersion": "1.0.0",
+  "Name": "WoodCutting",
   "Events": {
     "BlockBreak": [
       {
