@@ -1,0 +1,3063 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Dexterity",
+  "DisplayName": "Dexterity",
+  "LevelDrainage": 50,
+  "MaxLevel": 50,
+  "Events": {
+    "BrewItem": [
+      {
+        "PotionType": ["awkward"],
+        "PotionLevel": 0,
+        "Type": "NORMAL",
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 40, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["thick", "mundane"],
+        "PotionLevel": 0,
+        "Type": "NORMAL",
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 40, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["night_vision", "water_breathing"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 40, "max": 70 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 25, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["fire_resistance", "slow_falling"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 50, "max": 90 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 25, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["swiftness", "leaping"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 70, "max": 120 },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 20, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["strength", "regeneration"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 90, "max": 150 },
+        "PlayerGetExp": 40,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 20, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["poison", "harming", "slowness", "weakness"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 110, "max": 180 },
+        "PlayerGetExp": 50,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 18, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["invisibility"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 160, "max": 240 },
+        "PlayerGetExp": 70,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 15, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["turtle_master"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 300, "max": 500 },
+        "PlayerGetExp": 120,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 8, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["long_night_vision", "long_fire_resistance", "long_water_breathing"],
+        "PotionLevel": 1,
+        "Type": "NORMAL",
+        "EXP": { "min": 140, "max": 220 },
+        "PlayerGetExp": 60,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 20, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["strong_swiftness", "strong_leaping", "strong_poison", "strong_slowness"],
+        "PotionLevel": 2,
+        "Type": "NORMAL",
+        "EXP": { "min": 260, "max": 420 },
+        "PlayerGetExp": 110,
+        "Chance": 90,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 12, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["strong_healing", "strong_harming", "strong_strength", "strong_regeneration"],
+        "PotionLevel": 2,
+        "Type": "NORMAL",
+        "EXP": { "min": 400, "max": 650 },
+        "PlayerGetExp": 180,
+        "Chance": 85,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 10, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["night_vision", "invisibility", "swiftness", "strength", "poison"],
+        "PotionLevel": 1,
+        "Type": "SPLASH",
+        "EXP": { "min": 300, "max": 500 },
+        "PlayerGetExp": 150,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 15, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["strong_healing", "strong_harming", "strong_strength"],
+        "PotionLevel": 2,
+        "Type": "SPLASH",
+        "EXP": { "min": 700, "max": 1200 },
+        "PlayerGetExp": 350,
+        "Chance": 85,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 10, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["night_vision", "invisibility", "strength", "regeneration"],
+        "PotionLevel": 1,
+        "Type": "LINGERING",
+        "EXP": { "min": 1200, "max": 2000 },
+        "PlayerGetExp": 600,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 5, "PlayerPermissionOverride": "brewItem.bypass" }
+      },
+      {
+        "PotionType": ["strong_healing", "strong_harming", "strong_strength", "strong_turtle_master"],
+        "PotionLevel": 2,
+        "Type": "LINGERING",
+        "EXP": { "min": 3000, "max": 6000 },
+        "PlayerGetExp": 1200,
+        "Chance": 75,
+        "RequiredLevel": 0,
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventAFKBrew": true, "CheckIngredients": true, "MaxBrewPerMinute": 3, "PlayerPermissionOverride": "brewItem.bypass" }
+      }
+    ],
+    "CraftItem": [
+      {
+        "TypeItemName": ["WOODEN_SWORD"],
+        "EXP": { "min": 4, "max": 6 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 1, "addMax": 1 }, "clear": { "addMin": 0, "addMax": 1 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 40, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["WOODEN_PICKAXE"],
+        "EXP": { "min": 3, "max": 5 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 0, "addMax": 1 }, "clear": { "addMin": 0, "addMax": 0 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 40, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["WOODEN_AXE", "WOODEN_SHOVEL", "WOODEN_HOE"],
+        "EXP": { "min": 2, "max": 3 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 0, "addMax": 0 }, "clear": { "addMin": 0, "addMax": 0 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 40, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["STONE_SWORD"],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 2, "addMax": 3 }, "clear": { "addMin": 1, "addMax": 2 } }, "multiplier": 1.0, "bonusEXP": 1 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 30, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["STONE_PICKAXE"],
+        "EXP": { "min": 8, "max": 12 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 1, "addMax": 2 }, "clear": { "addMin": 0, "addMax": 1 } }, "multiplier": 1.0, "bonusEXP": 1 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 30, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["STONE_AXE", "STONE_SHOVEL", "STONE_HOE"],
+        "EXP": { "min": 6, "max": 9 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 1, "addMax": 1 }, "clear": { "addMin": 0, "addMax": 0 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 30, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["IRON_SWORD"],
+        "EXP": { "min": 35, "max": 50 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 5, "addMax": 10 }, "clear": { "addMin": 2, "addMax": 5 } }, "multiplier": 1.1, "bonusEXP": 5 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 20, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["IRON_PICKAXE"],
+        "EXP": { "min": 30, "max": 45 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 4, "addMax": 8 }, "clear": { "addMin": 1, "addMax": 4 } }, "multiplier": 1.1, "bonusEXP": 4 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 20, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["IRON_AXE", "IRON_SHOVEL", "IRON_HOE"],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 3, "addMax": 6 }, "clear": { "addMin": 1, "addMax": 3 } }, "multiplier": 1.1, "bonusEXP": 2 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 20, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["IRON_CHESTPLATE", "IRON_LEGGINGS"],
+        "EXP": { "min": 60, "max": 90 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 10, "addMax": 20 }, "clear": { "addMin": 5, "addMax": 10 } }, "multiplier": 1.1, "bonusEXP": 10 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 15, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["IRON_HELMET", "IRON_BOOTS"],
+        "EXP": { "min": 45, "max": 70 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 8, "addMax": 15 }, "clear": { "addMin": 4, "addMax": 8 } }, "multiplier": 1.1, "bonusEXP": 5 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 15, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["GOLDEN_SWORD", "GOLDEN_PICKAXE"],
+        "EXP": { "min": 50, "max": 80 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 15, "addMax": 20 }, "clear": { "addMin": 8, "addMax": 12 } }, "multiplier": 1.2, "bonusEXP": 10 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 15, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["GOLDEN_AXE", "GOLDEN_SHOVEL", "GOLDEN_HOE"],
+        "EXP": { "min": 35, "max": 55 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 8, "addMax": 15 }, "clear": { "addMin": 4, "addMax": 8 } }, "multiplier": 1.2, "bonusEXP": 5 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 15, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["GOLDEN_CHESTPLATE", "GOLDEN_LEGGINGS"],
+        "EXP": { "min": 80, "max": 120 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 20, "addMax": 30 }, "clear": { "addMin": 10, "addMax": 15 } }, "multiplier": 1.2, "bonusEXP": 15 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 15, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["DIAMOND_SWORD"],
+        "EXP": { "min": 180, "max": 250 },
+        "PlayerGetExp": 40,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 40, "addMax": 60 }, "clear": { "addMin": 20, "addMax": 30 } }, "multiplier": 1.5, "bonusEXP": 40 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 5, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["DIAMOND_PICKAXE", "DIAMOND_AXE", "DIAMOND_SHOVEL", "DIAMOND_HOE"],
+        "EXP": { "min": 160, "max": 230 },
+        "PlayerGetExp": 35,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 30, "addMax": 50 }, "clear": { "addMin": 15, "addMax": 25 } }, "multiplier": 1.5, "bonusEXP": 30 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 5, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["DIAMOND_CHESTPLATE", "DIAMOND_LEGGINGS"],
+        "EXP": { "min": 300, "max": 450 },
+        "PlayerGetExp": 80,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 50, "addMax": 100 }, "clear": { "addMin": 30, "addMax": 50 } }, "multiplier": 1.5, "bonusEXP": 50 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 5, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["NETHERITE_SWORD", "NETHERITE_PICKAXE"],
+        "EXP": { "min": 450, "max": 700 },
+        "PlayerGetExp": 130,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 110, "addMax": 160 }, "clear": { "addMin": 55, "addMax": 90 } }, "multiplier": 2.0, "bonusEXP": 130 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 2, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["NETHERITE_AXE", "NETHERITE_SHOVEL", "NETHERITE_HOE"],
+        "EXP": { "min": 420, "max": 650 },
+        "PlayerGetExp": 120,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 90, "addMax": 140 }, "clear": { "addMin": 45, "addMax": 80 } }, "multiplier": 2.0, "bonusEXP": 120 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 2, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["NETHERITE_CHESTPLATE", "NETHERITE_LEGGINGS"],
+        "EXP": { "min": 800, "max": 1200 },
+        "PlayerGetExp": 250,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 150, "addMax": 300 }, "clear": { "addMin": 80, "addMax": 150 } }, "multiplier": 2.0, "bonusEXP": 200 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 2, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["BOW", "CROSSBOW"],
+        "EXP": { "min": 40, "max": 80 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 5, "addMax": 15 }, "clear": { "addMin": 5, "addMax": 10 } }, "multiplier": 1.1, "bonusEXP": 5 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 10, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["TRIDENT", "MACE"],
+        "EXP": { "min": 1000, "max": 1500 },
+        "PlayerGetExp": 400,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 200, "addMax": 500 }, "clear": { "addMin": 100, "addMax": 200 } }, "multiplier": 2.5, "bonusEXP": 300 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 1, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["ELYTRA"],
+        "EXP": { "min": 1500, "max": 2500 },
+        "PlayerGetExp": 1000,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 500, "addMax": 1000 }, "clear": { "addMin": 200, "addMax": 500 } }, "multiplier": 3.0, "bonusEXP": 500 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 1, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["FISHING_ROD", "FLINT_AND_STEEL", "SHIELD", "CARROT_ON_A_STICK", "WARPED_FUNGUS_ON_A_STICK"],
+        "EXP": { "min": 15, "max": 30 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 5, "addMax": 10 }, "clear": { "addMin": 2, "addMax": 5 } }, "multiplier": 1.1, "bonusEXP": 3 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 20, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["SHEARS"],
+        "EXP": { "min": 25, "max": 45 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 8, "addMax": 12 }, "clear": { "addMin": 3, "addMax": 6 } }, "multiplier": 1.1, "bonusEXP": 4 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 20, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["SHULKER_BOX", "WHITE_SHULKER_BOX", "BLACK_SHULKER_BOX"],
+        "EXP": { "min": 300, "max": 500 },
+        "PlayerGetExp": 120,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 80, "addMax": 120 }, "clear": { "addMin": 40, "addMax": 70 } }, "multiplier": 1.8, "bonusEXP": 80 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 5, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["OAK_BOAT", "BIRCH_BOAT", "SPRUCE_BOAT", "JUNGLE_BOAT", "ACACIA_BOAT", "DARK_OAK_BOAT", "MANGROVE_BOAT", "CHERRY_BOAT"],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 5, "addMax": 8 }, "clear": { "addMin": 2, "addMax": 4 } }, "multiplier": 1.0, "bonusEXP": 2 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 30, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["OAK_CHEST_BOAT", "BIRCH_CHEST_BOAT", "SPRUCE_CHEST_BOAT", "JUNGLE_CHEST_BOAT", "ACACIA_CHEST_BOAT", "DARK_OAK_CHEST_BOAT", "MANGROVE_CHEST_BOAT", "CHERRY_CHEST_BOAT"],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 8, "addMax": 12 }, "clear": { "addMin": 4, "addMax": 6 } }, "multiplier": 1.1, "bonusEXP": 4 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 25, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["COMPASS", "CLOCK", "SPYGLASS", "BRUSH"],
+        "EXP": { "min": 50, "max": 100 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 10, "addMax": 20 }, "clear": { "addMin": 10, "addMax": 20 } }, "multiplier": 1.2, "bonusEXP": 10 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 10, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["ANVIL", "SMITHING_TABLE", "GRINDSTONE", "STONECUTTER", "LOOM", "CARTOGRAPHY_TABLE", "FLETCHING_TABLE"],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 2, "addMax": 4 }, "clear": { "addMin": 1, "addMax": 2 } }, "multiplier": 1.0, "bonusEXP": 1 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 15, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["PISTON", "STICKY_PISTON", "DISPENSER", "DROPPER", "OBSERVER", "COMPARATOR", "REPEATER", "DAYLIGHT_DETECTOR"],
+        "EXP": { "min": 15, "max": 30 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 2, "addMax": 3 }, "clear": { "addMin": 1, "addMax": 2 } }, "multiplier": 1.0, "bonusEXP": 1 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 25, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["HOPPER", "MINECART", "CHEST_MINECART", "HOPPER_MINECART"],
+        "EXP": { "min": 25, "max": 45 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 3, "addMax": 6 }, "clear": { "addMin": 2, "addMax": 3 } }, "multiplier": 1.0, "bonusEXP": 2 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 10, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["RAIL", "POWERED_RAIL", "DETECTOR_RAIL", "ACTIVATOR_RAIL"],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 1, "addMax": 2 }, "clear": { "addMin": 0, "addMax": 1 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 60, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["CHEST", "TRAPPED_CHEST", "ENDER_CHEST", "BARREL", "BOOKSHELF", "LECTERN"],
+        "EXP": { "min": 10, "max": 25 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 2, "addMax": 4 }, "clear": { "addMin": 1, "addMax": 2 } }, "multiplier": 1.0, "bonusEXP": 1 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 30, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["ITEM_FRAME", "GLOW_ITEM_FRAME", "ARMOR_STAND"],
+        "EXP": { "min": 8, "max": 15 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 1, "addMax": 2 }, "clear": { "addMin": 0, "addMax": 1 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 40, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["ARROW", "SPECTRAL_ARROW", "TIPPED_ARROW"],
+        "EXP": { "min": 4, "max": 8 },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 1, "addMax": 1 }, "clear": { "addMin": 0, "addMax": 1 } }, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": false, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 80, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["ENCHANTING_TABLE", "BEACON"],
+        "EXP": { "min": 60, "max": 100 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 10, "addMax": 20 }, "clear": { "addMin": 5, "addMax": 10 } }, "multiplier": 1.2, "bonusEXP": 5 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 3, "CheckInventorySpace": true }
+      },
+      {
+        "TypeItemName": ["END_CRYSTAL", "CONDUIT", "SCULK_SENSOR", "CALIBRATED_SCULK_SENSOR", "SCULK_SHRIEKER"],
+        "EXP": { "min": 120, "max": 200 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": { "Weather": { "rain": { "addMin": 20, "addMax": 40 }, "clear": { "addMin": 10, "addMax": 20 } }, "multiplier": 1.3, "bonusEXP": 10 },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": { "PreventShiftClickCrafting": true, "ValidateNBTIngredients": true, "MaxCraftPerMinute": 2, "CheckInventorySpace": true }
+      }
+    ],
+    "EnchantItem": [
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SHARPNESS", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SHARPNESS", "Level": 2 }],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SHARPNESS", "Level": 3 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SHARPNESS", "Level": 4 }],
+        "EXP": { "min": 25, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SHARPNESS", "Level": 5 }],
+        "EXP": { "min": 40, "max": 60 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SMITE", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SMITE", "Level": 2 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SMITE", "Level": 3 }],
+        "EXP": { "min": 15, "max": 30 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SMITE", "Level": 4 }],
+        "EXP": { "min": 25, "max": 45 },
+        "PlayerGetExp": 9,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.35, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SMITE", "Level": 5 }],
+        "EXP": { "min": 35, "max": 55 },
+        "PlayerGetExp": 11,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.45, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BANE_OF_ARTHROPODS", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BANE_OF_ARTHROPODS", "Level": 2 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BANE_OF_ARTHROPODS", "Level": 3 }],
+        "EXP": { "min": 15, "max": 30 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BANE_OF_ARTHROPODS", "Level": 4 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BANE_OF_ARTHROPODS", "Level": 5 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "EFFICIENCY", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "EFFICIENCY", "Level": 2 }],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "EFFICIENCY", "Level": 3 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "EFFICIENCY", "Level": 4 }],
+        "EXP": { "min": 25, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "EFFICIENCY", "Level": 5 }],
+        "EXP": { "min": 40, "max": 60 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "UNBREAKING", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "UNBREAKING", "Level": 2 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "UNBREAKING", "Level": 3 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROTECTION", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROTECTION", "Level": 2 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROTECTION", "Level": 3 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROTECTION", "Level": 4 }],
+        "EXP": { "min": 40, "max": 65 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FIRE_PROTECTION", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FIRE_PROTECTION", "Level": 2 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FIRE_PROTECTION", "Level": 3 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FIRE_PROTECTION", "Level": 4 }],
+        "EXP": { "min": 35, "max": 55 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BLAST_PROTECTION", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BLAST_PROTECTION", "Level": 2 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BLAST_PROTECTION", "Level": 3 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BLAST_PROTECTION", "Level": 4 }],
+        "EXP": { "min": 35, "max": 55 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROJECTILE_PROTECTION", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROJECTILE_PROTECTION", "Level": 2 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROJECTILE_PROTECTION", "Level": 3 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 1 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PROJECTILE_PROTECTION", "Level": 4 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 9,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.35, "bonusEXP": 3 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FEATHER_FALLING", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FEATHER_FALLING", "Level": 2 }],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FEATHER_FALLING", "Level": 3 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FEATHER_FALLING", "Level": 4 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "THORNS", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 3,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "THORNS", "Level": 2 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 3,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "THORNS", "Level": 3 }],
+        "EXP": { "min": 40, "max": 70 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 3,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 8 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "RESPIRATION", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "RESPIRATION", "Level": 2 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "RESPIRATION", "Level": 3 }],
+        "EXP": { "min": 40, "max": 65 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "AQUA_AFFINITY", "Level": 1 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DEPTH_STRIDER", "Level": 1 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DEPTH_STRIDER", "Level": 3 }],
+        "EXP": { "min": 40, "max": 70 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FROST_WALKER", "Level": 1 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FROST_WALKER", "Level": 2 }],
+        "EXP": { "min": 60, "max": 100 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.7, "bonusEXP": 15 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SOUL_SPEED", "Level": 1 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SOUL_SPEED", "Level": 2 }],
+        "EXP": { "min": 40, "max": 65 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SOUL_SPEED", "Level": 3 }],
+        "EXP": { "min": 60, "max": 100 },
+        "PlayerGetExp": 25,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.8, "bonusEXP": 20 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SWIFT_SNEAK", "Level": 1 }],
+        "EXP": { "min": 25, "max": 45 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SWIFT_SNEAK", "Level": 2 }],
+        "EXP": { "min": 45, "max": 75 },
+        "PlayerGetExp": 18,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.6, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SWIFT_SNEAK", "Level": 3 }],
+        "EXP": { "min": 70, "max": 110 },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 15,
+        "ExtraEXP": { "Weather": {}, "multiplier": 2.0, "bonusEXP": 30 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "KNOCKBACK", "Level": 1 }],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "KNOCKBACK", "Level": 2 }],
+        "EXP": { "min": 20, "max": 30 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FIRE_ASPECT", "Level": 1 }],
+        "EXP": { "min": 20, "max": 30 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FIRE_ASPECT", "Level": 2 }],
+        "EXP": { "min": 40, "max": 60 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LOOTING", "Level": 1 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LOOTING", "Level": 2 }],
+        "EXP": { "min": 25, "max": 45 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LOOTING", "Level": 3 }],
+        "EXP": { "min": 50, "max": 80 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SWEEPING_EDGE", "Level": 1 }],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.05, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SWEEPING_EDGE", "Level": 2 }],
+        "EXP": { "min": 15, "max": 30 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.15, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SWEEPING_EDGE", "Level": 3 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "POWER", "Level": 1 }],
+        "EXP": { "min": 5, "max": 10 },
+        "PlayerGetExp": 2,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "POWER", "Level": 2 }],
+        "EXP": { "min": 10, "max": 15 },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "POWER", "Level": 3 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "POWER", "Level": 4 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.35, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "POWER", "Level": 5 }],
+        "EXP": { "min": 45, "max": 70 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.6, "bonusEXP": 8 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PUNCH", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PUNCH", "Level": 2 }],
+        "EXP": { "min": 25, "max": 45 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FLAME", "Level": 1 }],
+        "EXP": { "min": 45, "max": 70 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "INFINITY", "Level": 1 }],
+        "EXP": { "min": 60, "max": 90 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.8, "bonusEXP": 15 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "QUICK_CHARGE", "Level": 1 }],
+        "EXP": { "min": 15, "max": 30 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "QUICK_CHARGE", "Level": 3 }],
+        "EXP": { "min": 45, "max": 75 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PIERCING", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "PIERCING", "Level": 4 }],
+        "EXP": { "min": 40, "max": 65 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "MULTISHOT", "Level": 1 }],
+        "EXP": { "min": 50, "max": 80 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LOYALTY", "Level": 1 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LOYALTY", "Level": 2 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LOYALTY", "Level": 3 }],
+        "EXP": { "min": 40, "max": 60 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 2,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "RIPTIDE", "Level": 1 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "RIPTIDE", "Level": 2 }],
+        "EXP": { "min": 35, "max": 60 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "RIPTIDE", "Level": 3 }],
+        "EXP": { "min": 50, "max": 90 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.6, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "CHANNELING", "Level": 1 }],
+        "EXP": { "min": 50, "max": 80 },
+        "PlayerGetExp": 18,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.6, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "IMPALING", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.0, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "IMPALING", "Level": 2 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "IMPALING", "Level": 3 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "IMPALING", "Level": 4 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "IMPALING", "Level": 5 }],
+        "EXP": { "min": 40, "max": 70 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 1,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LUCK_OF_THE_SEA", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LUCK_OF_THE_SEA", "Level": 2 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 7,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LUCK_OF_THE_SEA", "Level": 3 }],
+        "EXP": { "min": 40, "max": 65 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LURE", "Level": 1 }],
+        "EXP": { "min": 10, "max": 20 },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "LURE", "Level": 3 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FORTUNE", "Level": 1 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.1, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FORTUNE", "Level": 2 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "FORTUNE", "Level": 3 }],
+        "EXP": { "min": 50, "max": 80 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "SILK_TOUCH", "Level": 1 }],
+        "EXP": { "min": 45, "max": 75 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "MENDING", "Level": 1 }],
+        "EXP": { "min": 60, "max": 100 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.7, "bonusEXP": 15 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BINDING_CURSE", "Level": 1 }],
+        "EXP": { "min": 80, "max": 120 },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 20,
+        "ExtraEXP": { "Weather": {}, "multiplier": 2.2, "bonusEXP": 50 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "VANISHING_CURSE", "Level": 1 }],
+        "EXP": { "min": 80, "max": 120 },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 20,
+        "ExtraEXP": { "Weather": {}, "multiplier": 2.2, "bonusEXP": 50 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DENSITY", "Level": 1 }],
+        "EXP": { "min": 15, "max": 25 },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 3,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.15, "bonusEXP": 0 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DENSITY", "Level": 2 }],
+        "EXP": { "min": 25, "max": 40 },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.25, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DENSITY", "Level": 3 }],
+        "EXP": { "min": 35, "max": 55 },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.4, "bonusEXP": 5 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DENSITY", "Level": 4 }],
+        "EXP": { "min": 45, "max": 70 },
+        "PlayerGetExp": 16,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.55, "bonusEXP": 8 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "DENSITY", "Level": 5 }],
+        "EXP": { "min": 55, "max": 85 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.7, "bonusEXP": 12 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BREACH", "Level": 1 }],
+        "EXP": { "min": 20, "max": 35 },
+        "PlayerGetExp": 6,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.2, "bonusEXP": 2 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BREACH", "Level": 2 }],
+        "EXP": { "min": 30, "max": 50 },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.3, "bonusEXP": 3 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BREACH", "Level": 3 }],
+        "EXP": { "min": 40, "max": 65 },
+        "PlayerGetExp": 14,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.45, "bonusEXP": 6 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "BREACH", "Level": 4 }],
+        "EXP": { "min": 50, "max": 80 },
+        "PlayerGetExp": 18,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 5,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.6, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "WIND_BURST", "Level": 1 }],
+        "EXP": { "min": 40, "max": 70 },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.5, "bonusEXP": 10 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "WIND_BURST", "Level": 2 }],
+        "EXP": { "min": 55, "max": 90 },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 1.75, "bonusEXP": 20 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      },
+      {
+        "TypeItemName": ["All"],
+        "CheckEnchant": [{ "EnchantType": "WIND_BURST", "Level": 3 }],
+        "EXP": { "min": 70, "max": 110 },
+        "PlayerGetExp": 25,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "Cooldown": 10,
+        "ExtraEXP": { "Weather": {}, "multiplier": 2.0, "bonusEXP": 30 },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {}
+      }
+    ],
+    "CraftItem": [
+      {
+        "TypeItemName": [
+          "WOODEN_PICKAXE"
+        ],
+        "EXP": {
+          "min": 2,
+          "max": 5
+        },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 1,
+              "addMax": 1
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "WOODEN_AXE"
+        ],
+        "EXP": {
+          "min": 2,
+          "max": 5
+        },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 1,
+              "addMax": 1
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "WOODEN_SHOVEL"
+        ],
+        "EXP": {
+          "min": 1,
+          "max": 3
+        },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 0,
+              "addMax": 1
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "WOODEN_HOE"
+        ],
+        "EXP": {
+          "min": 1,
+          "max": 3
+        },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 0,
+              "addMax": 1
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "WOODEN_SWORD"
+        ],
+        "EXP": {
+          "min": 2,
+          "max": 4
+        },
+        "PlayerGetExp": 1,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 0,
+              "addMax": 1
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "STONE_PICKAXE"
+        ],
+        "EXP": {
+          "min": 8,
+          "max": 15
+        },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 2,
+              "addMax": 3
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "STONE_AXE"
+        ],
+        "EXP": {
+          "min": 8,
+          "max": 15
+        },
+        "PlayerGetExp": 5,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 2,
+              "addMax": 3
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "STONE_SHOVEL"
+        ],
+        "EXP": {
+          "min": 5,
+          "max": 10
+        },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 1,
+              "addMax": 2
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "STONE_HOE"
+        ],
+        "EXP": {
+          "min": 5,
+          "max": 10
+        },
+        "PlayerGetExp": 3,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 1,
+              "addMax": 2
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "STONE_SWORD"
+        ],
+        "EXP": {
+          "min": 8,
+          "max": 12
+        },
+        "PlayerGetExp": 4,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 1,
+              "addMax": 2
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": false,
+          "MaxCraftPerMinute": 60,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "IRON_PICKAXE"
+        ],
+        "EXP": {
+          "min": 40,
+          "max": 60
+        },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 5,
+              "addMax": 10
+            },
+            "clear": {
+              "addMin": 2,
+              "addMax": 5
+            }
+          },
+          "multiplier": 1.1,
+          "bonusEXP": 5
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 30,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "IRON_AXE"
+        ],
+        "EXP": {
+          "min": 40,
+          "max": 60
+        },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 5,
+              "addMax": 10
+            },
+            "clear": {
+              "addMin": 2,
+              "addMax": 5
+            }
+          },
+          "multiplier": 1.1,
+          "bonusEXP": 5
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 30,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "IRON_SHOVEL"
+        ],
+        "EXP": {
+          "min": 25,
+          "max": 40
+        },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 3,
+              "addMax": 6
+            },
+            "clear": {
+              "addMin": 1,
+              "addMax": 3
+            }
+          },
+          "multiplier": 1.1,
+          "bonusEXP": 2
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 30,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "IRON_HOE"
+        ],
+        "EXP": {
+          "min": 25,
+          "max": 40
+        },
+        "PlayerGetExp": 12,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 3,
+              "addMax": 6
+            },
+            "clear": {
+              "addMin": 1,
+              "addMax": 3
+            }
+          },
+          "multiplier": 1.1,
+          "bonusEXP": 2
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 30,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "IRON_SWORD"
+        ],
+        "EXP": {
+          "min": 35,
+          "max": 55
+        },
+        "PlayerGetExp": 18,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 4,
+              "addMax": 8
+            },
+            "clear": {
+              "addMin": 1,
+              "addMax": 4
+            }
+          },
+          "multiplier": 1.1,
+          "bonusEXP": 3
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 30,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "GOLDEN_PICKAXE"
+        ],
+        "EXP": {
+          "min": 60,
+          "max": 100
+        },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 10,
+              "addMax": 20
+            },
+            "clear": {
+              "addMin": 5,
+              "addMax": 10
+            }
+          },
+          "multiplier": 1.3,
+          "bonusEXP": 10
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 20,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "GOLDEN_AXE"
+        ],
+        "EXP": {
+          "min": 60,
+          "max": 100
+        },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 10,
+              "addMax": 20
+            },
+            "clear": {
+              "addMin": 5,
+              "addMax": 10
+            }
+          },
+          "multiplier": 1.3,
+          "bonusEXP": 10
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 20,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "GOLDEN_SHOVEL"
+        ],
+        "EXP": {
+          "min": 50,
+          "max": 80
+        },
+        "PlayerGetExp": 25,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 8,
+              "addMax": 15
+            },
+            "clear": {
+              "addMin": 4,
+              "addMax": 8
+            }
+          },
+          "multiplier": 1.3,
+          "bonusEXP": 5
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 20,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "GOLDEN_HOE"
+        ],
+        "EXP": {
+          "min": 50,
+          "max": 80
+        },
+        "PlayerGetExp": 25,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 8,
+              "addMax": 15
+            },
+            "clear": {
+              "addMin": 4,
+              "addMax": 8
+            }
+          },
+          "multiplier": 1.3,
+          "bonusEXP": 5
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 20,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "GOLDEN_SWORD"
+        ],
+        "EXP": {
+          "min": 55,
+          "max": 90
+        },
+        "PlayerGetExp": 28,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 9,
+              "addMax": 18
+            },
+            "clear": {
+              "addMin": 4,
+              "addMax": 9
+            }
+          },
+          "multiplier": 1.3,
+          "bonusEXP": 8
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 20,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "DIAMOND_PICKAXE"
+        ],
+        "EXP": {
+          "min": 250,
+          "max": 400
+        },
+        "PlayerGetExp": 150,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 50,
+              "addMax": 100
+            },
+            "clear": {
+              "addMin": 25,
+              "addMax": 50
+            }
+          },
+          "multiplier": 1.5,
+          "bonusEXP": 50
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 10,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "DIAMOND_AXE"
+        ],
+        "EXP": {
+          "min": 250,
+          "max": 400
+        },
+        "PlayerGetExp": 150,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 50,
+              "addMax": 100
+            },
+            "clear": {
+              "addMin": 25,
+              "addMax": 50
+            }
+          },
+          "multiplier": 1.5,
+          "bonusEXP": 50
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 10,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "DIAMOND_SHOVEL"
+        ],
+        "EXP": {
+          "min": 180,
+          "max": 300
+        },
+        "PlayerGetExp": 100,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 30,
+              "addMax": 70
+            },
+            "clear": {
+              "addMin": 15,
+              "addMax": 35
+            }
+          },
+          "multiplier": 1.5,
+          "bonusEXP": 30
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 10,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "DIAMOND_HOE"
+        ],
+        "EXP": {
+          "min": 180,
+          "max": 300
+        },
+        "PlayerGetExp": 100,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 30,
+              "addMax": 70
+            },
+            "clear": {
+              "addMin": 15,
+              "addMax": 35
+            }
+          },
+          "multiplier": 1.5,
+          "bonusEXP": 30
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 10,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "DIAMOND_SWORD"
+        ],
+        "EXP": {
+          "min": 220,
+          "max": 350
+        },
+        "PlayerGetExp": 130,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 40,
+              "addMax": 80
+            },
+            "clear": {
+              "addMin": 20,
+              "addMax": 40
+            }
+          },
+          "multiplier": 1.5,
+          "bonusEXP": 40
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 10,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "NETHERITE_PICKAXE"
+        ],
+        "EXP": {
+          "min": 1000,
+          "max": 2000
+        },
+        "PlayerGetExp": 500,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 200,
+              "addMax": 400
+            },
+            "clear": {
+              "addMin": 100,
+              "addMax": 200
+            }
+          },
+          "multiplier": 2.0,
+          "bonusEXP": 200
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 5,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "NETHERITE_AXE"
+        ],
+        "EXP": {
+          "min": 1000,
+          "max": 2000
+        },
+        "PlayerGetExp": 500,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 200,
+              "addMax": 400
+            },
+            "clear": {
+              "addMin": 100,
+              "addMax": 200
+            }
+          },
+          "multiplier": 2.0,
+          "bonusEXP": 200
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 5,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "FISHING_ROD"
+        ],
+        "EXP": {
+          "min": 30,
+          "max": 50
+        },
+        "PlayerGetExp": 15,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 20,
+              "addMax": 40
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.2,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 30,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "SHEARS"
+        ],
+        "EXP": {
+          "min": 15,
+          "max": 25
+        },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 2,
+              "addMax": 5
+            },
+            "clear": {
+              "addMin": 0,
+              "addMax": 0
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 40,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "FLINT_AND_STEEL"
+        ],
+        "EXP": {
+          "min": 15,
+          "max": 25
+        },
+        "PlayerGetExp": 8,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 0,
+              "addMax": 0
+            },
+            "clear": {
+              "addMin": 5,
+              "addMax": 10
+            }
+          },
+          "multiplier": 1.0,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": false,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": false,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 40,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "BRUSH"
+        ],
+        "EXP": {
+          "min": 20,
+          "max": 40
+        },
+        "PlayerGetExp": 10,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 0,
+              "addMax": 0
+            },
+            "clear": {
+              "addMin": 10,
+              "addMax": 20
+            }
+          },
+          "multiplier": 1.2,
+          "bonusEXP": 5
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 20,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "COMPASS"
+        ],
+        "EXP": {
+          "min": 40,
+          "max": 70
+        },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 5,
+              "addMax": 15
+            },
+            "clear": {
+              "addMin": 5,
+              "addMax": 15
+            }
+          },
+          "multiplier": 1.2,
+          "bonusEXP": 10
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 15,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "CLOCK"
+        ],
+        "EXP": {
+          "min": 40,
+          "max": 70
+        },
+        "PlayerGetExp": 20,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 5,
+              "addMax": 15
+            },
+            "clear": {
+              "addMin": 5,
+              "addMax": 15
+            }
+          },
+          "multiplier": 1.2,
+          "bonusEXP": 10
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 15,
+          "CheckInventorySpace": true
+        }
+      },
+      {
+        "TypeItemName": [
+          "SPYGLASS"
+        ],
+        "EXP": {
+          "min": 50,
+          "max": 90
+        },
+        "PlayerGetExp": 30,
+        "Chance": 100,
+        "ExtraEXP": {
+          "Weather": {
+            "rain": {
+              "addMin": 0,
+              "addMax": 0
+            },
+            "clear": {
+              "addMin": 20,
+              "addMax": 40
+            }
+          },
+          "multiplier": 1.3,
+          "bonusEXP": 15
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "PreventShiftClickCrafting": true,
+          "ValidateNBTIngredients": true,
+          "MaxCraftPerMinute": 10,
+          "CheckInventorySpace": true
+        }
+      }
+    ]
+  }
+}
