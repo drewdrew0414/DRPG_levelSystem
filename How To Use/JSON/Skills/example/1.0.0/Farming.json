@@ -1,5 +1,5 @@
 {
-  "RewardJsonVersion": "1.0.0",
+  "SkillJsonVersion": "1.0.0",
   "Name": "Farming",
   "DisplayName": "Farming",
   "LevelDrainage": 50,
