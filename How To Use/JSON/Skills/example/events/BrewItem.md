@@ -24,7 +24,11 @@
   "Events": {
     "BrewItem": [ // 플레이어가 포션을 제조했을 때 발생
       {
-        "PotionType": ["String"], 
+        "PotionType": ["String"],
+        "Type": "NORMAL",
+        // NORMAL : 먹는 포션
+        // SPLASH : 투척
+        // LINGERING : 잔류형
         // 제조 대상 포션 목록
         "PotionLevel": int,
 
@@ -75,6 +79,10 @@
       {
         "PotionType": ["String"],
         // Target potion types
+        "Type": "NORMAL",
+        // NORMAL : eating
+        // SPLASH : splash
+        // LINGERING : lingering
         "PotionLevel": int,
 
         "EXP": {
@@ -112,3 +120,4 @@
 ```
 
 ---
+ 
