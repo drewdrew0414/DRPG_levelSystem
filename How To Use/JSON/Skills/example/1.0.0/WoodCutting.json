@@ -1,0 +1,390 @@
+{
+  "Events": {
+    "BlockBreak": [
+      {
+        "TypeItemName": ["OAK_LOG", "STRIPPED_OAK_LOG"],
+        "EXP": { "min": 4, "max": 6 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.5,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 6,
+            "CooldownSeconds": 8,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["SPRUCE_LOG", "STRIPPED_SPRUCE_LOG"],
+        "EXP": { "min": 5, "max": 7 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.5,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 6,
+            "CooldownSeconds": 8,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["BIRCH_LOG", "STRIPPED_BIRCH_LOG"],
+        "EXP": { "min": 4, "max": 7 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.5,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 6,
+            "CooldownSeconds": 8,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["JUNGLE_LOG", "STRIPPED_JUNGLE_LOG"],
+        "EXP": { "min": 6, "max": 9 },
+        "Chance": 100,
+        "RequiredLevel": 1,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.6,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 6,
+            "CooldownSeconds": 8,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["ACACIA_LOG", "STRIPPED_ACACIA_LOG"],
+        "EXP": { "min": 6, "max": 8 },
+        "Chance": 100,
+        "RequiredLevel": 1,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.6,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 6,
+            "CooldownSeconds": 8,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["DARK_OAK_LOG", "STRIPPED_DARK_OAK_LOG"],
+        "EXP": { "min": 7, "max": 10 },
+        "Chance": 100,
+        "RequiredLevel": 2,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.7,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 8,
+            "CooldownSeconds": 12,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["MANGROVE_LOG", "STRIPPED_MANGROVE_LOG"],
+        "EXP": { "min": 6, "max": 9 },
+        "Chance": 100,
+        "RequiredLevel": 2,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.7,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 8,
+            "CooldownSeconds": 12,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["CHERRY_LOG", "STRIPPED_CHERRY_LOG"],
+        "EXP": { "min": 5, "max": 8 },
+        "Chance": 100,
+        "RequiredLevel": 1,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.6,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 6,
+            "CooldownSeconds": 8,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      },
+      {
+        "TypeItemName": ["BAMBOO_BLOCK"],
+        "EXP": { "min": 2, "max": 3 },
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+        "ExtraEXP": {
+          "Weather": {
+            "rain": { "addMin": 0, "addMax": 0 },
+            "clear": { "addMin": 0, "addMax": 0 },
+            "thunder": { "addMin": 0, "addMax": 0 }
+          },
+          "multiplier": 0.3,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "RequirePlayerPlaced": false,
+          "PreventXPGrinding": {
+            "Radius": 4,
+            "CooldownSeconds": 5,
+            "MaxBlocksInChunk": 64,
+            "MinLightLevel": 0,
+            "MaxDailyXPPerBlock": -1
+          },
+          "ActionControl": {
+            "AllowCreativeMode": false,
+            "RequireNaturalBlock": true,
+            "CancelExpIfCancelled": true
+          },
+          "Requirements": {
+            "RequiredWorldTimeStart": 0,
+            "RequiredWorldTimeEnd": 24000
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      }
+    ],
+    "BlockPlace": [
+      {
+        "TypeItemName": [
+          "OAK_SAPLING", "SPRUCE_SAPLING", "BIRCH_SAPLING", "JUNGLE_SAPLING",
+          "ACACIA_SAPLING", "DARK_OAK_SAPLING", "MANGROVE_PROPAGULE",
+          "CHERRY_SAPLING", "BAMBOO_SAPLING"
+        ],
+        "EXP": { "min": 1, "max": 2 },
+        "PlayerGetExp": 0,
+        "Chance": 100,
+        "RequiredLevel": 0,
+        "RequiredTools": [],
+        "Cooldown": 5,
+        "ExtraEXP": {
+          "multiplier": 0.1,
+          "bonusEXP": 0
+        },
+        "UseAdvancedSettings": true,
+        "AdvancedSettings": {
+          "VerifyGravityBlock": false,
+          "IgnoreLiquidPlacement": true,
+          "BlockDataValidation": false,
+          "BroadcastToAdmins": {
+            "Enable": false,
+            "AdminPermission": "admin.notify",
+            "Message": "Player placed a sapling"
+          },
+          "PreventMassPlace": {
+            "MaxPerSecond": 2,
+            "MaxPerChunk": 10
+          },
+          "Requirements": {
+            "RequiredLightLevel": 0,
+            "SurfaceOnly": true,
+            "MinDistanceBetweenSameBlock": 0,
+            "MinFoodLevel": 0
+          },
+          "PlayerPermissionOverride": "woodcutting.bypass",
+          "RequireBiome": ["All"]
+        }
+      }
+    ]
+  }
+}
