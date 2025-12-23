@@ -1,6 +1,9 @@
 {
   "SkillJsonVersion": "1.0.0",
   "Name": "WoodCutting",
+  "DisplayName": "WoodCutting",
+  "LevelDrainage": 50,
+  "MaxLevel": 100,
   "Events": {
     "BlockBreak": [
       {
