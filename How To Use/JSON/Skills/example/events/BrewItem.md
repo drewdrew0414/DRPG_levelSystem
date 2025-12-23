@@ -26,6 +26,7 @@
       {
         "PotionType": ["String"], 
         // 제조 대상 포션 목록
+        "PotionLevel": int,
 
         "EXP": {
           "min": int,
@@ -74,6 +75,7 @@
       {
         "PotionType": ["String"],
         // Target potion types
+        "PotionLevel": int,
 
         "EXP": {
           "min": int,
