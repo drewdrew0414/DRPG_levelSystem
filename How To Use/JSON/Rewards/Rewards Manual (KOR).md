@@ -44,9 +44,20 @@
 "RewardJsonVersion": "<String>",
 "Name": "<String>",
 "DisplayName": "<String>"
+"<int>": [ ... // 밑에 설명 됨
 ```
 
 | 필드명 | 타입 | 설명 | 예시 |
 | --- | --- | --- | --- |
 | RewardJsonVersion | String | Reward Json의 버전 정의 (플러그인의 버전에 맞게 설정 할 것) | 1.0.0 |
+| Name | String | 해당 스킬의 이름 | Farming |
+| DisplayName | String | 플레이어가 보게 될 스킬의 이름 | Farming |
+| "int" | int | int레벨 시 보상 출력 | 5, 10... |
 
+### 2.2 내부구조1
+
+```jsonc
+"<int>": [
+    
+]
+```
