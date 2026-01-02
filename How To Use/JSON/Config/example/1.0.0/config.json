@@ -3,20 +3,15 @@
   "usePlugin": true,
 
   "Debug": {
-    "useDebug": true,
-    "Debug-Default": true,
-    "retryOnError": true,
-    "retryCount": 3
+    "useDebug": true
   },
 
   "Logging": {
     "logToConsole": true,
     "logToFile": true,
-    "logFileName": "log.txt",
     "includeDebug": true,
     "includeStackTrace": true,
-    "includeJsonError": true,
-    "includePerformance": false
+    "includeJsonError": true
   },
 
   "Performance": {
@@ -37,16 +32,9 @@
     "backupMaxFiles": 10
   },
 
-  "Permissions": {
-    "opOnly": true,
-    "useLuckPerms": true,
-    "ignoreNoPermissionMessage": false
-  },
-
   "Skill": {
     "validateSkillFiles": true,
-    "stopOnCriticalError": false,
-    "autoFixSimpleError": true
+    "stopOnCriticalError": false
   },
 
   "Reward": {
@@ -65,11 +53,6 @@
     "preventOverflow": true,
     "preventAsyncRace": true,
     "safeModeOnException": true
-  },
-
-  "VersionControl": {
-    "checkPluginVersion": true,
-    "executeOnlySupportedFeatures": true
   },
 
   "plguins": {
