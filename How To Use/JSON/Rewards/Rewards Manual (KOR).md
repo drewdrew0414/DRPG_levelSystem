@@ -22,7 +22,7 @@
 
 ## 0. 목차
 * ### 1. [Rewards Json 호환버전 확인](#kor1)
-* ### 2. [Json 구조]()
+* ### 2. [Json 구조](#kor2)
 * ### 3. [주의사항]()
 * ### 4. [예제]()
   
@@ -39,6 +39,11 @@
 ## 2. Json 구조
 <a id="kor2"></a>
 
+#### 2.1 최상위 구조
 ``` jsonc
-
+"RewardJsonVersion": "<String>",
+"Name": "<String>",
+"DisplayName": "<String>"
 ```
+
+| 필드명 | 타입 | 설명 |ㅇㅇ
