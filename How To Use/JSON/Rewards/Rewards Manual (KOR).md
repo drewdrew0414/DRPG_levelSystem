@@ -46,4 +46,7 @@
 "DisplayName": "<String>"
 ```
 
-| 필드명 | 타입 | 설명 |ㅇㅇ
+| 필드명 | 타입 | 설명 | 예시 |
+| --- | --- | --- | --- |
+| RewardJsonVersion | String | Reward Json의 버전 정의 (플러그인의 버전에 맞게 설정 할 것) | 1.0.0 |
+
