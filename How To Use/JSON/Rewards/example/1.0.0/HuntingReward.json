@@ -1,0 +1,286 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Hunting",
+  "displayName": "Hunting",
+  "5": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "COOKED_BEEF", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "COOKED_PORKCHOP", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "COOKED_CHICKEN", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "10": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "STONE_SWORD", "amount": 1, "nbt": [], "enchant": [["SHARPNESS", 1]], "exp": 0 }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "APPLE", "amount": 10, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SWEET_BERRIES", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "GLOW_BERRIES", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "20": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "BOW", "amount": 1, "nbt": [], "enchant": [["POWER", 2]], "exp": 0 },
+        { "itemName": "ARROW", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "LEATHER", "amount": 1, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "STRING", "amount": 1, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "SADDLE", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "30": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "CAKE", "amount": 2, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "GUNPOWDER", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "35": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND_SWORD", "amount": 1, "nbt": [], "enchant": [["SHARPNESS", 2]], "exp": 0 }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "DIAMOND_HELMET", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "DIAMOND_CHESTPLATE", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "DIAMOND_LEGGINGS", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "3": [{ "itemName": "DIAMOND_BOOTS", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "45": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "GUNPOWDER", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "50": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "GOLDEN_APPLE", "amount": 5, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "55": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "TOTEM_OF_UNDYING", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "60": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "INCREASE_DAMAGE", "level": 1, "time": 400, "cooltime": 2400 }
+      ],
+      "title": "사냥전문가",
+      "items": []
+    }
+  ],
+  "65": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_SCRAP", "amount": 4, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "70": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "75": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "TOTEM_OF_UNDYING", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "80": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["MENDING", 1]], "exp": 0 }
+      ]
+    }
+  ],
+  "85": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["SHARPNESS", 5], ["EFFICIENCY", 5]], "exp": 0 }
+      ]
+    }
+  ],
+  "90": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_GOLDEN_APPLE", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "95": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_HELMET", "amount": 1, "nbt": [], "enchant": [["PROTECTION", 4], ["UNBREAKING", 3]], "exp": 0 },
+        { "itemName": "NETHERITE_CHESTPLATE", "amount": 1, "nbt": [], "enchant": [["PROTECTION", 4], ["UNBREAKING", 3]], "exp": 0 },
+        { "itemName": "NETHERITE_LEGGINGS", "amount": 1, "nbt": [], "enchant": [["PROTECTION", 4], ["UNBREAKING", 3]], "exp": 0 },
+        { "itemName": "NETHERITE_BOOTS", "amount": 1, "nbt": [], "enchant": [["PROTECTION", 4], ["UNBREAKING", 3]], "exp": 0 }
+      ]
+    }
+  ],
+  "100": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "사냥 마스터",
+      "items": [
+        { "itemName": "ELYTRA", "amount": 1, "nbt": [], "enchant": [["UNBREAKING", 3]], "exp": 0 }
+      ]
+    }
+  ]
+}
