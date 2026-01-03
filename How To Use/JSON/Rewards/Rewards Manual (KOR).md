@@ -8,7 +8,7 @@
 
 ## Select Language / 언어 선택
 * ## [English](#English)
-* ## [한국어](#한국어)
+* ## [한국어](#Korean)
 
 ---
 
@@ -185,7 +185,7 @@
 ---
 
 ## 한국어
-<a id="한국어"></a>
+<a id="Korean"></a>
 
 ## 0. 목차
 * ### 1. [Rewards Json 호환버전 확인](#kor1)
