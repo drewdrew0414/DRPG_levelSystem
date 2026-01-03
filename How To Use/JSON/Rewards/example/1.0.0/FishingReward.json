@@ -1,0 +1,302 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Fishing",
+  "displayName": "Fishing",
+  "5": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "COD", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SALMON", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "TROPICAL_FISH", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "3": [{ "itemName": "PUFFERFISH", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "10": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        {
+          "itemName": "FISHING_ROD",
+          "amount": 1,
+          "nbt": [],
+          "enchant": [["UNBREAKING", 1], ["LUCK_OF_THE_SEA", 2]],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "PUFFERFISH", "amount": 5, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "20": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "COD", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SALMON", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "25": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "WATER_BREATHING", "level": 1, "time": 1200, "cooltime": 3600 }
+      ],
+      "title": "물고기 사냥꾼",
+      "items": []
+    }
+  ],
+  "30": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "COD", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SALMON", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "35": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        {
+          "itemName": "ENCHANTED_BOOK",
+          "amount": 1,
+          "nbt": [],
+          "enchant": [["UNBREAKING", 3], ["LUCK_OF_THE_SEA", 1]],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "HEART_OF_THE_SEA", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "45": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENDER_PEARL", "amount": 10, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "50": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "AXOLOTL_BUCKET", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "55": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "TRIDENT", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "60": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "COD", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SALMON", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "65": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "DOLPHINS_GRACE", "level": 1, "time": 1200, "cooltime": 4200 }
+      ],
+      "title": "물고기들의 적",
+      "items": []
+    }
+  ],
+  "70": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        {
+          "itemName": "FISHING_ROD",
+          "amount": 1,
+          "nbt": [],
+          "enchant": [["UNBREAKING", 5], ["LUCK_OF_THE_SEA", 3], ["MENDING", 1], ["LURE", 2]],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "75": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "TROPICAL_FISH", "amount": 64, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "80": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "AXOLOTL_BUCKET", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "85": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "SADDLE", "amount": 2, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["MENDING", 1]], "exp": 0 }
+      ]
+    }
+  ],
+  "90": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "TRIDENT", "amount": 2, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "SPONGE", "amount": 10, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "95": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NAME_TAG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "SPONGE", "amount": 5, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "TRIDENT", "amount": 1, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["MENDING", 1]], "exp": 0 }
+      ]
+    }
+  ],
+  "100": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "CONDUIT_POWER", "level": 1, "time": 2100, "cooltime": 3600 }
+      ],
+      "title": "바다의 원수",
+      "items": []
+    }
+  ]
+}
