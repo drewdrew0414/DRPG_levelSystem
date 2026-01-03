@@ -2,14 +2,9 @@
   "configVersion": "1.0.0",
   "usePlugin": true,
 
-  "Debug": {
-    "useDebug": true
-  },
-
   "Logging": {
     "logToConsole": true,
     "logToFile": true,
-    "includeDebug": true,
     "includeStackTrace": true,
     "includeJsonError": true
   },
