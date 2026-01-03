@@ -38,8 +38,7 @@
     "Notify": {
       "chat": true,
       "actionBar": true,
-      "title": false,
-      "subtitle": false
+      "title": false
     }
   },
 
