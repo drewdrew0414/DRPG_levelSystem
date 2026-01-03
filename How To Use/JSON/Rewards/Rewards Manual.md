@@ -131,6 +131,18 @@
 ### 2.4 Internal Structure (items)
 <a id="eng2-1-4"></a>
 
+```json
+"items": [
+  {
+    "itemName": "WHEAT",
+    "amount": 64,
+    "nbt": [],
+    "enchant": [],
+    "exp": 0
+  }
+]
+```
+
 | Field | Type | Description | Example |
 | :--- | :--- | :--- | :--- |
 | itemName | String | Minecraft Material Name (UPPERCASE) | WHEAT |
@@ -183,7 +195,6 @@
 
 ## 5. Case Examples
 <a id="eng-case"></a>
-*(Refer to the JSON examples in the Korean section below for full code snippets)*
 
 ---
 
@@ -223,21 +234,48 @@
 ### 2.1 Json 최상위 구조
 <a id="kor2-1-1"></a>
 
+```json
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Farming",
+  "displayName": "Farming",
+
+  "<레벨>": [
+    { }
+  ]
+}
+```
+
 | 필드명 | 타입 | 설명 | 예시 |
 | :--- | :--- | :--- | :--- |
 | RewardJsonVersion | String | 보상 파일의 버전 정의 | 1.0.0 |
 | Name | String | 스킬의 내부 고유 이름 | Farming |
 | displayName | String | 플레이어에게 표시될 이름 | 농사 보상 |
+| <레벨> | String | 보상이 지급될 레벨 (반드시 문자열) | "5", "10" |
 
 ---
 
-### 2.2 기본 내부 구조
+### 2.2 Json 기본 내부 구조
 <a id="kor2-1-2"></a>
+
+```json
+"<레벨>": [
+  {
+    "useRandom": false,
+    "randomValue": 0,
+    "randomItems": [],
+    "Permissions": null,
+    "effects": [],
+    "title": null,
+    "items": []
+  }
+]
+```
 
 | 필드명 | 타입 | 설명 | 예시 |
 | :--- | :--- | :--- | :--- |
 | useRandom | boolean | 랜덤 보상 로직 사용 여부 | true / false |
-| randomValue | int | 랜덤 그룹 중 선택할 개수 | 1 |
+| randomValue | int | 랜덤 그룹 중 선택할 개수 | 1, 2 |
 | randomItems | Array | 랜덤 보상 아이템 그룹 리스트 | [ { "0": [...] } ] |
 | Permissions | String | LuckPerms 권한 노드 | skill.farming.5 |
 | effects | Array | 부여할 포션 및 특수 효과 리스트 | 하단 2.5 참조 |
@@ -246,28 +284,79 @@
 
 ---
 
-### 2.3 내부 구조 (useRandom)
+### 2.3 Json 내부 구조 (useRandom)
 <a id="kor2-1-3"></a>
-* ### 인덱스는 반드시 `"0"`부터 시작
+
+```json
+"randomItems": [
+  {
+    "0": [
+      {
+        "itemName": "BREAD",
+        "amount": 8,
+        "nbt": [],
+        "enchant": [],
+        "exp": 0
+      }
+    ]
+  }
+]
+```
+
+| 필드명 | 타입 | 설명 | 예시 |
+| :--- | :--- | :--- | :--- |
+| "인덱스" | String | 그룹 번호 (반드시 "0"부터 시작) | "0", "1" |
+| itemName | String | 마인크래프트 아이템 명칭 (대문자) | STONE |
+| amount | int | 지급할 아이템의 수량 | 64 |
+| nbt | Array | NBT 태그 정보 (리스트 형식) | [] |
+| enchant | Array | 인챈트 설정 [ ["이름", 레벨] ] | [ ["FORTUNE", 3] ] |
+| exp | int | 지급할 경험치량 | 100 |
+
+* ### 인덱스는 반드시 `"0"`부터 시작해야 함
 * ### 순차적으로 증가해야 함 (0, 1, 2...)
 * ### randomValue는 설정된 인덱스 그룹의 총 개수를 초과할 수 없음
 
 ---
 
-### 2.4 내부 구조 (items)
+### 2.4 Json 내부 구조 (items)
 <a id="kor2-1-4"></a>
+
+```json
+"items": [
+  {
+    "itemName": "WHEAT",
+    "amount": 64,
+    "nbt": [],
+    "enchant": [],
+    "exp": 0
+  }
+]
+```
+
 | 필드명 | 타입 | 설명 | 예시 |
 | :--- | :--- | :--- | :--- |
-| itemName | String | 아이템 영문 명칭 (대문자) | DIAMOND_HOE |
+| itemName | String | 마인크래프트 아이템 명칭 (대문자) | DIAMOND_HOE |
 | amount | int | 지급 수량 | 1 |
-| nbt | Array | NBT 태그 정보 (리스트) | [] |
+| nbt | Array | NBT 태그 정보 | [] |
 | enchant | Array | 인챈트 설정 [ ["이름", 레벨] ] | [ ["UNBREAKING", 3] ] |
 | exp | int | 지급할 경험치량 | 100 |
 
 ---
 
-### 2.5 내부 구조 (effects)
+### 2.5 Json 내부 구조 (effects)
 <a id="kor2-1-5"></a>
+
+```json
+"effects": [
+  {
+    "type": "SPEED",
+    "level": 1,
+    "time": 200,
+    "cooltime": 0
+  }
+]
+```
+
 | 필드명 | 타입 | 설명 | 예시 |
 | :--- | :--- | :--- | :--- |
 | type | String | 포션 효과 종류 | HASTE, SPEED |
@@ -287,7 +376,7 @@
 
 ## 4. 에러 조건
 <a id="kor-error"></a>
-* ### 랜덤 설정 사용 시 보상 풀이 비어있는 경우
+* ### 랜덤 설정(`useRandom = true`) 시 보상 풀(`randomItems`)이 비어있는 경우
 * ### 필수 필드(RewardJsonVersion 등)가 누락된 경우
 * ### 인챈트나 효과 이름이 올바르지 않은 경우
 
