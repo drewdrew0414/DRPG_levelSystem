@@ -1,0 +1,302 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Mining",
+  "displayName": "Mining",
+  "5": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "IRON_INGOT", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "COPPER_INGOT", "amount": 12, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "COAL", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "10": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "STONE_PICKAXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 2], ["UNBREAKING", 1]], "exp": 0 }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "RAW_IRON", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "RAW_GOLD", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "RAW_COPPER", "amount": 20, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "20": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "IRON_PICKAXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 3]], "exp": 0 },
+        { "itemName": "TORCH", "amount": 64, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "광부",
+      "items": [
+        { "itemName": "IRON_INGOT", "amount": 32, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "GOLD_INGOT", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "30": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "AMETHYST_SHARD", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "COPPER_INGOT", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "IRON_INGOT", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "35": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND_PICKAXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 2], ["UNBREAKING", 2]], "exp": 0 }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND", "amount": 5, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "GOLD_INGOT", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "45": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "GOLDEN_APPLE", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "50": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "DIAMOND", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "EMERALD", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "55": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        {
+          "itemName": "DIAMOND_PICKAXE",
+          "amount": 1,
+          "nbt": [],
+          "enchant": [["EFFICIENCY", 4], ["UNBREAKING", 3], ["FORTUNE", 2]],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "60": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "FAST_DIGGING", "level": 1, "time": 2400, "cooltime": 4800 }
+      ],
+      "title": "채굴 전문가",
+      "items": []
+    }
+  ],
+  "65": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_SCRAP", "amount": 2, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "GOLD_INGOT", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "70": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 64, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "DIAMOND_BLOCK", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "75": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_INGOT", "amount": 1, "nbt": [], "enchant": [], "exp": 0 },
+        { "itemName": "NETHER_BRICK", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "80": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["MENDING", 1], ["EFFICIENCY", 5]], "exp": 0 }
+      ]
+    }
+  ],
+  "85": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["SILK_TOUCH", 1], ["FORTUNE", 3]], "exp": 0 }
+      ]
+    }
+  ],
+  "90": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "NETHERITE_INGOT", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "DIAMOND_BLOCK", "amount": 5, "nbt": [], "enchant": [], "exp": 0 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "95": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        {
+          "itemName": "NETHERITE_PICKAXE",
+          "amount": 1,
+          "nbt": [],
+          "enchant": [["EFFICIENCY", 5], ["UNBREAKING", 3], ["FORTUNE", 3], ["MENDING", 1]],
+          "exp": 0
+        }
+      ]
+    }
+  ],
+  "100": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "FAST_DIGGING", "level": 2, "time": 3600, "cooltime": 6000 }
+      ],
+      "title": "지하의 지배자",
+      "items": []
+    }
+  ]
+}
