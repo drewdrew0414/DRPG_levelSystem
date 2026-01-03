@@ -5,7 +5,6 @@
   "Logging": {
     "logToConsole": true,
     "logToFile": true,
-    "includeStackTrace": true,
     "includeJsonError": true
   },
 
