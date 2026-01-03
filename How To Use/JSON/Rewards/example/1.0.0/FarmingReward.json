@@ -7,18 +7,14 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "BREAD", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "COOKED_PORKCHOP", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "2": [
-            { "itemName": "COOKED_BEEF", "amount": 6, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "BREAD", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "COOKED_PORKCHOP", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "COOKED_BEEF", "amount": 6, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": []
     }
   ],
@@ -27,6 +23,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "WHEAT", "amount": 64, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -37,18 +35,14 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "WHEAT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "BEETROOT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "2": [
-            { "itemName": "MELON_SEEDS", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "WHEAT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "BEETROOT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "MELON_SEEDS", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": []
     }
   ],
@@ -57,15 +51,13 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "STONE_HOE", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "IRON_HOE", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "STONE_HOE", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "IRON_HOE", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "SUGAR_CANE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -76,15 +68,13 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "PUMPKIN_SEEDS", "amount": 24, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "MELON_SEEDS", "amount": 24, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "PUMPKIN_SEEDS", "amount": 24, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "MELON_SEEDS", "amount": 24, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": []
     }
   ],
@@ -93,18 +83,14 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "COW_SPAWN_EGG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "SHEEP_SPAWN_EGG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "2": [
-            { "itemName": "CHICKEN_SPAWN_EGG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "COW_SPAWN_EGG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SHEEP_SPAWN_EGG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "CHICKEN_SPAWN_EGG", "amount": 3, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": []
     }
   ],
@@ -113,6 +99,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "SUGAR_CANE", "amount": 48, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -123,6 +111,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "BONE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -133,6 +123,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "PUMPKIN_SEEDS", "amount": 16, "nbt": [], "enchant": [], "exp": 0 },
         { "itemName": "MELON_SEEDS", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
@@ -144,6 +136,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "CAKE", "amount": 10, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -154,16 +148,14 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": "Veteran Farmer",
+      "effects": [],
       "items": [
         {
           "itemName": "DIAMOND_HOE",
           "amount": 1,
           "nbt": [],
-          "enchant": [
-            ["UNBREAKING", 4],
-            ["EFFICIENCY", 4],
-            ["FORTUNE", 3]
-          ],
+          "enchant": [["UNBREAKING", 4], ["EFFICIENCY", 4], ["FORTUNE", 3]],
           "exp": 0
         }
       ]
@@ -174,6 +166,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -184,6 +178,8 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": [
         { "itemName": "HONEYCOMB", "amount": 12, "nbt": [], "enchant": [], "exp": 0 }
       ]
@@ -194,18 +190,14 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "WHEAT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "BEETROOT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "2": [
-            { "itemName": "CARROT", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "WHEAT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "BEETROOT_SEEDS", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }],
+          "2": [{ "itemName": "CARROT", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": []
     }
   ],
@@ -214,15 +206,13 @@
       "useRandom": true,
       "randomItems": [
         {
-          "0": [
-            { "itemName": "COW_SPAWN_EGG", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
-          ],
-          "1": [
-            { "itemName": "SHEEP_SPAWN_EGG", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
-          ]
+          "0": [{ "itemName": "COW_SPAWN_EGG", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }],
+          "1": [{ "itemName": "SHEEP_SPAWN_EGG", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }]
         }
       ],
       "Permissions": null,
+      "Title": null,
+      "effects": [],
       "items": []
     }
   ],
@@ -231,6 +221,46 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": "Green Thumb",
+      "effects": [
+        { "type": "HASTE", "level": 1, "time": 0, "cooltime": 0 }
+      ],
+      "items": []
+    }
+  ],
+  "85": [
+    {
+      "useRandom": false,
+      "randomItems": [],
+      "Permissions": null,
+      "Title": "Farmer's Vitality",
+      "effects": [
+        { "type": "REGENERATION", "level": 1, "time": 0, "cooltime": 0 }
+      ],
+      "items": []
+    }
+  ],
+  "90": [
+    {
+      "useRandom": false,
+      "randomItems": [],
+      "Permissions": null,
+      "Title": "Sturdy Harvest",
+      "effects": [
+        { "type": "HEALTH_BOOST", "level": 2, "time": 0, "cooltime": 0 }
+      ],
+      "items": []
+    }
+  ],
+  "95": [
+    {
+      "useRandom": false,
+      "randomItems": [],
+      "Permissions": null,
+      "Title": "Swift Reap",
+      "effects": [
+        { "type": "HASTE", "level": 2, "time": 0, "cooltime": 0 }
+      ],
       "items": []
     }
   ],
@@ -239,16 +269,16 @@
       "useRandom": false,
       "randomItems": [],
       "Permissions": null,
+      "Title": "Master of Farming",
+      "effects": [
+        { "type": "SPEED", "level": 1, "time": 0, "cooltime": 0 }
+      ],
       "items": [
         {
           "itemName": "NETHERITE_HOE",
           "amount": 1,
           "nbt": [],
-          "enchant": [
-            ["UNBREAKING", 5],
-            ["EFFICIENCY", 6],
-            ["FORTUNE", 4]
-          ],
+          "enchant": [["UNBREAKING", 5], ["EFFICIENCY", 6], ["FORTUNE", 4]],
           "exp": 0
         }
       ]
