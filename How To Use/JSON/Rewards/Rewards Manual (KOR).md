@@ -13,9 +13,175 @@
 ---
 
 ## English
+<a id="english"></a>
 
 ## 0. Table of Contents
-* ### 1.
+* ### 1. [Rewards Json Compatibility Check](#eng1)
+* ### 2. **Versions**
+    * ### [1.0.0](#eng-1-0-0)
+        * [Top-level Json Structure](#eng2-1-1)
+        * [Basic Internal Structure](#eng2-1-2)
+        * [Internal Structure (useRandom)](#eng2-1-3)
+        * [Internal Structure (items)](#eng2-1-4)
+* ### 3. [Precautions](#eng3)
+* ### 4. [Example](#eng4)
+
+---
+
+## 1. Compatibility Check
+<a id="eng1"></a>
+
+| Plugin Version | Compatible Rewards Json Version |
+|---|---|
+| 1.0.0 | 1.0.0 |
+
+---
+
+## 2. Json Structure by Version
+<a id="eng2"></a>
+
+## 1.0.0
+<a id="eng-1-0-0"></a>
+
+### 2.1 Top-level Json Structure
+<a id="eng2-1-1"></a>
+
+```json
+"RewardJsonVersion": "<String>",
+"Name": "<String>",
+"DisplayName": "<String>",
+"<int>": [ ... ] // Explained below
+````
+
+| Field             | Type   | Description                                                 | Example |
+| ----------------- | ------ | ----------------------------------------------------------- | ------- |
+| RewardJsonVersion | String | Defines the Reward Json version (must match plugin version) | 1.0.0   |
+| Name              | String | Internal ID / name of the skill                             | Farming |
+| DisplayName       | String | Name displayed to players                                   | Farming |
+| "int"             | int    | Level at which the reward is given                          | 5, 10   |
+
+---
+
+### 2.2 Basic Internal Structure
+
+<a id="eng2-1-2"></a>
+
+```json
+"<int>": [
+  {
+    "useRandom": <boolean>,
+    "randomItems": [
+      ... // Explained below
+    ],
+    "Permissions": <String>,
+    "items": [
+      {
+        ... // Explained below
+      }
+    ]
+  }
+]
+```
+
+| Field       | Type    | Description                        | Example        |
+| ----------- | ------- | ---------------------------------- | -------------- |
+| useRandom   | boolean | Whether rewards are given randomly | false          |
+| randomItems | Object  | Logic for random item selection    | See below      |
+| Permissions | String  | Used for LuckPerms integration     | farming.reward |
+| items       | Object  | Logic for guaranteed rewards       | See below      |
+
+---
+
+### 2.3 Internal Structure (useRandom)
+
+<a id="eng2-1-3"></a>
+
+```json
+"randomItems": [
+  {
+    "0": [
+      {
+        "itemName": "<String>",
+        "amount": <int>,
+        "nbt": [ <String> ],
+        "enchant": [ [ "<String>", <int> ], ... ],
+        "exp": <int>
+      }
+    ],
+    "1": [
+      {
+        "itemName": "<String>",
+        "amount": <int>,
+        "nbt": [ <String> ],
+        "enchant": [ [ "<String>", <int> ] ],
+        "exp": <int>
+      }
+    ]
+    // ... more can be added
+  }
+]
+```
+
+| Field    | Type   | Description                      | Example         |
+| -------- | ------ | -------------------------------- | --------------- |
+| "int"    | int    | Must start from 0                | 0, 1, 2         |
+| itemName | String | Item ID (UPPERCASE only)         | STONE           |
+| amount   | int    | Item quantity                    | 8, 16, 32       |
+| nbt      | String | NBT tags (supported from 1.2.0+) | WIP             |
+| enchant  | List   | Enchantments to apply            | [UNBREAKING, 3] |
+| exp      | int    | Experience given to player       | 100             |
+
+---
+
+### 2.4 Internal Structure (items)
+
+<a id="eng2-1-4"></a>
+
+```json
+"items": [
+  {
+    "itemName": "<String>",
+    "amount": <int>,
+    "nbt": <String>,
+    "enchant": [ [ "<String>", <int> ] ],
+    "exp": <int>
+  },
+  {
+    "itemName": "<String>",
+    "amount": <int>,
+    "nbt": <String>,
+    "enchant": [ [ "<String>", <int> ] ],
+    "exp": <int>
+  }
+]
+```
+
+| Field    | Type   | Description                      | Example         |
+| -------- | ------ | -------------------------------- | --------------- |
+| itemName | String | Item ID (UPPERCASE only)         | STONE           |
+| amount   | int    | Item quantity                    | 8, 16, 32       |
+| nbt      | String | NBT tags (supported from 1.2.0+) | WIP             |
+| enchant  | List   | Enchantments to apply            | [UNBREAKING, 3] |
+| exp      | int    | Experience given to player       | 100             |
+
+---
+
+## 3. Precautions
+
+<a id="eng3"></a>
+
+* Ensure `itemName` matches official Minecraft Material names (uppercase).
+* `RewardJsonVersion` must be compatible with the plugin version.
+* When using `randomItems`, indices must be sequential starting from `"0"`.
+
+---
+
+## 4. Example
+
+<a id="eng4"></a>
+
+[1.0.0 Farming.json Example](example/1.0.0/FarmingReward.json)
+
 ---
 
 ## 한국어
