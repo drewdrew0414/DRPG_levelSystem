@@ -1,0 +1,274 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Dexterity",
+  "displayName": "Dexterity",
+  "5": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "COAL", "amount": 32, "nbt": [], "enchant": [], "exp": 500 }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "IRON_INGOT", "amount": 16, "nbt": [], "enchant": [], "exp": 1000 },
+        { "itemName": "CRAFTING_TABLE", "amount": 4, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "COPPER_INGOT", "amount": 32, "nbt": [], "enchant": [], "exp": 1500 }],
+          "1": [{ "itemName": "RAW_IRON", "amount": 20, "nbt": [], "enchant": [], "exp": 1500 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "20": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "FURNACE", "amount": 8, "nbt": [], "enchant": [], "exp": 2000 },
+        { "itemName": "IRON_INGOT", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "견습 대장장이",
+      "items": [
+        { "itemName": "ANVIL", "amount": 1, "nbt": [], "enchant": [], "exp": 3000 },
+        { "itemName": "GOLD_INGOT", "amount": 16, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "30": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "BLAST_FURNACE", "amount": 2, "nbt": [], "enchant": [], "exp": 4000 },
+        { "itemName": "SMOKER", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "35": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "BUCKET", "amount": 3, "nbt": [], "enchant": [], "exp": 5000 },
+        { "itemName": "LAVA_BUCKET", "amount": 1, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND", "amount": 8, "nbt": [], "enchant": [], "exp": 6500 }
+      ]
+    }
+  ],
+  "45": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 8000 }
+      ]
+    }
+  ],
+  "50": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "중급 기술자",
+      "items": [
+        { "itemName": "SMITHING_TABLE", "amount": 1, "nbt": [], "enchant": [], "exp": 10000 },
+        { "itemName": "NETHERITE_SCRAP", "amount": 2, "nbt": [], "enchant": [], "exp": 0 }
+      ]
+    }
+  ],
+  "55": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "GOLD_BLOCK", "amount": 4, "nbt": [], "enchant": [], "exp": 12000 }
+      ]
+    }
+  ],
+  "60": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "숙련된 대장장이",
+      "items": [
+        { "itemName": "IRON_BLOCK", "amount": 8, "nbt": [], "enchant": [], "exp": 15000 }
+      ]
+    }
+  ],
+  "65": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_SCRAP", "amount": 4, "nbt": [], "enchant": [], "exp": 20000 }
+      ]
+    }
+  ],
+  "70": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND_BLOCK", "amount": 2, "nbt": [], "enchant": [], "exp": 25000 }
+      ]
+    }
+  ],
+  "75": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_INGOT", "amount": 1, "nbt": [], "enchant": [], "exp": 30000 }
+      ]
+    }
+  ],
+  "80": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["MENDING", 1]], "exp": 40000 }
+      ]
+    }
+  ],
+  "85": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["UNBREAKING", 3], ["EFFICIENCY", 5]], "exp": 50000 }
+      ]
+    }
+  ],
+  "90": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_INGOT", "amount": 3, "nbt": [], "enchant": [], "exp": 70000 }
+      ]
+    }
+  ],
+  "95": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_INGOT", "amount": 1, "nbt": [], "enchant": [], "exp": 100000 }
+      ]
+    }
+  ],
+  "100": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "신의 손",
+      "items": [
+        { "itemName": "NETHERITE_UPGRADE_SMITHING_TEMPLATE", "amount": 2, "nbt": [], "enchant": [], "exp": 200000 }
+      ]
+    }
+  ]
+}
