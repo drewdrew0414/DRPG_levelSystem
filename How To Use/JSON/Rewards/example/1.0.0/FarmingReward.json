@@ -1,12 +1,10 @@
 {
   "RewardJsonVersion": "1.0.0",
   "Name": "Farming",
-  "displayName": "Farming",
-
+  "DisplayName": "Farming",
   "5": [
     {
       "useRandom": true,
-      "randomValue": 2,
       "randomItems": [
         {
           "0": [
@@ -24,21 +22,19 @@
       "items": []
     }
   ],
-
   "10": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "WHEAT", "amount": 64, "nbt": [], "enchant": [], "exp": 0 }
       ]
     }
   ],
-
   "15": [
     {
       "useRandom": true,
-      "randomValue": 2,
       "randomItems": [
         {
           "0": [
@@ -56,11 +52,9 @@
       "items": []
     }
   ],
-
   "20": [
     {
       "useRandom": true,
-      "randomValue": 1,
       "randomItems": [
         {
           "0": [
@@ -77,11 +71,9 @@
       ]
     }
   ],
-
   "25": [
     {
       "useRandom": true,
-      "randomValue": 1,
       "randomItems": [
         {
           "0": [
@@ -96,11 +88,9 @@
       "items": []
     }
   ],
-
   "30": [
     {
       "useRandom": true,
-      "randomValue": 2,
       "randomItems": [
         {
           "0": [
@@ -118,30 +108,30 @@
       "items": []
     }
   ],
-
   "35": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "SUGAR_CANE", "amount": 48, "nbt": [], "enchant": [], "exp": 0 }
       ]
     }
   ],
-
   "40": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "BONE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
       ]
     }
   ],
-
   "45": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "PUMPKIN_SEEDS", "amount": 16, "nbt": [], "enchant": [], "exp": 0 },
@@ -149,20 +139,20 @@
       ]
     }
   ],
-
   "50": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "CAKE", "amount": 10, "nbt": [], "enchant": [], "exp": 0 }
       ]
     }
   ],
-
   "55": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         {
@@ -179,31 +169,29 @@
       ]
     }
   ],
-
   "60": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 0 }
       ]
     }
   ],
-
   "65": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
       "items": [
         { "itemName": "HONEYCOMB", "amount": 12, "nbt": [], "enchant": [], "exp": 0 }
       ]
     }
   ],
-
   "70": [
     {
       "useRandom": true,
-      "randomValue": 2,
       "randomItems": [
         {
           "0": [
@@ -221,11 +209,9 @@
       "items": []
     }
   ],
-
   "75": [
     {
       "useRandom": true,
-      "randomValue": 1,
       "randomItems": [
         {
           "0": [
@@ -240,59 +226,19 @@
       "items": []
     }
   ],
-
   "80": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
-      "effects": [
-        { "type": "HASTE", "level": 1, "time": 0, "cooltime": 0 }
-      ],
       "items": []
     }
   ],
-
-  "85": [
-    {
-      "useRandom": false,
-      "Permissions": null,
-      "effects": [
-        { "type": "REGENERATION", "level": 1, "time": 0, "cooltime": 0 }
-      ],
-      "items": []
-    }
-  ],
-
-  "90": [
-    {
-      "useRandom": false,
-      "Permissions": null,
-      "effects": [
-        { "type": "HEALTH_BOOST", "level": 2, "time": 0, "cooltime": 0 }
-      ],
-      "items": []
-    }
-  ],
-
-  "95": [
-    {
-      "useRandom": false,
-      "Permissions": null,
-      "effects": [
-        { "type": "HASTE", "level": 2, "time": 0, "cooltime": 0 }
-      ],
-      "items": []
-    }
-  ],
-
   "100": [
     {
       "useRandom": false,
+      "randomItems": [],
       "Permissions": null,
-      "effects": [
-        { "type": "SPEED", "level": 1, "time": 0, "cooltime": 0 }
-      ],
-      "title": "Master of Farming",
       "items": [
         {
           "itemName": "NETHERITE_HOE",
