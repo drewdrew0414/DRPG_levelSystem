@@ -1,0 +1,276 @@
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "WoodCutting",
+  "displayName": "WoodCutting",
+  "5": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "OAK_LOG", "amount": 16, "nbt": [], "enchant": [], "exp": 500 }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "STONE_AXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 1]], "exp": 1000 }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "useRandom": true,
+      "randomValue": 1,
+      "randomItems": [
+        {
+          "0": [{ "itemName": "APPLE", "amount": 5, "nbt": [], "enchant": [], "exp": 1500 }],
+          "1": [{ "itemName": "OAK_SAPLING", "amount": 4, "nbt": [], "enchant": [], "exp": 1500 }]
+        }
+      ],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": []
+    }
+  ],
+  "20": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "IRON_AXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 2]], "exp": 2000 }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "나무꾼",
+      "items": [
+        { "itemName": "COAL", "amount": 32, "nbt": [], "enchant": [], "exp": 3000 }
+      ]
+    }
+  ],
+  "30": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "STRIPPED_OAK_LOG", "amount": 64, "nbt": [], "enchant": [], "exp": 4000 }
+      ]
+    }
+  ],
+  "35": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND_AXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 2]], "exp": 5000 }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "GOLDEN_APPLE", "amount": 3, "nbt": [], "enchant": [], "exp": 6000 }
+      ]
+    }
+  ],
+  "45": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 16, "nbt": [], "enchant": [], "exp": 7000 }
+      ]
+    }
+  ],
+  "50": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [
+        { "type": "NIGHT_VISION", "level": 1, "time": 0, "cooltime": 0 }
+      ],
+      "title": "어둠을 걷는 자",
+      "items": [
+        { "itemName": "DIAMOND", "amount": 4, "nbt": [], "enchant": [], "exp": 8500 }
+      ]
+    }
+  ],
+  "55": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "DIAMOND_AXE", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 4], ["UNBREAKING", 3]], "exp": 10000 }
+      ]
+    }
+  ],
+  "60": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "벌목 전문가",
+      "items": [
+        { "itemName": "AIR", "amount": 1, "nbt": [], "enchant": [], "exp": 12000 }
+      ]
+    }
+  ],
+  "65": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_SCRAP", "amount": 2, "nbt": [], "enchant": [], "exp": 15000 }
+      ]
+    }
+  ],
+  "70": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "EXPERIENCE_BOTTLE", "amount": 32, "nbt": [], "enchant": [], "exp": 18000 }
+      ]
+    }
+  ],
+  "75": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_INGOT", "amount": 1, "nbt": [], "enchant": [], "exp": 22000 }
+      ]
+    }
+  ],
+  "80": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["MENDING", 1]], "exp": 26000 }
+      ]
+    }
+  ],
+  "85": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "ENCHANTED_BOOK", "amount": 1, "nbt": [], "enchant": [["EFFICIENCY", 5]], "exp": 30000 }
+      ]
+    }
+  ],
+  "90": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        { "itemName": "NETHERITE_INGOT", "amount": 2, "nbt": [], "enchant": [], "exp": 40000 }
+      ]
+    }
+  ],
+  "95": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": null,
+      "items": [
+        {
+          "itemName": "NETHERITE_AXE",
+          "amount": 1,
+          "nbt": [],
+          "enchant": [["EFFICIENCY", 5], ["UNBREAKING", 3], ["MENDING", 1]],
+          "exp": 50000
+        }
+      ]
+    }
+  ],
+  "100": [
+    {
+      "useRandom": false,
+      "randomValue": 0,
+      "randomItems": [],
+      "Permissions": null,
+      "effects": [],
+      "title": "숲의 마스터",
+      "items": [
+        { "itemName": "AIR", "amount": 1, "nbt": [], "enchant": [], "exp": 100000 }
+      ]
+    }
+  ]
+}
