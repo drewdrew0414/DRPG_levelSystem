@@ -42,12 +42,6 @@
     }
   },
 
-  "Protection": {
-    "preventOverflow": true,
-    "preventAsyncRace": true,
-    "safeModeOnException": true
-  },
-
   "plguins": {
     "UsePlaceholderAPI": true,
     "UseLuckPerms": true,
