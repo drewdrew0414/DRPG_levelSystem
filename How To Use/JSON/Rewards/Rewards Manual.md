@@ -13,18 +13,20 @@
 ---
 
 ## English
-<a id="english"></a>
+<a id="English"></a>
 
 ## 0. Table of Contents
 * ### 1. [Rewards Json Compatibility Check](#eng1)
-* ### 2. **Versions**
+* ### 2. Versions
     * ### [1.0.0](#eng-1-0-0)
         * [Top-level Json Structure](#eng2-1-1)
         * [Basic Internal Structure](#eng2-1-2)
         * [Internal Structure (useRandom)](#eng2-1-3)
         * [Internal Structure (items)](#eng2-1-4)
+        * [Internal Structure (effects)](#eng2-1-5)
 * ### 3. [Precautions](#eng3)
-* ### 4. [Example](#eng4)
+* ### 4. [Error Conditions](#eng-error)
+* ### 5. [Case Examples](#eng-case)
 
 ---
 
@@ -47,53 +49,56 @@
 <a id="eng2-1-1"></a>
 
 ```json
-"RewardJsonVersion": "<String>",
-"Name": "<String>",
-"DisplayName": "<String>",
-"<int>": [ ... ] // Explained below
-````
+{
+  "RewardJsonVersion": "1.0.0",
+  "Name": "Farming",
+  "displayName": "Farming",
 
-| Field             | Type   | Description                                                 | Example |
-| ----------------- | ------ | ----------------------------------------------------------- | ------- |
-| RewardJsonVersion | String | Defines the Reward Json version (must match plugin version) | 1.0.0   |
-| Name              | String | Internal ID / name of the skill                             | Farming |
-| DisplayName       | String | Name displayed to players                                   | Farming |
-| "int"             | int    | Level at which the reward is given                          | 5, 10   |
+  "<level>": [
+    { }
+  ]
+}
+```
+
+| Field | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| RewardJsonVersion | String | Defines the Reward Json version | 1.0.0 |
+| Name | String | Internal ID of the skill | Farming |
+| displayName | String | Name displayed to players | Farming |
+| <level> | String | Level at which the reward is given (Must be string) | "5", "10" |
 
 ---
 
 ### 2.2 Basic Internal Structure
-
 <a id="eng2-1-2"></a>
 
 ```json
-"<int>": [
+"<level>": [
   {
-    "useRandom": <boolean>,
-    "randomItems": [
-      ... // Explained below
-    ],
-    "Permissions": <String>,
-    "items": [
-      {
-        ... // Explained below
-      }
-    ]
+    "useRandom": false,
+    "randomValue": 0,
+    "randomItems": [],
+    "Permissions": null,
+    "effects": [],
+    "title": null,
+    "items": []
   }
 ]
 ```
 
-| Field       | Type    | Description                        | Example        |
-| ----------- | ------- | ---------------------------------- | -------------- |
-| useRandom   | boolean | Whether rewards are given randomly | false          |
-| randomItems | Object  | Logic for random item selection    | See below      |
-| Permissions | String  | Used for LuckPerms integration     | farming.reward |
-| items       | Object  | Logic for guaranteed rewards       | See below      |
+| Field | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| useRandom | boolean | Enable random reward logic | true / false |
+| randomValue | int | Number of random groups to select | 1, 2 |
+| randomItems | Array | Random reward pool groups | [ { "0": [...] } ] |
+| Permissions | String | LuckPerms permission node | farming.reward |
+| effects | Array | Potion or custom effects | See 2.5 |
+| title | String | Title message displayed on screen | "Master" |
+| items | Array | Guaranteed reward items | See 2.4 |
 
 ---
 
 ### 2.3 Internal Structure (useRandom)
-
 <a id="eng2-1-3"></a>
 
 ```json
@@ -101,86 +106,84 @@
   {
     "0": [
       {
-        "itemName": "<String>",
-        "amount": <int>,
-        "nbt": [ <String> ],
-        "enchant": [ [ "<String>", <int> ], ... ],
-        "exp": <int>
-      }
-    ],
-    "1": [
-      {
-        "itemName": "<String>",
-        "amount": <int>,
-        "nbt": [ <String> ],
-        "enchant": [ [ "<String>", <int> ] ],
-        "exp": <int>
+        "itemName": "BREAD",
+        "amount": 8,
+        "nbt": [],
+        "enchant": [],
+        "exp": 0
       }
     ]
-    // ... more can be added
   }
 ]
 ```
 
-| Field    | Type   | Description                      | Example         |
-| -------- | ------ | -------------------------------- | --------------- |
-| "int"    | int    | Must start from 0                | 0, 1, 2         |
-| itemName | String | Item ID (UPPERCASE only)         | STONE           |
-| amount   | int    | Item quantity                    | 8, 16, 32       |
-| nbt      | String | NBT tags (supported from 1.2.0+) | WIP             |
-| enchant  | List   | Enchantments to apply            | [UNBREAKING, 3] |
-| exp      | int    | Experience given to player       | 100             |
+| Field | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| "int" | String | Index group (Must start from "0") | "0", "1" |
+| itemName | String | Minecraft Material Name (UPPERCASE) | STONE |
+| amount | int | Quantity of the item | 64 |
+| nbt | Array | NBT tags (List format) | [] |
+| enchant | Array | Enchantments [ ["NAME", Level] ] | [ ["FORTUNE", 3] ] |
+| exp | int | Experience points given | 100 |
 
 ---
 
 ### 2.4 Internal Structure (items)
-
 <a id="eng2-1-4"></a>
 
+| Field | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| itemName | String | Minecraft Material Name (UPPERCASE) | WHEAT |
+| amount | int | Quantity of the item | 32 |
+| nbt | Array | NBT tags | [] |
+| enchant | Array | Enchantments | [ ["EFFICIENCY", 5] ] |
+| exp | int | Experience points given | 50 |
+
+---
+
+### 2.5 Internal Structure (effects)
+<a id="eng2-1-5"></a>
+
 ```json
-"items": [
+"effects": [
   {
-    "itemName": "<String>",
-    "amount": <int>,
-    "nbt": <String>,
-    "enchant": [ [ "<String>", <int> ] ],
-    "exp": <int>
-  },
-  {
-    "itemName": "<String>",
-    "amount": <int>,
-    "nbt": <String>,
-    "enchant": [ [ "<String>", <int> ] ],
-    "exp": <int>
+    "type": "SPEED",
+    "level": 1,
+    "time": 200,
+    "cooltime": 0
   }
 ]
 ```
 
-| Field    | Type   | Description                      | Example         |
-| -------- | ------ | -------------------------------- | --------------- |
-| itemName | String | Item ID (UPPERCASE only)         | STONE           |
-| amount   | int    | Item quantity                    | 8, 16, 32       |
-| nbt      | String | NBT tags (supported from 1.2.0+) | WIP             |
-| enchant  | List   | Enchantments to apply            | [UNBREAKING, 3] |
-| exp      | int    | Experience given to player       | 100             |
+| Field | Type | Description | Example |
+| :--- | :--- | :--- | :--- |
+| type | String | Potion Effect Type | SPEED, HASTE |
+| level | int | Potency level (Starting from 1) | 1, 2 |
+| time | int | Duration in ticks (0 for infinite) | 200 |
+| cooltime | int | Cooldown before next use | 0 |
 
 ---
 
 ## 3. Precautions
-
 <a id="eng3"></a>
-
-* Ensure `itemName` matches official Minecraft Material names (uppercase).
-* `RewardJsonVersion` must be compatible with the plugin version.
-* When using `randomItems`, indices must be sequential starting from `"0"`.
+* `itemName` must match **Minecraft Material (UPPERCASE)**.
+* `RewardJsonVersion` must match plugin version.
+* `randomItems` index must start at `"0"` and be sequential.
+* `<level>` key must be a **string**.
 
 ---
 
-## 4. Example
+## 4. Error Conditions
+<a id="eng-error"></a>
+* `useRandom = true` but `randomItems` is empty.
+* `randomValue` > number of groups in `randomItems`.
+* Missing required fields or invalid Level key type.
 
-<a id="eng4"></a>
+---
 
-[1.0.0 Farming.json Example](example/1.0.0/FarmingReward.json)
+## 5. Case Examples
+<a id="eng-case"></a>
+*(Refer to the JSON examples in the Korean section below for full code snippets)*
 
 ---
 
@@ -189,27 +192,25 @@
 
 ## 0. 목차
 * ### 1. [Rewards Json 호환버전 확인](#kor1)
-* ### 2. **버전**
-    * ### [1.0.0](#1-0-0)
-        * [Json 최상위 구조](#kor2-1-1)
-
-        * [Json 기본 내부 구조](#kor2-1-2)
-
-        * [Json 내부 구조 (useRandom)](#kor2-1-3)
-
-        * [Json 내부 구조 (items)](#kor2-1-4)
-
+* ### 2. 버전
+  * ### [1.0.0](#kor-1-0-0)
+    * [Json 최상위 구조](#kor2-1-1)
+    * [Json 기본 내부 구조](#kor2-1-2)
+    * [Json 내부 구조 (useRandom)](#kor2-1-3)
+    * [Json 내부 구조 (items)](#kor2-1-4)
+    * [Json 내부 구조 (effects)](#kor2-1-5)
 * ### 3. [주의사항](#kor3)
-* ### 4. [예제](#kor4)
+* ### 4. [에러 조건](#kor-error)
+* ### 5. [케이스별 예제](#kor-case)
 
 ---
 
 ## 1. 호환버전확인
 <a id="kor1"></a>
 
-| 플러그인 버전 | 호환되는 Rewards Json 버전 | 
-|---|---|
-| 1.0.0 | 1.0.0 |
+| 플러그인 버전 | Rewards Json 버전 |
+| ------- | --------------- |
+| 1.0.0   | 1.0.0           |
 
 ---
 
@@ -217,147 +218,117 @@
 <a id="kor2"></a>
 
 ## 1.0.0
-<a id="1-0-0"></a>
+<a id="kor-1-0-0"></a>
 
-* ### 2.1 최상위 구조
+### 2.1 Json 최상위 구조
 <a id="kor2-1-1"></a>
 
-``` json
-"RewardJsonVersion": "<String>",
-"Name": "<String>",
-"DisplayName": "<String>"
-"<int>": [ ... ] // 밑에 설명 됨
-```
-
 | 필드명 | 타입 | 설명 | 예시 |
-| --- | --- | --- | --- |
-| RewardJsonVersion | String | Reward Json의 버전 정의 (플러그인의 버전에 맞게 설정 할 것) | 1.0.0 |
-| Name | String | 해당 스킬의 이름 | Farming |
-| DisplayName | String | 플레이어가 보게 될 스킬의 이름 | Farming |
-| "int" | int | 보상을 주게 할 레벨 | 5, 10... |
+| :--- | :--- | :--- | :--- |
+| RewardJsonVersion | String | 보상 파일의 버전 정의 | 1.0.0 |
+| Name | String | 스킬의 내부 고유 이름 | Farming |
+| displayName | String | 플레이어에게 표시될 이름 | 농사 보상 |
 
-* ### 2.2 기본 내부구조
+---
+
+### 2.2 기본 내부 구조
 <a id="kor2-1-2"></a>
 
-```json
-"<int>": [
-    {
-      "useRandom": <boolean>,
-      "randomItems": [
-        ... // 밑에 설명 됨
-      ],
-      "Permissions": <String>,
-      "items": [
-        {
-            ... // 밑에 설명 됨
-        }
-      ]
-    }
-  ]
-```
+| 필드명 | 타입 | 설명 | 예시 |
+| :--- | :--- | :--- | :--- |
+| useRandom | boolean | 랜덤 보상 로직 사용 여부 | true / false |
+| randomValue | int | 랜덤 그룹 중 선택할 개수 | 1 |
+| randomItems | Array | 랜덤 보상 아이템 그룹 리스트 | [ { "0": [...] } ] |
+| Permissions | String | LuckPerms 권한 노드 | skill.farming.5 |
+| effects | Array | 부여할 포션 및 특수 효과 리스트 | 하단 2.5 참조 |
+| title | String | 화면 중앙에 뜰 타이틀 메시지 | "레벨 업!" |
+| items | Array | 확정 지급 아이템 리스트 | 하단 2.4 참조 |
 
-| 필드명 | 타입      | 설명                   | 예시             |
-| --- |---------|----------------------|----------------|
-|  useRandom   | boolean | 랜덤으로 보상을 줄 것인 지      | false          |
-|  randomItems   |    아래에 설명     | 랜덤 아이템 선택 로직이 들어감    | 아래에 설명         |
-|   Permissions  | String  | LuckPerms 연동 시 사용 가능 | farming.reward |
-|   items  | 아래에 설명  | 지급 할 아이템의 로직이 들어감    | 아래에 설명         |
+---
 
-* ### 2.3 내부구조 (useRandom)
+### 2.3 내부 구조 (useRandom)
 <a id="kor2-1-3"></a>
+* ### 인덱스는 반드시 `"0"`부터 시작
+* ### 순차적으로 증가해야 함 (0, 1, 2...)
+* ### randomValue는 설정된 인덱스 그룹의 총 개수를 초과할 수 없음
 
-```json
-"randomItems": [
-        {
-          "0": [ // 여러개 지급 할 시
-            {
-              "itemName": "<String>",
-              "amount": <int>,
-              "nbt": [ <String> ],
-              "enchant": [ [<String>, <int> ], ... ],
-              "exp": <int>
-            },
-            {
-              "itemName": "<String>",
-              "amount": <int>,
-              "nbt": [ <String> ],
-              "enchant": [ [<String>, <int> ], ... ],
-              "exp": <int>
-            }
-          ],
-          "1": [ // 한 개씩 지급 할 시 + 인첸트
-            {
-              "itemName": "<String>",
-              "amount": <int>,
-              "nbt": [ <String> ],
-              "enchant": [ [<String>, <int> ] ],
-              "exp": <int>
-            }
-          ],
-          "2": [ // 인첸트가 여러개 일 시
-            {
-              "itemName": "<String>",
-              "amount": <int>,
-              "nbt": [ <String> ],
-              "enchant": [ [<String>, <int> ], ... ],
-              "exp": <int>
-            }
-          ]
-          
-          // ... 추가 가능
-          
-        }
-      ]
-```
+---
 
-| 필드명        | 타입       | 설명                                  | 예시               |
-|------------|----------|-------------------------------------|------------------|
-| "int"      | int      | 무조건 0에서 시작할 것                       | 0, 1, 2 ...      |
-| itemName   | String   | 지급 할 아이템 이름 (대문자로 쓸 것)              |  STONE           |
-| amount     | int      | 지급 할 아이템의 갯수                        | 8, 16, 32 ...    |
-| nbt        | String   | 지급 할 아이템의 nbt 태그 부여 (1.2.0 이상부터 지원) | 미완성              |
-| enchant    | String   | 지급 할 아이템에 넣을 인첸트                    | [UNBREAKING, 3 ] |
-| exp        | int      | 플레이어에게 지급 할 경험치 (exp기준)             | 100              |
-
-* ### 2.4 내부구조 (items)
+### 2.4 내부 구조 (items)
 <a id="kor2-1-4"></a>
+| 필드명 | 타입 | 설명 | 예시 |
+| :--- | :--- | :--- | :--- |
+| itemName | String | 아이템 영문 명칭 (대문자) | DIAMOND_HOE |
+| amount | int | 지급 수량 | 1 |
+| nbt | Array | NBT 태그 정보 (리스트) | [] |
+| enchant | Array | 인챈트 설정 [ ["이름", 레벨] ] | [ ["UNBREAKING", 3] ] |
+| exp | int | 지급할 경험치량 | 100 |
 
-```json
-"items": [
-        {
-          "itemName": "<String>",
-          "amount": <int>,
-          "nbt": <String>,
-          "enchant": [ [ <String>, <int>] ],
-          "exp": <int>
-        }, // 여러 개 일 시 중첩법
-        {
-          "itemName": "<String>",
-          "amount": <int>,
-          "nbt": <String>,
-          "enchant": [ [ <String>, <int>] ],
-          "exp": <int>
-          }
-      ]
-```
+---
 
-| 필드명        | 타입       | 설명                                  | 예시               |
-|------------|----------|-------------------------------------|------------------|
-| itemName   | String   | 지급 할 아이템 이름 (대문자로 쓸 것)              |  STONE           |
-| amount     | int      | 지급 할 아이템의 갯수                        | 8, 16, 32 ...    |
-| nbt        | String   | 지급 할 아이템의 nbt 태그 부여 (1.2.0 이상부터 지원) | 미완성              |
-| enchant    | String   | 지급 할 아이템에 넣을 인첸트                    | [UNBREAKING, 3 ] |
-| exp        | int      | 플레이어에게 지급 할 경험치 (exp기준)             | 100              |
+### 2.5 내부 구조 (effects)
+<a id="kor2-1-5"></a>
+| 필드명 | 타입 | 설명 | 예시 |
+| :--- | :--- | :--- | :--- |
+| type | String | 포션 효과 종류 | HASTE, SPEED |
+| level | int | 효과 강도 (1레벨부터 시작) | 2 |
+| time | int | 지속 시간 (Tick 단위, 20틱=1초) | 600 |
+| cooltime | int | 효과 재발동 대기 시간 | 0 |
 
 ---
 
 ## 3. 주의사항
 <a id="kor3"></a>
-* ​itemName은 공식 마인크래프트 아이템 명칭(Material Name)과 일치해야 하며, 반드시 대문자로 작성해야 합니다.
-* ​RewardJsonVersion은 현재 사용 중인 플러그인 버전과 호환되어야 로딩 오류를 방지할 수 있습니다.
-* ​randomItems를 사용할 때, 인덱스(번호)는 반드시 **"0"**부터 시작하여 순차적으로 작성해야 합니다.
+* ### 아이템 이름은 반드시 **대문자 Material** 명칭을 사용해야 합니다.
+* ### 레벨 키는 반드시 **문자열** 형식이어야 합니다. (예: "5")
+* ### randomValue가 그룹 수보다 많으면 로딩 에러가 발생합니다.
+
 ---
 
-## 4. 예제
-<a id="kor4"></a>
-[1.0.0 Farming.json 예제](example/1.0.0/FarmingReward.json)
+## 4. 에러 조건
+<a id="kor-error"></a>
+* ### 랜덤 설정 사용 시 보상 풀이 비어있는 경우
+* ### 필수 필드(RewardJsonVersion 등)가 누락된 경우
+* ### 인챈트나 효과 이름이 올바르지 않은 경우
+
+---
+
+## 5. 케이스별 예제
+<a id="kor-case"></a>
+
+### 랜덤 지급 (Random Only)
+```json
+"5": [
+  {
+    "useRandom": true,
+    "randomValue": 1,
+    "randomItems": [
+      {
+        "0": [{ "itemName": "BREAD", "amount": 8, "nbt": [], "enchant": [], "exp": 0 }],
+        "1": [{ "itemName": "COOKED_BEEF", "amount": 6, "nbt": [], "enchant": [], "exp": 0 }]
+      }
+    ],
+    "Permissions": null,
+    "effects": [],
+    "title": "행운의 보상",
+    "items": []
+  }
+]
+```
+
+### 고정 지급 (Items Only)
+```json
+"10": [
+  {
+    "useRandom": false,
+    "randomValue": 0,
+    "randomItems": [],
+    "Permissions": null,
+    "effects": [],
+    "title": null,
+    "items": [
+      { "itemName": "WHEAT", "amount": 64, "nbt": [], "enchant": [], "exp": 0 }
+    ]
+  }
+]
+```
