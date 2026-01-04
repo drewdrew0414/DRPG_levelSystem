@@ -355,7 +355,7 @@
     "cooltime": 0,
     "operator": "AND",
     "when": [
-      { "condition": "<String>" }
+      { "<String>": "<String>" }
     ]
   }
 ]
@@ -382,8 +382,29 @@
 | INTERACT_ENTITY | 엔티티와 상호작용 했을 때 | [참고](#ex6) |
 | INTERACT_BLOCK | 블록과 상호작용 했을 때 | [참고](#ex7) |
 | KILL_ENTITY | 엔티티를 죽였을 때 | [참고](#ex8) |
+| HP_REMAINING | 피가 <int>만큼 남았을 때 | [참고](#ex9) |
 
+### GET_DMG
+<a id="ex1"></a>
 
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "GET_DMG": [
+          {
+            "cause": [ "<String>" ],
+            "by": [ "<String" ],
+            "
+          }
+        ]
+      }
+    ]
+  }
+]
+
+```
 
 ---
 
