@@ -384,6 +384,8 @@
 | KILL_ENTITY | 엔티티를 죽였을 때 | [참고](#ex8) |
 | HP_REMAINING | 피가 <int>만큼 남았을 때 | [참고](#ex9) |
 
+---
+
 ### GET_DMG
 <a id="ex1"></a>
 
@@ -395,10 +397,150 @@
       { "GET_DMG": [
           {
             "cause": [ "<String>" ],
-            "by": [ "<String" ],
-            "
+            "by": [ "<String" ]
           }
         ]
+      }
+    ]
+  }
+]
+
+```
+
+### SNEAKING
+<a id="ex2"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "SNEAKING" }
+    ]
+  }
+]
+
+```
+
+### L_CLICK
+<a id="ex3"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "L_CLICK" }
+    ]
+  }
+]
+
+```
+
+### R_CLICK
+<a id="ex4"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "R_CLICK" }
+    ]
+  }
+]
+
+```
+
+### HOLDING_ITEM
+<a id="ex5"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "HOLDING_ITEM": [
+          {
+            "items": [ "<String>" ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
+```
+
+### INTERACT_ENTITY
+<a id="ex6"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "INTERACT_ENTITY": [
+          {
+            "target": [ "<String>" ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
+```
+
+### INTERACT_BLOCK
+<a id="ex7"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "INTERACT_BLOCK": [
+          {
+            "target": [ "<String>" ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
+```
+
+### KILL_ENTITY
+<a id="ex8"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "KILL_ENTITY": [
+          {
+            "target": [ "<String>" ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
+```
+
+### HP_REMAINING
+<a id="ex9"></a>
+
+```json
+"effect": [
+    {
+      // 기본 로직
+      "when": [
+      { "HP_REMAINING": <int>
       }
     ]
   }
