@@ -352,7 +352,11 @@
     "type": "SPEED",
     "level": 1,
     "time": 200,
-    "cooltime": 0
+    "cooltime": 0,
+    "operator": "AND",
+    "when": [
+      { "condition": "<String>" }
+    ]
   }
 ]
 ```
@@ -363,6 +367,23 @@
 | level | int | 효과 강도 (1레벨부터 시작) | 2 |
 | time | int | 지속 시간 (Tick 단위, 20틱=1초) | 600 |
 | cooltime | int | 효과 재발동 대기 시간 | 0 |
+| operator | String | 효과 발동 조건 연산자 | AND, OR |
+| when | Array | 발동 트리거 리스트 | 하단 참조 |
+
+### when 내부에서 사용가능한 이벤트들
+
+| 조건 | 설명 | 내부구조 |
+| --- | --- | --- |
+| GET_DMG | 데미지를 입었을 때 | [참고](#ex1) |
+| SNEAKING | 웅크릴 때 | [참고](#ex2) |
+| L_CLICK | 좌클릭 했을 때 | [참고](#ex3) |
+| R_CLICK | 우클릭 했을 때 | [참고](#ex4) |
+| HOLDING_ITEM | 아이템을 손에 들고 있을 때 | [참고](#ex5) |
+| INTERACT_ENTITY | 엔티티와 상호작용 했을 때 | [참고](#ex6) |
+| INTERACT_BLOCK | 블록과 상호작용 했을 때 | [참고](#ex7) |
+| KILL_ENTITY | 엔티티를 죽였을 때 | [참고](#ex8) |
+
+
 
 ---
 
